@@ -1733,7 +1733,7 @@ function Navbar({ page, setPage, cartCount }){
               <img
                 src="https://khadlaj-perfumes.com/cdn/shop/files/Khadlaj_logo_2026--2_160x.png?v=1773752104"
                 alt="Khadlaj Perfumes"
-                style={{height:"clamp(38px,5vw,56px)",width:"auto",objectFit:"contain",display:"block"}}
+                style={{height:"clamp(52px,7vw,80px)",width:"auto",objectFit:"contain",display:"block"}}
               />
             </div>
             {/* Right icons */}

@@ -23507,7 +23507,7 @@ function Navbar({ page, setPage, cartCount }) {
             {
               src: "https://khadlaj-perfumes.com/cdn/shop/files/Khadlaj_logo_2026--2_160x.png?v=1773752104",
               alt: "Khadlaj Perfumes",
-              style: { height: "clamp(38px,5vw,56px)", width: "auto", objectFit: "contain", display: "block" }
+              style: { height: "clamp(52px,7vw,80px)", width: "auto", objectFit: "contain", display: "block" }
             }
           ) }),
           /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", alignItems: "center", justifyContent: "flex-end", gap: 22 }, children: [
