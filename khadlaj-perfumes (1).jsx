@@ -260,26 +260,54 @@ const GLOBAL_CSS = `
     animation:shimmer 3s linear infinite;
   }
 
-  /* ── Mobile responsive ── */
+  /* ── Tablet responsive (≤900px) ── */
   @media(max-width:900px){
     .hide-mob{display:none!important;}
-    .grid-4{grid-template-columns:repeat(2,1fr)!important;}
-    .grid-3{grid-template-columns:1fr!important;}
+    .grid-4{grid-template-columns:repeat(2,1fr)!important;gap:20px!important;}
+    .grid-3{grid-template-columns:repeat(2,1fr)!important;gap:20px!important;}
     .hero-split{grid-template-columns:1fr!important;}
     .hero-img-wrap{height:320px!important;min-height:unset!important;}
     .grid-2{grid-template-columns:1fr!important;}
+
+    /* Mosaic grid — simplify to 2 cols */
+    .mosaic-grid{display:grid!important;grid-template-columns:repeat(2,1fr)!important;grid-template-rows:auto!important;}
+    .mosaic-cell-large{grid-column:1/-1!important;grid-row:auto!important;}
+    .mosaic-cell-tall{grid-column:1/-1!important;grid-row:auto!important;}
+    .mosaic-cell-mid-top{grid-column:1/2!important;grid-row:auto!important;}
+    .mosaic-cell-mid-bl{grid-column:1/2!important;grid-row:auto!important;}
+    .mosaic-cell-mid-br{grid-column:2/3!important;grid-row:auto!important;}
+    .mosaic-bottom-item{grid-column:auto!important;grid-row:auto!important;}
+    .mosaic-bottom-container{display:grid!important;grid-template-columns:repeat(2,1fr)!important;gap:3px!important;}
+
+    /* Footer grid */
+    .footer-grid{grid-template-columns:1fr 1fr!important;gap:32px!important;}
+
+    /* Newsletter popup */
+    .popup-grid{grid-template-columns:1fr!important;}
+    .popup-img{display:none!important;}
+
+    /* Contact form */
+    .contact-grid{grid-template-columns:1fr!important;gap:40px!important;}
+
+    /* Product page */
+    .product-grid{grid-template-columns:1fr!important;gap:32px!important;}
+    .product-sticky{position:static!important;top:auto!important;}
+
+    /* Story page split */
+    .story-hero-split{grid-template-columns:1fr!important;}
+    .story-editorial{grid-template-columns:repeat(2,1fr)!important;gap:20px!important;}
+
+    /* Collections filter bar */
+    .filter-bar-wrap{flex-direction:column!important;align-items:flex-start!important;gap:8px!important;}
+    .filter-categories{border-right:none!important;padding-right:0!important;margin-right:0!important;border-bottom:1px solid #E0E0E0!important;padding-bottom:8px!important;margin-bottom:4px!important;width:100%!important;}
+
+    /* TikTok cards */
+    .tiktok-track-card{flex:0 0 85vw!important;}
+    
+    /* Stats grid border adjustments */
+    .stats-grid-item{border-right:none!important;}
   }
-  @media(max-width:600px){
-    .grid-4{grid-template-columns:repeat(2,1fr)!important;}
-    .grid-3{grid-template-columns:1fr!important;}
-    .grid-2{grid-template-columns:1fr!important;}
-    .new-scroll > div{flex:0 0 78vw!important;}
-    .reel-card{flex:0 0 88vw!important;}
-  }
-  @media(max-width:480px){
-    .grid-4{grid-template-columns:repeat(2,1fr)!important;}
-    .popup-in{grid-template-columns:1fr!important;}
-  }
+
 `;
 
 /* ═══════════════════════════════════════════════════════════════
@@ -445,6 +473,7 @@ function TikTokCard({ t }) {
     <div
       onMouseEnter={() => setHov(true)}
       onMouseLeave={() => setHov(false)}
+      className="tiktok-track-card"
       style={{
         flex:"0 0 320px",
         height: 520,
@@ -527,6 +556,19 @@ function HomePage({ setPage, addToCart, setViewProduct }){
     <>
       {/* ── HERO VIDEO ── */}
       <section style={{position:"relative",width:"100%",height:"100vh",overflow:"hidden",background:"#0a0a0a"}}>
+        {/* Background Image (video replacement for Vercel) */}
+        <div style={{
+          position:"absolute",
+          top:0,left:0,
+          width:"100%",
+          height:"100%",
+          backgroundImage:"url('https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Ihthiraam-1.jpg?v=1775635386')",
+          backgroundSize:"cover",
+          backgroundPosition:"center",
+          opacity:.85
+        }}/>
+        
+        {/* Video - commented for Vercel file size limit 
         <video
           ref={el=>{if(el){el.muted=true;el.play().catch(()=>{});}}}
           autoPlay muted loop playsInline preload="auto"
@@ -534,6 +576,7 @@ function HomePage({ setPage, addToCart, setViewProduct }){
         >
           <source src="./video/new-video.mp4" type="video/mp4"/>
         </video>
+        */}
 
         {/* Layered gradient: dark at bottom, transparent at top */}
         <div style={{position:"absolute",inset:0,background:"linear-gradient(to bottom,rgba(0,0,0,.1) 0%,rgba(0,0,0,.0) 30%,rgba(0,0,0,.6) 70%,rgba(0,0,0,.92) 100%)",pointerEvents:"none"}}/>
@@ -588,7 +631,7 @@ function HomePage({ setPage, addToCart, setViewProduct }){
           </p>
 
           {/* CTA Buttons */}
-          <div style={{display:"flex",gap:12,flexWrap:"wrap",marginBottom:32}}>
+          <div className="hero-cta-row" style={{display:"flex",gap:12,flexWrap:"wrap",marginBottom:32}}>
             <button
               onClick={()=>setPage("collections")}
               style={{
@@ -615,14 +658,14 @@ function HomePage({ setPage, addToCart, setViewProduct }){
           </div>
 
           {/* Stats bar */}
-          <div style={{display:"flex",gap:0,borderTop:"1px solid rgba(255,255,255,.1)",paddingTop:18,flexWrap:"wrap",rowGap:8}}>
+          <div className="hero-stats-bar" style={{display:"flex",gap:0,borderTop:"1px solid rgba(255,255,255,.1)",paddingTop:18,flexWrap:"wrap",rowGap:8}}>
             {[
               {v:"1997",l:"Est."},
               {v:"400+",l:"Fragrances"},
               {v:"30+",l:"Countries"},
               {v:"4.8★",l:"Rating"},
             ].map((s,i)=>(
-              <div key={s.l} style={{
+              <div key={s.l} className="hero-stat-item" style={{
                 paddingRight:22,marginRight:22,
                 borderRight: i<3 ? "1px solid rgba(255,255,255,.1)" : "none",
               }}>
@@ -651,9 +694,9 @@ function HomePage({ setPage, addToCart, setViewProduct }){
 
       {/* ── STATS ── */}
       <section style={{background:"#fff",padding:"80px 6%",borderBottom:"1px solid #E8E4DC"}}>
-        <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:0}} className="grid-4">
+        <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:0}} className="grid-4 stats-grid">
           {STATS.map((s,i)=>(
-            <div key={s.v} style={{textAlign:"center",padding:"32px 24px",borderRight:i<3?"1px solid #E8E4DC":"none"}}>
+            <div key={s.v} className="stats-grid-item" style={{textAlign:"center",padding:"32px 24px",borderRight:i<3?"1px solid #E8E4DC":"none"}}>
               <p className="disp" style={{fontSize:"clamp(40px,4.5vw,64px)",fontWeight:300,color:"#111",lineHeight:1,marginBottom:12}}>{s.v}</p>
               <div style={{width:24,height:1,background:"#C1A46A",margin:"0 auto 16px"}}/>
               <p style={{fontSize:9,letterSpacing:4,color:"#888",textTransform:"uppercase",fontFamily:"'DM Sans',sans-serif",fontWeight:600}}>{s.l}</p>
@@ -664,7 +707,7 @@ function HomePage({ setPage, addToCart, setViewProduct }){
 
       {/* ── FEATURED PRODUCTS ── */}
       <section style={{padding:"0 5% 104px",background:"#fff"}}>
-        <div style={{paddingTop:96,marginBottom:52,display:"flex",alignItems:"flex-end",justifyContent:"space-between",flexWrap:"wrap",gap:16}}>
+        <div className="section-header-row" style={{paddingTop:96,marginBottom:52,display:"flex",alignItems:"flex-end",justifyContent:"space-between",flexWrap:"wrap",gap:16}}>
           <div>
             <p style={{fontSize:9,letterSpacing:5,color:"#B8922A",textTransform:"uppercase",fontFamily:"'DM Sans',sans-serif",marginBottom:14}}>Featured Fragrances</p>
             <h2 className="disp" style={{fontSize:"clamp(32px,4vw,54px)",fontWeight:300,color:"#000",lineHeight:1.05,letterSpacing:-1}}>Discover Your<br/><em style={{fontStyle:"italic",color:"#B8922A"}}>Signature Scent</em></h2>
@@ -689,7 +732,7 @@ function HomePage({ setPage, addToCart, setViewProduct }){
           ))}
         </div>
 
-        <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:32,alignItems:"start"}} className="grid-4">
+        <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:32,alignItems:"start"}} className="grid-3">
           {filtered.map(p=>(
             <ProductCard key={p.id} p={p} onView={(prod)=>{setViewProduct(prod);setPage("product");}} onCart={addToCart}/>
           ))}
@@ -744,15 +787,15 @@ function HomePage({ setPage, addToCart, setViewProduct }){
       </section>
 
       {/* ── MASTER PERFUMERY EDITORIAL ── */}
-      <section style={{position:"relative",overflow:"hidden",zIndex:0}}>
-            <h2 className="disp" style={{fontSize:"clamp(32px,5vw,64px)",fontWeight:300,lineHeight:1.05,marginBottom:20,color:"#fff",letterSpacing:-1.5}}>
-              The Art of Arabic &amp;<br/><em style={{color:"#B8922A",fontStyle:"italic"}}>French Perfumery</em>
-            </h2>
-            <p style={{color:"rgba(255,255,255,.6)",lineHeight:1.85,fontSize:14,marginBottom:32,maxWidth:440,fontFamily:"'DM Sans',sans-serif"}}>
-              Founded by Mohamed Iqbal Abdul Sattar — each creation blends the ancient soul of Arabian oud with the precision of French fragrance tradition.
-            </p>
-            <button className="btn-gold" onClick={()=>setPage("story")}>Meet the Perfumers</button>
-          </div>
+      <section style={{position:"relative",overflow:"hidden",zIndex:0,background:"#000",padding:"96px 5%"}}>
+        <div style={{maxWidth:560}}>
+          <h2 className="disp" style={{fontSize:"clamp(32px,5vw,64px)",fontWeight:300,lineHeight:1.05,marginBottom:20,color:"#fff",letterSpacing:-1.5}}>
+            The Art of Arabic &amp;<br/><em style={{color:"#B8922A",fontStyle:"italic"}}>French Perfumery</em>
+          </h2>
+          <p style={{color:"rgba(255,255,255,.6)",lineHeight:1.85,fontSize:14,marginBottom:32,maxWidth:440,fontFamily:"'DM Sans',sans-serif"}}>
+            Founded by Mohamed Iqbal Abdul Sattar — each creation blends the ancient soul of Arabian oud with the precision of French fragrance tradition.
+          </p>
+          <button className="btn-gold" onClick={()=>setPage("story")}>Meet the Perfumers</button>
         </div>
       </section>
 
@@ -808,7 +851,7 @@ function HomePage({ setPage, addToCart, setViewProduct }){
 
       {/* ── NEW ARRIVALS ── */}
       <section style={{padding:"96px 5%",background:"#fff",position:"relative",zIndex:1}}>
-        <div style={{display:"flex",alignItems:"flex-end",justifyContent:"space-between",marginBottom:40}}>
+        <div className="section-header-row" style={{display:"flex",alignItems:"flex-end",justifyContent:"space-between",marginBottom:40}}>
           <div>
             <div style={{width:32,height:1,background:"#B8922A",marginBottom:16}}/>
             <p style={{fontSize:9,letterSpacing:5,color:"#B8922A",textTransform:"uppercase",fontFamily:"'DM Sans',sans-serif",marginBottom:10}}>Just Dropped</p>
@@ -827,7 +870,7 @@ function HomePage({ setPage, addToCart, setViewProduct }){
 
       {/* ── GIFT SETS ── */}
       <section style={{padding:"96px 5%",background:"#fff",borderTop:"1px solid #E8E4DC"}}>
-        <div style={{display:"flex",alignItems:"flex-end",justifyContent:"space-between",flexWrap:"wrap",gap:16,marginBottom:60}}>
+        <div className="section-header-row" style={{display:"flex",alignItems:"flex-end",justifyContent:"space-between",flexWrap:"wrap",gap:16,marginBottom:60}}>
           <div>
             <div style={{width:32,height:1,background:"#B8922A",marginBottom:18}}/>
             <p style={{fontSize:9,letterSpacing:5,color:"#B8922A",textTransform:"uppercase",fontFamily:"'DM Sans',sans-serif",marginBottom:12}}>Gifting</p>
@@ -851,7 +894,7 @@ function HomePage({ setPage, addToCart, setViewProduct }){
       {/* ── TESTIMONIALS ── */}
       <section style={{background:"#000",padding:"96px 5%"}}>
         <SectionHeader eyebrow="Reviews" title="Loved Across the Gulf" light={true} />
-        <div className="grid-4" style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:1,background:"rgba(255,255,255,.15)"}}>
+        <div className="grid-4 testimonials-grid" style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:1,background:"rgba(255,255,255,.15)"}}>
           {REVIEWS.map((r,i)=>(
             <div key={i} style={{background:"#000",padding:"48px 32px",display:"flex",flexDirection:"column",alignItems:"center",textAlign:"center"}}>
               <StarRating n={r.stars} color="#B8922A"/>
@@ -893,10 +936,10 @@ function HomePage({ setPage, addToCart, setViewProduct }){
         </div>
 
         {/* Mosaic grid — varying sizes for editorial feel */}
-        <div style={{display:"grid",gridTemplateColumns:"repeat(6,1fr)",gridTemplateRows:"auto",gap:3}}>
+        <div className="mosaic-grid" style={{display:"grid",gridTemplateColumns:"repeat(6,1fr)",gridTemplateRows:"auto",gap:3}}>
 
           {/* Large — spans 2 cols 2 rows */}
-          <div style={{gridColumn:"1/3",gridRow:"1/3",position:"relative",overflow:"hidden",cursor:"pointer",background:"#F5F3EF"}}>
+          <div className="mosaic-cell-large" style={{gridColumn:"1/3",gridRow:"1/3",position:"relative",overflow:"hidden",cursor:"pointer",background:"#F5F3EF"}}>
             <img src="https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Ihthiraam-1.jpg?v=1775635386"
               alt="Ihthiraam" loading="lazy"
               style={{width:"100%",height:"100%",objectFit:"cover",objectPosition:"center top",transition:"transform .6s ease"}}
@@ -910,7 +953,7 @@ function HomePage({ setPage, addToCart, setViewProduct }){
           </div>
 
           {/* Medium top-middle */}
-          <div style={{gridColumn:"3/5",gridRow:"1/2",position:"relative",overflow:"hidden",cursor:"pointer",background:"#F5F3EF"}}>
+          <div className="mosaic-cell-mid-top" style={{gridColumn:"3/5",gridRow:"1/2",position:"relative",overflow:"hidden",cursor:"pointer",background:"#F5F3EF"}}>
             <img src="https://cdn.shopify.com/s/files/1/0626/6119/8023/files/IntoxicateMystique.1.png?v=1772518099"
               alt="Intoxicate Mystique" loading="lazy"
               style={{width:"100%",height:"100%",objectFit:"cover",objectPosition:"center top",transition:"transform .6s ease",aspectRatio:"1/1"}}
@@ -923,7 +966,7 @@ function HomePage({ setPage, addToCart, setViewProduct }){
           </div>
 
           {/* Tall right — spans 2 rows */}
-          <div style={{gridColumn:"5/7",gridRow:"1/3",position:"relative",overflow:"hidden",cursor:"pointer",background:"#F5F3EF"}}>
+          <div className="mosaic-cell-tall" style={{gridColumn:"5/7",gridRow:"1/3",position:"relative",overflow:"hidden",cursor:"pointer",background:"#F5F3EF"}}>
             <img src="https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Panache_2_jpg_0bc7a1f3-8af9-4188-98f1-c58151159f55.jpg?v=1771333283"
               alt="Angel Dust" loading="lazy"
               style={{width:"100%",height:"100%",objectFit:"cover",objectPosition:"center top",transition:"transform .6s ease"}}
@@ -937,7 +980,7 @@ function HomePage({ setPage, addToCart, setViewProduct }){
           </div>
 
           {/* Bottom-middle left */}
-          <div style={{gridColumn:"3/4",gridRow:"2/3",position:"relative",overflow:"hidden",cursor:"pointer",background:"#F5F3EF"}}>
+          <div className="mosaic-cell-mid-bl" style={{gridColumn:"3/4",gridRow:"2/3",position:"relative",overflow:"hidden",cursor:"pointer",background:"#F5F3EF"}}>
             <img src="https://cdn.shopify.com/s/files/1/0626/6119/8023/files/ONYX-01_b085642f-9033-4997-a1fd-4e97be2a8575.jpg?v=1762324228"
               alt="Onyx Gold" loading="lazy"
               style={{width:"100%",height:"100%",objectFit:"cover",aspectRatio:"1/1",transition:"transform .6s ease"}}
@@ -950,7 +993,7 @@ function HomePage({ setPage, addToCart, setViewProduct }){
           </div>
 
           {/* Bottom-middle right */}
-          <div style={{gridColumn:"4/5",gridRow:"2/3",position:"relative",overflow:"hidden",cursor:"pointer",background:"#F5F3EF"}}>
+          <div className="mosaic-cell-mid-br" style={{gridColumn:"4/5",gridRow:"2/3",position:"relative",overflow:"hidden",cursor:"pointer",background:"#F5F3EF"}}>
             <img src="https://cdn.shopify.com/s/files/1/0626/6119/8023/files/shiyaaka-snow.png?v=1781615422"
               alt="Shiyaaka Snow" loading="lazy"
               style={{width:"100%",height:"100%",objectFit:"cover",aspectRatio:"1/1",transition:"transform .6s ease"}}
@@ -1084,7 +1127,7 @@ function CollectionsPage({ addToCart, setViewProduct, setPage }){
       </div>
 
       {/* ── Filters bar ── */}
-      <div style={{
+      <div className="filter-bar" style={{
         background:"#fff",borderBottom:"1px solid #E8E4DC",
         padding:"20px 5%",
         display:"flex",gap:12,alignItems:"center",flexWrap:"wrap",
@@ -1092,7 +1135,7 @@ function CollectionsPage({ addToCart, setViewProduct, setPage }){
         boxShadow:"0 2px 12px rgba(0,0,0,.05)",
       }}>
         {/* Category tabs */}
-        <div style={{display:"flex",gap:0,flex:1,flexWrap:"wrap",borderRight:"1px solid #E0E0E0",paddingRight:16,marginRight:4}}>
+        <div className="filter-categories" style={{display:"flex",gap:0,flex:1,flexWrap:"wrap",borderRight:"1px solid #E0E0E0",paddingRight:16,marginRight:4}}>
           {CATEGORIES.map(c=>(
             <button key={c} onClick={()=>setActiveCat(c)}
               style={{
@@ -1223,7 +1266,7 @@ function ProductPage({ product, addToCart, setPage, setViewProduct }){
 
       {/* ── Main Product Section ── */}
       <div style={{maxWidth:1440, margin:"0 auto", padding:"40px 5% 120px"}}>
-        <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"clamp(40px, 8vw, 100px)",alignItems:"start"}} className="grid-2">
+        <div className="product-grid" style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"clamp(40px, 8vw, 100px)",alignItems:"start"}} >
           
           {/* ── Left: Image Gallery (Scrollable Stack) ── */}
           <div style={{display:"flex", flexDirection:"column", gap:16}}>
@@ -1235,7 +1278,7 @@ function ProductPage({ product, addToCart, setPage, setViewProduct }){
           </div>
 
           {/* ── Right: Product Details (Sticky) ── */}
-          <div style={{paddingTop:8, maxWidth:540, position:"sticky", top:120, alignSelf:"start"}}>
+          <div className="product-sticky" style={{paddingTop:8, maxWidth:540, position:"sticky", top:120, alignSelf:"start"}}>
              {/* EYEBROW */}
              <p style={{fontSize:10, letterSpacing:3, color:"#111", textTransform:"uppercase", fontFamily:"'DM Sans',sans-serif", marginBottom:16}}>Khadlaj Perfumes</p>
              
@@ -1263,9 +1306,9 @@ function ProductPage({ product, addToCart, setPage, setViewProduct }){
              </div>
 
              {/* ACTIONS (Qty + Add to Cart) */}
-             <div style={{display:"flex", gap:16, marginBottom:32, flexWrap:"wrap"}}>
+             <div className="product-actions" style={{display:"flex", gap:16, marginBottom:32, flexWrap:"wrap"}}>
                {/* Quantity */}
-               <div style={{display:"flex", alignItems:"center", border:"1px solid #E8E4DC", width:130, height:56}}>
+               <div className="product-qty" style={{display:"flex", alignItems:"center", border:"1px solid #E8E4DC", width:130, height:56}}>
                   <button onClick={()=>setQty(q=>Math.max(1,q-1))} style={{flex:1, height:"100%", border:"none", background:"transparent", fontSize:20, cursor:"pointer", color:"#555"}}>−</button>
                   <span style={{flex:1, textAlign:"center", fontSize:15, fontFamily:"'DM Sans',sans-serif"}}>{qty}</span>
                   <button onClick={()=>setQty(q=>q+1)} style={{flex:1, height:"100%", border:"none", background:"transparent", fontSize:20, cursor:"pointer", color:"#555"}}>+</button>
@@ -1274,6 +1317,7 @@ function ProductPage({ product, addToCart, setPage, setViewProduct }){
                {/* Add to Bag (Minimalist Black) */}
                <button 
                  onClick={handleAdd} 
+                 className="product-add-btn"
                  style={{
                    flex:1, minWidth:200, height:56, background:"#111", color:"#fff", border:"none", 
                    fontSize:12, fontWeight:700, letterSpacing:2, textTransform:"uppercase", 
@@ -1287,7 +1331,7 @@ function ProductPage({ product, addToCart, setPage, setViewProduct }){
              </div>
 
              {/* TRUST BADGES */}
-             <div style={{display:"flex", gap:24, marginBottom:48, paddingTop:24, borderTop:"1px solid #E8E4DC"}}>
+             <div className="product-trust" style={{display:"flex", gap:24, marginBottom:48, paddingTop:24, borderTop:"1px solid #E8E4DC"}}>
                <div style={{display:"flex", alignItems:"center", gap:8, fontSize:10, color:"#555", fontFamily:"'DM Sans',sans-serif", textTransform:"uppercase", letterSpacing:1.5}}>
                  <span style={{fontSize:14}}>✓</span> Authentic
                </div>
@@ -1328,7 +1372,7 @@ function ProductPage({ product, addToCart, setPage, setViewProduct }){
       {related.length>0 && (
         <div style={{padding:"0 5% 104px"}}>
           <SectionHeader eyebrow="◈ · Handpicked For You" title="You May Also Like" light/>
-          <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:32,alignItems:"start"}} className="grid-4">
+          <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:32,alignItems:"start"}} className="grid-3">
             {related.map(p=>(
               <ProductCard key={p.id} p={p} onView={(prod)=>{if(setViewProduct){setViewProduct(prod);setPage("product");}}} onCart={addToCart}/>
             ))}
@@ -1455,7 +1499,7 @@ function StoryPage(){
 
       <div style={{padding:"80px 5%"}}>
         {/* Founder story */}
-        <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:64,alignItems:"center",marginBottom:88}} className="hero-split">
+        <div className="story-hero-split" style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:64,alignItems:"center",marginBottom:88}} >
           <div>
             <p className="eyebrow" style={{marginBottom:16}}>◈ · The Beginning</p>
             <h2 className="disp" style={{fontSize:"clamp(30px,4vw,52px)",fontWeight:300,lineHeight:1.2,marginBottom:24}}>
@@ -1487,7 +1531,7 @@ function StoryPage(){
         </div>
 
         {/* Managing Director */}
-        <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:64,alignItems:"center",marginBottom:88}} className="hero-split">
+        <div className="story-hero-split" style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:64,alignItems:"center",marginBottom:88}} >
           <div style={{position:"relative",aspectRatio:"4/5",overflow:"hidden"}}>
             <img src="./assets/images/people/managing-director-asif.png"
               alt="Asif Mohamed Iqbal Katchi" style={{width:"100%",height:"100%",objectFit:"cover",objectPosition:"center top"}}/>
@@ -1524,7 +1568,7 @@ function StoryPage(){
           </div>
         </div>
         {/* Lifestyle editorial */}
-        <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:48,marginBottom:0}}>
+        <div className="story-editorial" style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:48,marginBottom:0}}>
           {[
             "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/saraya_2.png?v=1781332291",
             "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/IntoxicateMystique.1.png?v=1772518099",
@@ -1579,7 +1623,7 @@ function ContactPage(){
         </div>
       </div>
 
-      <div style={{padding:"80px 5% 96px",display:"grid",gridTemplateColumns:"1fr 1.4fr",gap:64}} className="hero-split">
+      <div className="contact-grid" style={{padding:"80px 5% 96px",display:"grid",gridTemplateColumns:"1fr 1.4fr",gap:64}} >
         {/* Info */}
         <div>
           <div style={{width:32,height:1,background:"#B8922A",marginBottom:20}}/>
@@ -1628,7 +1672,7 @@ function ContactPage(){
         </div>
 
         {/* Form */}
-        <div style={{background:"#000",padding:"44px 40px"}}>
+        <div className="contact-form-box" style={{background:"#000",padding:"44px 40px"}}>
           {sent ? (
             <div style={{textAlign:"center",padding:"60px 0"}}>
               <div style={{width:48,height:48,borderRadius:"50%",background:"#B8922A",display:"flex",alignItems:"center",justifyContent:"center",margin:"0 auto 24px",fontSize:22,color:"#fff"}}>✓</div>
@@ -1730,7 +1774,7 @@ function Navbar({ page, setPage, cartCount }){
             {searchResults.length>0 && (
               <>
                 <p style={{fontSize:9,letterSpacing:4,color:"#B8922A",textTransform:"uppercase",fontFamily:"'DM Sans',sans-serif",marginBottom:20}}>{searchResults.length} results for "{searchQuery}"</p>
-                <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:48}} className="grid-3">
+                <div className="search-results-grid" style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:48}}>
                   {searchResults.map(p=>(
                     <div key={p.id} onClick={()=>{setSearchOpen(false);setSearchQuery("");setSearchResults([]);setPage("product");}} style={{cursor:"pointer"}}>
                       <div style={{position:"relative",aspectRatio:"3/4",overflow:"hidden",background:"#F7F5F2"}}>
@@ -1882,7 +1926,7 @@ function Footer({ setPage }){
         <p style={{fontSize:9,letterSpacing:5,color:"#B8922A",textTransform:"uppercase",fontFamily:"'DM Sans',sans-serif",marginBottom:16,fontWeight:600}}>Stay Inspired</p>
         <h2 className="disp" style={{fontSize:"clamp(28px,3.5vw,46px)",fontWeight:300,marginBottom:14,color:"#fff",letterSpacing:"-0.5px"}}>Join the Khadlaj Circle</h2>
         <p style={{color:"rgba(255,255,255,.5)",fontSize:13,marginBottom:36,fontFamily:"'DM Sans',sans-serif",maxWidth:400,margin:"0 auto 36px",lineHeight:1.7}}>New launches, exclusive offers, and fragrance stories — direct to your inbox.</p>
-        <div style={{display:"flex",gap:0,maxWidth:420,margin:"0 auto",justifyContent:"center"}}>
+        <div className="footer-newsletter-form" style={{display:"flex",gap:0,maxWidth:420,margin:"0 auto",justifyContent:"center"}}>
           <input type="email" placeholder="Your email address"
             style={{flex:1,background:"transparent",border:"1px solid rgba(255,255,255,.20)",borderRight:"none",color:"#fff",padding:"14px 20px",fontSize:12,outline:"none",fontFamily:"'DM Sans',sans-serif",letterSpacing:.5,transition:"border-color .3s"}}
             onFocus={e=>e.currentTarget.style.borderColor="rgba(255,255,255,.4)"}
@@ -1896,7 +1940,7 @@ function Footer({ setPage }){
       </div>
 
       {/* Links */}
-      <div style={{background:"#fff",padding:"72px 5% 48px",display:"grid",gridTemplateColumns:"2fr 1fr 1fr 1fr",gap:48}} className="grid-3">
+      <div className="footer-grid" style={{background:"#fff",padding:"72px 5% 48px",display:"grid",gridTemplateColumns:"2fr 1fr 1fr 1fr",gap:48}}>
         <div>
           <img
             src="https://khadlaj-perfumes.com/cdn/shop/files/Khadlaj_logo_2026--2_160x.png?v=1773752104"
@@ -1947,9 +1991,9 @@ function Footer({ setPage }){
           </div>
         </div>
       </div>
-      <div style={{background:"#fff",borderTop:"1px solid #E8E4DC",padding:"20px 5%",display:"flex",justifyContent:"space-between",flexWrap:"wrap",gap:12,fontSize:9,color:"#888",letterSpacing:1.5,fontFamily:"'DM Sans',sans-serif",textTransform:"uppercase"}}>
+      <div className="footer-bottom" style={{background:"#fff",borderTop:"1px solid #E8E4DC",padding:"20px 5%",display:"flex",justifyContent:"space-between",flexWrap:"wrap",gap:12,fontSize:9,color:"#888",letterSpacing:1.5,fontFamily:"'DM Sans',sans-serif",textTransform:"uppercase"}}>
         <p>© 2025 Khadlaj Perfumes LLC. All rights reserved. UAE.</p>
-        <div style={{display:"flex",gap:24}}>
+        <div className="footer-bottom-links" style={{display:"flex",gap:24}}>
           {["Privacy Policy","Terms of Use","Cookie Settings"].map(l=>(
             <span key={l} style={{cursor:"pointer",transition:"color .2s"}} onMouseEnter={e=>e.target.style.color="#B8922A"} onMouseLeave={e=>e.target.style.color="#888"}>{l}</span>
           ))}
@@ -2000,7 +2044,7 @@ export default function App(){
       {/* ── Floating Shop button ── */}
       {page==="home" && (
         <button
-          className="pulse"
+          className="pulse fab-shop"
           onClick={()=>setPage("collections")}
           style={{
             position:"fixed",bottom:32,right:32,zIndex:200,
@@ -2023,7 +2067,7 @@ export default function App(){
           onClick={()=>setShowPopup(false)}
         >
           <div
-            className="popup-in"
+            className="popup-in popup-grid"
             onClick={e=>e.stopPropagation()}
             style={{
               background:"#fff",maxWidth:520,width:"100%",
@@ -2034,7 +2078,7 @@ export default function App(){
           >
             <button onClick={()=>setShowPopup(false)} style={{position:"absolute",top:14,right:14,background:"none",border:"none",fontSize:22,cursor:"pointer",color:"#000",zIndex:1,lineHeight:1,fontWeight:300}}>×</button>
             {/* Left image */}
-            <div style={{position:"relative",minHeight:340,overflow:"hidden"}}>
+            <div className="popup-img" style={{position:"relative",minHeight:340,overflow:"hidden"}}>
               <img src="https://cdn.shopify.com/s/files/1/0626/6119/8023/files/CloudCandy3.jpg?v=1767169755" alt="" style={{width:"100%",height:"100%",objectFit:"cover"}}/>
               <div style={{position:"absolute",inset:0,background:"rgba(0,0,0,.35)",display:"flex",flexDirection:"column",justifyContent:"flex-end",padding:24}}>
                 <p className="shimmer-text" style={{fontSize:30,fontFamily:"'Cormorant Garamond',serif",fontWeight:300,lineHeight:1.1}}>10% Off<br/>First Order</p>
