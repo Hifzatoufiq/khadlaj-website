@@ -23405,10 +23405,26 @@ function Navbar({ page, setPage, cartCount }) {
     /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("nav", { style: { position: "sticky", top: 0, zIndex: 100, background: "rgba(255,255,255,.97)", backdropFilter: "blur(20px)", borderBottom: "1px solid #E8E4DC" }, children: [
       /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { padding: "0 5%" }, children: [
         /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "grid", gridTemplateColumns: "1fr auto 1fr", alignItems: "center", height: "clamp(70px,8vw,90px)", gap: 16 }, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", gap: 24, alignItems: "center", fontSize: 9, letterSpacing: 2.5, color: "#777", textTransform: "uppercase", fontFamily: "'DM Sans',sans-serif" }, children: [
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "hide-mob", style: { cursor: "pointer", transition: "color .2s" }, onMouseEnter: (e) => e.target.style.color = "#000", onMouseLeave: (e) => e.target.style.color = "#777", onClick: () => setPage("contact"), children: "Find a Store" }),
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "hide-mob", style: { opacity: 0.25, fontSize: 14 }, children: "|" }),
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "hide-mob", style: { cursor: "pointer", transition: "color .2s" }, onMouseEnter: (e) => e.target.style.color = "#000", onMouseLeave: (e) => e.target.style.color = "#777", onClick: () => setPage("contact"), children: "Help" }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", gap: 6, alignItems: "center" }, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { display: "flex", gap: 5, alignItems: "center" }, className: "hide-mob", children: COUNTRIES.map((c) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(
+              "div",
+              {
+                style: { display: "flex", alignItems: "center", gap: 4, padding: "4px 8px", border: "1px solid #EBEBEB", background: "#FCFBFA", cursor: "pointer", transition: "all .2s ease" },
+                onMouseEnter: (e) => {
+                  e.currentTarget.style.borderColor = "#000";
+                  e.currentTarget.style.background = "#fff";
+                },
+                onMouseLeave: (e) => {
+                  e.currentTarget.style.borderColor = "#EBEBEB";
+                  e.currentTarget.style.background = "#FCFBFA";
+                },
+                children: [
+                  /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { fontSize: 11 }, children: c.flag }),
+                  /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { fontSize: 9, color: "#444", fontFamily: "'DM Sans',sans-serif", fontWeight: 500 }, children: c.name })
+                ]
+              },
+              c.name
+            )) }),
             /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "mob-search-left", style: { cursor: "pointer", fontSize: 18, color: "#000", lineHeight: 1 }, onClick: () => setSearchOpen(true), children: "\u2315" })
           ] }),
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { onClick: () => setPage("home"), style: { cursor: "pointer", textAlign: "center", userSelect: "none", display: "flex", alignItems: "center", justifyContent: "center" }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(

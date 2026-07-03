@@ -1648,10 +1648,18 @@ function Navbar({ page, setPage, cartCount }){
         <div style={{padding:"0 5%"}}>
           <div style={{display:"grid",gridTemplateColumns:"1fr auto 1fr",alignItems:"center",height:"clamp(70px,8vw,90px)",gap:16}}>
             {/* Left utility */}
-            <div style={{display:"flex",gap:24,alignItems:"center",fontSize:9,letterSpacing:2.5,color:"#777",textTransform:"uppercase",fontFamily:"'DM Sans',sans-serif"}}>
-              <span className="hide-mob" style={{cursor:"pointer",transition:"color .2s"}} onMouseEnter={e=>e.target.style.color="#000"} onMouseLeave={e=>e.target.style.color="#777"} onClick={()=>setPage("contact")}>Find a Store</span>
-              <span className="hide-mob" style={{opacity:.25,fontSize:14}}>|</span>
-              <span className="hide-mob" style={{cursor:"pointer",transition:"color .2s"}} onMouseEnter={e=>e.target.style.color="#000"} onMouseLeave={e=>e.target.style.color="#777"} onClick={()=>setPage("contact")}>Help</span>
+            <div style={{display:"flex",gap:6,alignItems:"center"}}>
+              <div style={{display:"flex",gap:5,alignItems:"center"}} className="hide-mob">
+                {COUNTRIES.map(c=>(
+                  <div key={c.name} style={{display:"flex",alignItems:"center",gap:4,padding:"4px 8px",border:"1px solid #EBEBEB",background:"#FCFBFA",cursor:"pointer",transition:"all .2s ease"}}
+                    onMouseEnter={e=>{e.currentTarget.style.borderColor="#000";e.currentTarget.style.background="#fff";}}
+                    onMouseLeave={e=>{e.currentTarget.style.borderColor="#EBEBEB";e.currentTarget.style.background="#FCFBFA";}}
+                  >
+                    <span style={{fontSize:11}}>{c.flag}</span>
+                    <span style={{fontSize:9,color:"#444",fontFamily:"'DM Sans',sans-serif",fontWeight:500}}>{c.name}</span>
+                  </div>
+                ))}
+              </div>
               <span className="mob-search-left" style={{cursor:"pointer",fontSize:18,color:"#000",lineHeight:1}} onClick={()=>setSearchOpen(true)}>⌕</span>
             </div>
             {/* Logo */}
