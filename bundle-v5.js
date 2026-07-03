@@ -21780,9 +21780,9 @@ var STATS = [
 ];
 var PRODUCTS = [
   // ── Local products (own images) ──
-  { id: 13, name: "Island", col: "Master Perfumery", price: 150, size: "100ml Extrait", badge: "Best Seller", gender: "Unisex", notes: ["Marine", "Amber", "Oud"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Island3.jpg?v=1767168724" },
-  { id: 14, name: "Cream Velvet", col: "Master Perfumery", price: 130, size: "Gift Set", badge: "Best Seller", gender: "Unisex", notes: ["Cream", "Velvet", "Musk"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/CreamVelvet-1.jpg?v=1779352383" },
-  { id: 15, name: "Cloud Candy", col: "Atyaab", price: 325, size: "Gift Set", badge: null, gender: "Her", notes: ["Peach", "Musk", "Vanilla"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/CloudCandy3.jpg?v=1767169755", images: ["https://cdn.shopify.com/s/files/1/0626/6119/8023/files/CloudCandy3.jpg?v=1767169755", "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/CloudCandy3.jpg?v=1767169755", "./assets/images/products/cloud-candy-open-box.png", "./assets/images/products/cloud-candy-back-box.png"] },
+  { id: 13, name: "Island", col: "Master Perfumery", price: 150, size: "100ml Extrait", badge: "Best Seller", gender: "Unisex", notes: ["Marine", "Amber", "Oud"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Island1.jpg?v=1767168752" },
+  { id: 14, name: "Cream Velvet", col: "Master Perfumery", price: 130, size: "Gift Set", badge: "Best Seller", gender: "Unisex", notes: ["Cream", "Velvet", "Musk"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/CreamVelvet-2.jpg?v=1779352384" },
+  { id: 15, name: "Cloud Candy", col: "Atyaab", price: 325, size: "Gift Set", badge: null, gender: "Her", notes: ["Peach", "Musk", "Vanilla"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/CloudCandy1.jpg?v=1767169755", images: ["https://cdn.shopify.com/s/files/1/0626/6119/8023/files/CloudCandy1.jpg?v=1767169755", "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/CloudCandy1.jpg?v=1767169755", "./assets/images/products/cloud-candy-open-box.png", "./assets/images/products/cloud-candy-back-box.png"] },
   { id: 16, name: "Strawberry Shake", col: "Atyaab", price: 295, size: "100ml EDP", badge: null, gender: "Her", notes: ["Strawberry", "Musk", "Vanilla"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/STRAWBERRY_SHAKE-03.jpg?v=1764228432" },
   { id: 17, name: "Biscotti Date Toffee", col: "Lafede", price: 315, size: "100ml EDP", badge: "New", gender: "Unisex", notes: ["Date", "Coffee", "Gourmand"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Biscotti_Date_Toffee-3.jpg?v=1776407655" },
   { id: 18, name: "Biscotti Melon Musk", col: "Lafede", price: 315, size: "100ml EDP", badge: "New", gender: "Unisex", notes: ["Melon", "Musk", "Cream"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Bleu_Glace_02.jpg?v=1738325363" },
@@ -21791,7 +21791,7 @@ var PRODUCTS = [
   { id: 21, name: "Bleu Glac\xE9", col: "Atyaab", price: 275, size: "100ml EDP", badge: "New", gender: "Unisex", notes: ["Marine", "Bergamot", "Musk"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Bleu_Glace_02.jpg?v=1738325363" },
   // ── Live products from khadlaj-perfumes.com ──
   { id: 200, name: "Saraya", col: "Master Perfumery", price: 105, size: "60ml Extrait", badge: "New", gender: "Unisex", notes: ["Amber", "Bergamot", "Vetiver"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/saraya_3.png?v=1781332291" },
-  { id: 201, name: "Nafais Sharq Gift Set", col: "Atyaab", price: 150, size: "Gift Set", badge: null, gender: "Her", notes: ["Rose", "Amber", "Musk"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Nafais-Sharq-1.jpg?v=1779352739" },
+  { id: 201, name: "Nafais Sharq Gift Set", col: "Atyaab", price: 150, size: "Gift Set", badge: null, gender: "Her", notes: ["Rose", "Amber", "Musk"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Nafais-Sharq-2.jpg?v=1779352739" },
   { id: 203, name: "Zayaan Silver", col: "Atyaab", price: 150, size: "100ml EDP", badge: "New", gender: "Him", notes: ["Citrus", "Lavender", "Sandalwood"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Zayan_Silver-3.jpg?v=1776430400" },
   { id: 204, name: "Ihthiraam", col: "Master Perfumery", price: 150, size: "60ml Extrait", badge: "New", gender: "Unisex", notes: ["Bergamot", "Oud", "Musk"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Ihthiraam-3.jpg?v=1775636549" },
   { id: 205, name: "Qarar", col: "Master Perfumery", price: 150, size: "60ml Extrait", badge: "New", gender: "Unisex", notes: ["Oud", "Leather", "Vetiver"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Qarar-3.jpg?v=1775637258" },
@@ -21804,7 +21804,7 @@ var PRODUCTS = [
   { id: 212, name: "Onyx", col: "Atyaab", price: 125, size: "100ml EDP", badge: "Best Seller", gender: "Him", notes: ["Cardamom", "Sandalwood", "Tonka"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/ONYX-03.jpg?v=1762324228" },
   { id: 213, name: "Shiyaaka", col: "Master Perfumery", price: 65, size: "100ml EDP", badge: "Best Seller", gender: "Him", notes: ["Bergamot", "Vetiver", "Cardamom"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Shiyaaka.1.jpg?v=1782717568" },
   { id: 214, name: "Nafais Magrib", col: "Atyaab", price: 110, size: "100ml EDP", badge: "New", gender: "Unisex", notes: ["Citrus", "Marine", "Musk"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Nafais_Magrib-3.jpg?v=1761115886" },
-  { id: 215, name: "Island Gift Set", col: "Master Perfumery", price: 179, size: "Gift Set", badge: null, gender: "Unisex", notes: ["Marine", "Amber", "Musk"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Island3.jpg?v=1767168724" },
+  { id: 215, name: "Island Gift Set", col: "Master Perfumery", price: 179, size: "Gift Set", badge: null, gender: "Unisex", notes: ["Marine", "Amber", "Musk"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Island1.jpg?v=1767168752" },
   { id: 22, name: "Hareem Al Sultan", col: "Atyaab", price: 195, size: "75ml EDP", badge: null, gender: "Her", notes: ["Rose", "Amber", "Musk"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/SHAHI_OUD_EDP_SPRAY_100_ML_-_Khadlaj_Perfumes-1965925.jpg?v=1722412108" },
   { id: 23, name: "Shiyaaka Shadow", col: "Master Perfumery", price: 340, size: "100ml EDP", badge: "Limited", gender: "Him", notes: ["Oud", "Leather", "Vetiver"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Shiyaaka_Shadow-3.jpg?v=1751436642" },
   // ── New Best Sellers (requested list additions) ──
@@ -21827,7 +21827,7 @@ var REELS = [
     caption: "The viral sensation on #perfumetok. Does it live up to the hype?",
     tag: "Viral on TikTok",
     price: 195,
-    img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/CloudCandy3.jpg?v=1767169755"
+    img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/CloudCandy1.jpg?v=1767169755"
   },
   {
     id: "7614741288168066334",
@@ -21835,7 +21835,7 @@ var REELS = [
     caption: "A gorgeous creamy floral gourmand. Completely blind buy safe!",
     tag: "First Impressions",
     price: 200,
-    img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Island3.jpg?v=1767168724"
+    img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Island1.jpg?v=1767168752"
   },
   {
     id: "7639701570875165985",
@@ -21867,7 +21867,7 @@ var REELS = [
     caption: "Wore this today and got stopped 3 times. Must have for gourmand lovers.",
     tag: "Review",
     price: 345,
-    img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/CreamVelvet-1.jpg?v=1779352383"
+    img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/CreamVelvet-2.jpg?v=1779352384"
   }
 ];
 var SOCIAL_LINKS = {
@@ -22878,8 +22878,8 @@ function ProductPage({ product, addToCart, setPage, setViewProduct }) {
   const related = PRODUCTS.filter((p) => p.col === product.col && p.id !== product.id).slice(0, 3);
   const thumbs = product.images?.length > 1 ? product.images : [
     product.img,
-    "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/CloudCandy3.jpg?v=1767169755",
-    "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Nafais-Sharq-1.jpg?v=1779352739",
+    "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/CloudCandy1.jpg?v=1767169755",
+    "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Nafais-Sharq-2.jpg?v=1779352739",
     "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Zayan_Silver-3.jpg?v=1776430400"
   ];
   (0, import_react.useEffect)(() => {
@@ -22994,7 +22994,7 @@ function GiftsPage({ addToCart, setViewProduct, setPage }) {
       /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
         "img",
         {
-          src: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/CloudCandy3.jpg?v=1767169755",
+          src: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/CloudCandy1.jpg?v=1767169755",
           alt: "Gift Sets",
           style: { width: "100%", height: "100%", objectFit: "cover", opacity: 0.55 }
         }
@@ -23799,7 +23799,7 @@ function App() {
             children: [
               /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", { onClick: () => setShowPopup(false), style: { position: "absolute", top: 14, right: 14, background: "none", border: "none", fontSize: 22, cursor: "pointer", color: "#000", zIndex: 1, lineHeight: 1, fontWeight: 300 }, children: "\xD7" }),
               /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { position: "relative", minHeight: 340, overflow: "hidden" }, children: [
-                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", { src: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/CloudCandy3.jpg?v=1767169755", alt: "", style: { width: "100%", height: "100%", objectFit: "cover" } }),
+                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", { src: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/CloudCandy1.jpg?v=1767169755", alt: "", style: { width: "100%", height: "100%", objectFit: "cover" } }),
                 /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { position: "absolute", inset: 0, background: "rgba(0,0,0,.35)", display: "flex", flexDirection: "column", justifyContent: "flex-end", padding: 24 }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { className: "shimmer-text", style: { fontSize: 30, fontFamily: "'Cinzel',serif", fontWeight: 300, lineHeight: 1.1 }, children: [
                   "10% Off",
                   /* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {}),
