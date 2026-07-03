@@ -22009,6 +22009,8 @@ function StarRating({ n = 5, color = C.brass }) {
 }
 function ProductCard({ p, onView }) {
   const [hov, setHov] = (0, import_react.useState)(false);
+  const notes = p.notes || [];
+  const noteColors = ["#C8A96E", "#9C7B50", "#B8866A", "#7A9E8A", "#8B7EAA", "#B06A6A", "#6A8BAA", "#A09060"];
   return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(
     "div",
     {
@@ -22021,76 +22023,58 @@ function ProductCard({ p, onView }) {
         flexDirection: "column",
         position: "relative",
         cursor: "pointer",
-        textAlign: "center",
-        transition: "transform .3s ease, box-shadow .3s ease",
-        transform: hov ? "translateY(-6px)" : "translateY(0)",
-        boxShadow: hov ? "0 16px 40px rgba(0,0,0,.10)" : "none"
+        border: hov ? "1px solid #000" : "1px solid #EBEBEB",
+        transition: "border-color .3s ease, box-shadow .3s ease",
+        boxShadow: hov ? "0 12px 40px rgba(0,0,0,.10)" : "0 2px 8px rgba(0,0,0,.04)"
       },
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { position: "relative", aspectRatio: "3/4", overflow: "hidden", background: "transparent" }, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
-            "img",
-            {
-              src: p.img,
-              alt: p.name,
-              loading: "lazy",
-              style: {
-                width: "100%",
-                height: "100%",
-                objectFit: "contain",
-                padding: "12px",
-                transition: "transform .6s cubic-bezier(0.25,0.8,0.25,1)",
-                transform: hov ? "scale(1.06)" : "scale(1)"
-              }
+        p.badge && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: {
+          position: "absolute",
+          top: 12,
+          left: 12,
+          zIndex: 3,
+          background: p.badge === "Limited" ? "#5C0000" : p.badge === "New" ? "#B8922A" : "#000",
+          color: "#fff",
+          fontSize: 8,
+          letterSpacing: 2.5,
+          padding: "4px 10px",
+          fontWeight: 700,
+          textTransform: "uppercase",
+          fontFamily: "'DM Sans',sans-serif"
+        }, children: p.badge }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { position: "relative", aspectRatio: "4/5", overflow: "hidden", background: "#fff" }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+          "img",
+          {
+            src: p.img,
+            alt: p.name,
+            loading: "lazy",
+            style: {
+              width: "100%",
+              height: "100%",
+              objectFit: "contain",
+              padding: "16px",
+              transition: "transform .6s cubic-bezier(0.25,0.8,0.25,1)",
+              transform: hov ? "scale(1.05)" : "scale(1)"
             }
-          ),
-          p.badge && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: {
-            position: "absolute",
-            top: 10,
-            left: 10,
-            background: p.badge === "Limited" ? "#5C0000" : p.badge === "New" ? "#111" : "#B8922A",
-            color: "#fff",
-            fontSize: 7,
-            letterSpacing: 2,
-            padding: "4px 10px",
-            fontWeight: 700,
-            textTransform: "uppercase",
-            fontFamily: "'DM Sans',sans-serif"
-          }, children: p.badge })
-        ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { padding: "10px 8px 16px", flex: 1, display: "flex", flexDirection: "column", alignItems: "center" }, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", alignItems: "center", gap: 4, marginBottom: 4 }, children: [
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { color: "#C8A96E", fontSize: 11 }, children: "\u2605".repeat(5) }),
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { fontSize: 9, color: "#aaa", fontFamily: "'DM Sans',sans-serif" }, children: "(225)" })
-          ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: {
-            fontSize: 8,
-            letterSpacing: 2.5,
-            color: "#B8922A",
-            textTransform: "uppercase",
-            marginBottom: 4,
-            fontFamily: "'DM Sans',sans-serif",
-            fontWeight: 600
-          }, children: p.col }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", { style: {
-            fontSize: 11,
-            fontWeight: 700,
-            color: "#111",
-            lineHeight: 1.35,
-            marginBottom: 6,
-            textTransform: "uppercase",
-            letterSpacing: 1.5,
-            fontFamily: "'DM Sans',sans-serif"
-          }, children: p.name }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { style: {
-            fontSize: 13,
-            fontWeight: 600,
-            color: "#111",
-            fontFamily: "'DM Sans',sans-serif"
-          }, children: [
-            "AED ",
-            p.price,
-            " /-"
+          }
+        ) }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { padding: "16px 14px 18px", flex: 1, display: "flex", flexDirection: "column" }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 8, letterSpacing: 3, color: "#B8922A", textTransform: "uppercase", marginBottom: 6, fontFamily: "'DM Sans',sans-serif", fontWeight: 600 }, children: p.col }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", { style: { fontSize: 13, fontWeight: 700, color: "#000", lineHeight: 1.3, marginBottom: 4, textTransform: "uppercase", letterSpacing: 1, fontFamily: "'DM Sans',sans-serif" }, children: p.name }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 11, color: "#999", marginBottom: 10, fontFamily: "'DM Sans',sans-serif", letterSpacing: 0.4 }, children: p.size }),
+          notes.length > 0 && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { display: "flex", flexWrap: "wrap", gap: 5, marginBottom: 12 }, children: notes.map((n, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { style: { display: "inline-flex", alignItems: "center", gap: 4, padding: "3px 8px", background: "#F5F5F5", fontSize: 8, letterSpacing: 1, color: "#666", textTransform: "uppercase", fontFamily: "'DM Sans',sans-serif" }, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { width: 5, height: 5, borderRadius: "50%", background: noteColors[i % noteColors.length], flexShrink: 0, display: "inline-block" } }),
+            n
+          ] }, n)) }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", alignItems: "center", justifyContent: "space-between", marginTop: "auto", paddingTop: 12, borderTop: "1px solid #F0F0F0" }, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", alignItems: "center", gap: 4 }, children: [
+              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { color: "#C8A96E", fontSize: 11, letterSpacing: 1 }, children: "\u2605".repeat(5) }),
+              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { fontSize: 9, color: "#aaa", fontFamily: "'DM Sans',sans-serif" }, children: "(905)" })
+            ] }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { style: { fontSize: 15, fontWeight: 700, color: "#000", fontFamily: "'DM Sans',sans-serif" }, children: [
+              "AED ",
+              p.price
+            ] })
           ] })
         ] })
       ]
