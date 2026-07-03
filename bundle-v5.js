@@ -21747,11 +21747,11 @@ var C = {
   shadow: "rgba(0,0,0,.06)"
 };
 var COUNTRIES = [
-  { name: "UAE", flag: "\u{1F1E6}\u{1F1EA}", domain: "khadlaj.ae" },
-  { name: "Saudi", flag: "\u{1F1F8}\u{1F1E6}", domain: "khadlaj.sa" },
-  { name: "Kuwait", flag: "\u{1F1F0}\u{1F1FC}", domain: "khadlaj.kw" },
-  { name: "Bahrain", flag: "\u{1F1E7}\u{1F1ED}", domain: "khadlaj.bh" },
-  { name: "Global", flag: "\u{1F310}", domain: "khadlaj-perfumes.com" }
+  { name: "UAE", flagUrl: "https://flagcdn.com/w40/ae.png", domain: "khadlaj.ae" },
+  { name: "Saudi", flagUrl: "https://flagcdn.com/w40/sa.png", domain: "khadlaj.sa" },
+  { name: "Kuwait", flagUrl: "https://flagcdn.com/w40/kw.png", domain: "khadlaj.kw" },
+  { name: "Bahrain", flagUrl: "https://flagcdn.com/w40/bh.png", domain: "khadlaj.bh" },
+  { name: "Global", flagUrl: "global", domain: "khadlaj-perfumes.com" }
 ];
 var SCENT_RIBBON = [
   "Oud",
@@ -23409,7 +23409,7 @@ function Navbar({ page, setPage, cartCount }) {
             /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { display: "flex", gap: 4, alignItems: "center" }, className: "hide-mob", children: COUNTRIES.map((c) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(
               "div",
               {
-                style: { display: "flex", alignItems: "center", gap: 3, padding: "5px 10px", background: "transparent", cursor: "pointer", transition: "all .25s ease", opacity: 0.75 },
+                style: { display: "flex", alignItems: "center", gap: 5, padding: "5px 10px", background: "transparent", cursor: "pointer", transition: "all .25s ease", opacity: 0.75 },
                 onMouseEnter: (e) => {
                   e.currentTarget.style.opacity = "1";
                   e.currentTarget.style.transform = "scale(1.05)";
@@ -23419,7 +23419,11 @@ function Navbar({ page, setPage, cartCount }) {
                   e.currentTarget.style.transform = "scale(1)";
                 },
                 children: [
-                  /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { fontSize: 12 }, children: c.flag }),
+                  c.flagUrl === "global" ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("svg", { width: "12", height: "12", viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: "2", strokeLinecap: "round", strokeLinejoin: "round", style: { color: "#111" }, children: [
+                    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", { cx: "12", cy: "12", r: "10" }),
+                    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("line", { x1: "2", y1: "12", x2: "22", y2: "12" }),
+                    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", { d: "M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" })
+                  ] }) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", { src: c.flagUrl, alt: "", style: { width: 16, height: 11, objectFit: "cover", borderRadius: 1 } }),
                   /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { fontSize: "8px", color: "#111", fontFamily: "'Outfit',sans-serif", fontWeight: 600, letterSpacing: "1px", textTransform: "uppercase" }, children: c.name })
                 ]
               },
@@ -23586,7 +23590,7 @@ function Footer({ setPage }) {
         /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { display: "flex", gap: 8, flexWrap: "wrap" }, children: COUNTRIES.map((c) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(
           "div",
           {
-            style: { display: "flex", alignItems: "center", gap: 4, padding: "5px 12px", border: "1px solid #e5e5e5", background: "#fff", cursor: "pointer", transition: "all .2s ease" },
+            style: { display: "flex", alignItems: "center", gap: 6, padding: "5px 12px", border: "1px solid #e5e5e5", background: "#fff", cursor: "pointer", transition: "all .2s ease" },
             onMouseEnter: (e) => {
               e.currentTarget.style.borderColor = "#000";
             },
@@ -23594,7 +23598,11 @@ function Footer({ setPage }) {
               e.currentTarget.style.borderColor = "#e5e5e5";
             },
             children: [
-              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { fontSize: 12 }, children: c.flag }),
+              c.flagUrl === "global" ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("svg", { width: "12", height: "12", viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: "2", strokeLinecap: "round", strokeLinejoin: "round", style: { color: "#222" }, children: [
+                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", { cx: "12", cy: "12", r: "10" }),
+                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("line", { x1: "2", y1: "12", x2: "22", y2: "12" }),
+                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", { d: "M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" })
+              ] }) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", { src: c.flagUrl, alt: "", style: { width: 16, height: 11, objectFit: "cover", borderRadius: 1 } }),
               /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { fontSize: 9, color: "#222", fontFamily: "'Outfit',sans-serif", fontWeight: 600 }, children: c.name })
             ]
           },

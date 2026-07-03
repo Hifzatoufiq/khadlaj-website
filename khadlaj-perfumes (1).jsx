@@ -1,4 +1,4 @@
-﻿import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 
 /* ═══════════════════════════════════════════════════════════════
    DESIGN TOKENS
@@ -27,11 +27,11 @@ const C = {
    DATA
 ═══════════════════════════════════════════════════════════════ */
 const COUNTRIES = [
-  { name:"UAE",    flag:"🇦🇪", domain:"khadlaj.ae" },
-  { name:"Saudi",  flag:"🇸🇦", domain:"khadlaj.sa" },
-  { name:"Kuwait", flag:"🇰🇼", domain:"khadlaj.kw" },
-  { name:"Bahrain",flag:"🇧🇭", domain:"khadlaj.bh" },
-  { name:"Global", flag:"🌐", domain:"khadlaj-perfumes.com" },
+  { name:"UAE",    flagUrl:"https://flagcdn.com/w40/ae.png", domain:"khadlaj.ae" },
+  { name:"Saudi",  flagUrl:"https://flagcdn.com/w40/sa.png", domain:"khadlaj.sa" },
+  { name:"Kuwait", flagUrl:"https://flagcdn.com/w40/kw.png", domain:"khadlaj.kw" },
+  { name:"Bahrain",flagUrl:"https://flagcdn.com/w40/bh.png", domain:"khadlaj.bh" },
+  { name:"Global", flagUrl:"global", domain:"khadlaj-perfumes.com" },
 ];
 
 const PAYMENTS = ["Visa","Mastercard","Apple Pay","Google Pay","Tabby","Tamara","PayTabs","PayPal"];
@@ -1651,11 +1651,15 @@ function Navbar({ page, setPage, cartCount }){
             <div style={{display:"flex",gap:6,alignItems:"center"}}>
               <div style={{display:"flex",gap:4,alignItems:"center"}} className="hide-mob">
                 {COUNTRIES.map(c=>(
-                  <div key={c.name} style={{display:"flex",alignItems:"center",gap:3,padding:"5px 10px",background:"transparent",cursor:"pointer",transition:"all .25s ease",opacity:0.75}}
+                  <div key={c.name} style={{display:"flex",alignItems:"center",gap:5,padding:"5px 10px",background:"transparent",cursor:"pointer",transition:"all .25s ease",opacity:0.75}}
                     onMouseEnter={e=>{e.currentTarget.style.opacity="1";e.currentTarget.style.transform="scale(1.05)";}}
                     onMouseLeave={e=>{e.currentTarget.style.opacity="0.75";e.currentTarget.style.transform="scale(1)";}}
                   >
-                    <span style={{fontSize:12}}>{c.flag}</span>
+                    {c.flagUrl === "global" ? (
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{color:"#111"}}><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    ) : (
+                      <img src={c.flagUrl} alt="" style={{width:16,height:11,objectFit:"cover",borderRadius:1}} />
+                    )}
                     <span style={{fontSize:"8px",color:"#111",fontFamily:"'Outfit',sans-serif",fontWeight:600,letterSpacing:"1px",textTransform:"uppercase"}}>{c.name}</span>
                   </div>
                 ))}
@@ -1792,11 +1796,15 @@ function Footer({ setPage }){
           
           <div style={{display:"flex",gap:8,flexWrap:"wrap"}}>
             {COUNTRIES.map(c=>(
-              <div key={c.name} style={{display:"flex",alignItems:"center",gap:4,padding:"5px 12px",border:"1px solid #e5e5e5",background:"#fff",cursor:"pointer",transition:"all .2s ease"}}
+              <div key={c.name} style={{display:"flex",alignItems:"center",gap:6,padding:"5px 12px",border:"1px solid #e5e5e5",background:"#fff",cursor:"pointer",transition:"all .2s ease"}}
                 onMouseEnter={e=>{e.currentTarget.style.borderColor="#000";}}
                 onMouseLeave={e=>{e.currentTarget.style.borderColor="#e5e5e5";}}
               >
-                <span style={{fontSize:12}}>{c.flag}</span>
+                {c.flagUrl === "global" ? (
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{color:"#222"}}><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                ) : (
+                  <img src={c.flagUrl} alt="" style={{width:16,height:11,objectFit:"cover",borderRadius:1}} />
+                )}
                 <span style={{fontSize:9,color:"#222",fontFamily:"'Outfit',sans-serif",fontWeight:600}}>{c.name}</span>
               </div>
             ))}
