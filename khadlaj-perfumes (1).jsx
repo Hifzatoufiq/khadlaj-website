@@ -569,83 +569,8 @@ function HomePage({ setPage, addToCart, setViewProduct }){
         {/* Side vignette */}
         <div style={{position:"absolute",inset:0,background:"linear-gradient(to right,rgba(0,0,0,.4) 0%,transparent 55%)",pointerEvents:"none"}}/>
 
-        {/* ── Main Content: full inset flex, content sits at bottom ── */}
-        <div className="hero-text-container" style={{
-          position:"absolute",inset:0,
-          display:"flex",
-          flexDirection:"column",
-          justifyContent:"flex-end",
-          padding:"clamp(100px,14vh,160px) clamp(24px,7%,108px) clamp(28px,4vh,56px)",
-          zIndex:3,
-          maxWidth:660,
-        }}>
-
-          {/* Headline */}
-          <h1 className="disp hero-headline" style={{
-            fontSize:"clamp(34px,4.5vw,72px)",
-            fontWeight:400,
-            fontStyle:"italic",
-            lineHeight:1.1,
-            color:"#fff",
-            margin:"0 0 16px",
-            letterSpacing:"-0.3px",
-          }}>
-            The Art of<br/>
-            <span style={{fontStyle:"normal",fontWeight:400,color:"#C9A84C"}}>Arabian Fragrance</span>
-          </h1>
 
 
-          {/* CTA Buttons */}
-          <div className="hero-cta-row" style={{display:"flex",gap:12,flexWrap:"wrap",marginBottom:32}}>
-            <button
-              onClick={()=>setPage("collections")}
-              style={{
-                background:"#C9A84C",color:"#000",border:"none",
-                padding:"12px 32px",fontSize:10,fontWeight:600,
-                letterSpacing:3,textTransform:"uppercase",cursor:"pointer",
-                fontFamily:"'DM Sans',sans-serif",transition:"opacity .2s",
-              }}
-              onMouseEnter={e=>e.currentTarget.style.opacity=".82"}
-              onMouseLeave={e=>e.currentTarget.style.opacity="1"}
-            >Shop Now</button>
-            <button
-              onClick={()=>setPage("story")}
-              style={{
-                background:"transparent",color:"#fff",
-                border:"1px solid rgba(255,255,255,.28)",
-                padding:"11px 26px",fontSize:10,fontWeight:400,
-                letterSpacing:3,textTransform:"uppercase",cursor:"pointer",
-                fontFamily:"'DM Sans',sans-serif",transition:"all .2s",
-              }}
-              onMouseEnter={e=>{e.currentTarget.style.borderColor="#C9A84C";e.currentTarget.style.color="#C9A84C";}}
-              onMouseLeave={e=>{e.currentTarget.style.borderColor="rgba(255,255,255,.28)";e.currentTarget.style.color="#fff";}}
-            >Our Story</button>
-          </div>
-
-          {/* Stats bar */}
-          <div className="hero-stats-row" style={{display:"flex",gap:0,borderTop:"1px solid rgba(255,255,255,.1)",paddingTop:18,flexWrap:"wrap",rowGap:8}}>
-            {[
-              {v:"1997",l:"Est."},
-              {v:"400+",l:"Fragrances"},
-              {v:"30+",l:"Countries"},
-              {v:"4.8★",l:"Rating"},
-            ].map((s,i)=>(
-              <div key={s.l} className="hero-stat-item" style={{
-                paddingRight:22,marginRight:22,
-                borderRight: i<3 ? "1px solid rgba(255,255,255,.1)" : "none",
-              }}>
-                <p style={{fontSize:"clamp(15px,1.8vw,20px)",fontWeight:500,color:"#fff",fontFamily:"'DM Sans',sans-serif",lineHeight:1,marginBottom:4}}>{s.v}</p>
-                <p style={{fontSize:9,letterSpacing:3,color:"rgba(255,255,255,.35)",textTransform:"uppercase",fontFamily:"'DM Sans',sans-serif"}}>{s.l}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Scroll hint — right side */}
-        <div style={{position:"absolute",bottom:32,right:"clamp(20px,3%,44px)",zIndex:3,display:"flex",flexDirection:"column",alignItems:"center",gap:8}}>
-          <div style={{width:1,height:40,background:"rgba(255,255,255,.2)"}}/>
-          <p style={{fontSize:8,letterSpacing:4,color:"rgba(255,255,255,.25)",textTransform:"uppercase",fontFamily:"'DM Sans',sans-serif",writingMode:"vertical-rl"}}>Scroll</p>
-        </div>
       </section>
 
       {/* ── SCENT RIBBON ── */}
