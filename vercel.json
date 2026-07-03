@@ -1,5 +1,0 @@
-{
-  "buildCommand": "cd web && npm install && node node_modules/.bin/esbuild main.jsx --bundle --outfile=bundle-v5.js --format=esm",
-  "outputDirectory": "web",
-  "installCommand": "cd web && npm install"
-}
