@@ -21790,19 +21790,19 @@ var PRODUCTS = [
   { id: 20, name: "Shahi Oud", col: "Master Perfumery", price: 360, size: "100ml EDP", badge: null, gender: "Unisex", notes: ["Oud", "Amber", "Saffron"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/SHAHI_OUD_EDP_SPRAY_100_ML_-_Khadlaj_Perfumes-1965925.jpg?v=1722412108" },
   { id: 21, name: "Bleu Glac\xE9", col: "Atyaab", price: 275, size: "100ml EDP", badge: "New", gender: "Unisex", notes: ["Marine", "Bergamot", "Musk"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Bleu_Glace_02.jpg?v=1738325363" },
   // ── Live products from khadlaj-perfumes.com ──
-  { id: 200, name: "Saraya", col: "Master Perfumery", price: 105, size: "60ml Extrait", badge: "New", gender: "Unisex", notes: ["Amber", "Bergamot", "Vetiver"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/saraya_2.png?v=1781332291" },
+  { id: 200, name: "Saraya", col: "Master Perfumery", price: 105, size: "60ml Extrait", badge: "New", gender: "Unisex", notes: ["Amber", "Bergamot", "Vetiver"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/saraya_1.png?v=1781332291" },
   { id: 201, name: "Nafais Sharq Gift Set", col: "Atyaab", price: 150, size: "Gift Set", badge: null, gender: "Her", notes: ["Rose", "Amber", "Musk"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/NAFAIS-3.jpg?v=1751435171" },
   { id: 203, name: "Zayaan Silver", col: "Atyaab", price: 150, size: "100ml EDP", badge: "New", gender: "Him", notes: ["Citrus", "Lavender", "Sandalwood"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Zayan_Silver-3.jpg?v=1776430400" },
   { id: 204, name: "Ihthiraam", col: "Master Perfumery", price: 150, size: "60ml Extrait", badge: "New", gender: "Unisex", notes: ["Bergamot", "Oud", "Musk"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Ihthiraam-3.jpg?v=1775636549" },
   { id: 205, name: "Qarar", col: "Master Perfumery", price: 150, size: "60ml Extrait", badge: "New", gender: "Unisex", notes: ["Oud", "Leather", "Vetiver"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Qarar-3.jpg?v=1775637258" },
-  { id: 206, name: "Icon", col: "Atyaab", price: 130, size: "100ml EDP", badge: "Best Seller", gender: "Him", notes: ["Bergamot", "Lavender", "Amber"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Icon.3.jpg?v=1773206615" },
+  { id: 206, name: "Icon", col: "Atyaab", price: 130, size: "100ml EDP", badge: "Best Seller", gender: "Him", notes: ["Bergamot", "Lavender", "Amber"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Icon.4.jpg?v=1773206615" },
   { id: 207, name: "Intoxicate Mystique", col: "Lafede", price: 150, size: "100ml Extrait", badge: null, gender: "Him", notes: ["Musk", "Vetiver", "Vanilla"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/IntoxicateMystique.3.png?v=1772518819" },
   { id: 208, name: "Panache", col: "Master Perfumery", price: 200, size: "100ml Extrait", badge: "Best Seller", gender: "Her", notes: ["Vanilla", "Sandalwood", "Musk"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Panache_1_jpg_c97c705a-aebf-4bf9-a621-f11b565e765d.jpg?v=1771333282" },
   { id: 209, name: "Onyx Silver", col: "Atyaab", price: 125, size: "100ml EDP", badge: "New", gender: "Unisex", notes: ["Bergamot", "Patchouli", "Tonka"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/OnyxSilver3.jpg?v=1769502676" },
   { id: 210, name: "Nuha Bon Bon", col: "Atyaab", price: 85, size: "85ml EDP", badge: "New", gender: "Her", notes: ["Strawberry", "Vanilla", "Musk"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/NUHA_BON_BON-03.jpg?v=1768477660" },
   { id: 211, name: "Sawaar", col: "Master Perfumery", price: 200, size: "100ml Extrait", badge: "Best Seller", gender: "Her", notes: ["Vanilla", "Sandalwood", "Amber"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/SAWAAR-03.jpg?v=1764151207" },
   { id: 212, name: "Onyx", col: "Atyaab", price: 125, size: "100ml EDP", badge: "Best Seller", gender: "Him", notes: ["Cardamom", "Sandalwood", "Tonka"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/ONYX-03.jpg?v=1762324228" },
-  { id: 213, name: "Shiyaaka", col: "Master Perfumery", price: 65, size: "100ml EDP", badge: "Best Seller", gender: "Him", notes: ["Bergamot", "Vetiver", "Cardamom"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Shiyaaka.3.jpg?v=1771043797" },
+  { id: 213, name: "Shiyaaka", col: "Master Perfumery", price: 65, size: "100ml EDP", badge: "Best Seller", gender: "Him", notes: ["Bergamot", "Vetiver", "Cardamom"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Shiyaaka.4.jpg?v=1771043858" },
   { id: 214, name: "Nafais Magrib", col: "Atyaab", price: 110, size: "100ml EDP", badge: "New", gender: "Unisex", notes: ["Citrus", "Marine", "Musk"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Nafais_Magrib-3.jpg?v=1761115886" },
   { id: 215, name: "Island Gift Set", col: "Master Perfumery", price: 179, size: "Gift Set", badge: null, gender: "Unisex", notes: ["Marine", "Amber", "Musk"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/3.jpg?v=1724330325" },
   { id: 22, name: "Hareem Al Sultan", col: "Atyaab", price: 195, size: "75ml EDP", badge: null, gender: "Her", notes: ["Rose", "Amber", "Musk"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/SHAHI_OUD_EDP_SPRAY_100_ML_-_Khadlaj_Perfumes-1965925.jpg?v=1722412108" },
@@ -22574,12 +22574,12 @@ function HomePage({ setPage, addToCart, setViewProduct }) {
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { position: "absolute", bottom: 0, left: 0, right: 0, padding: "12px 14px", background: "linear-gradient(to top,rgba(0,0,0,.7),transparent)" }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "disp", style: { color: "#fff", fontSize: 13, fontWeight: 300 }, children: "Shiyaaka Snow" }) })
         ] }),
         [
-          { src: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/saraya_2.png?v=1781332291", name: "Saraya" },
+          { src: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/saraya_1.png?v=1781332291", name: "Saraya" },
           { src: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/SAWAAR-03.jpg?v=1764151207", name: "Sawaar Vanille Blanc" },
           { src: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Nafais_Magrib-3.jpg?v=1761115886", name: "Nafais Magrib" },
           { src: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Qarar-3.jpg?v=1775637258", name: "Qarar" },
           { src: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Zayan_Silver-3.jpg?v=1776430400", name: "Zayaan Silver" },
-          { src: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Icon.3.jpg?v=1773206615", name: "Icon" }
+          { src: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Icon.4.jpg?v=1773206615", name: "Icon" }
         ].map((item, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { gridColumn: `${i + 1}/${i + 2}`, gridRow: "3/4", position: "relative", overflow: "hidden", cursor: "pointer", background: "#F5F3EF" }, children: [
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
             "img",
@@ -22632,7 +22632,7 @@ function CollectionsPage({ addToCart, setViewProduct, setPage }) {
   return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { background: "#fff" }, children: [
     /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { position: "relative", height: "clamp(300px,38vw,500px)", overflow: "hidden", background: "#000" }, children: [
       /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { position: "absolute", inset: 0, display: "grid", gridTemplateColumns: "repeat(5,1fr)", gap: 2, opacity: 0.5 }, children: [
-        "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/saraya_2.png?v=1781332291",
+        "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/saraya_1.png?v=1781332291",
         "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Ihthiraam-3.jpg?v=1775636549",
         "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/IntoxicateMystique.3.png?v=1772518819",
         "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/ONYX-03.jpg?v=1762324228",
@@ -23115,7 +23115,7 @@ function StoryPage() {
         ] })
       ] }),
       /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 48, marginBottom: 0 }, children: [
-        "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/saraya_2.png?v=1781332291",
+        "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/saraya_1.png?v=1781332291",
         "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/IntoxicateMystique.3.png?v=1772518819",
         "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Panache_1_jpg_c97c705a-aebf-4bf9-a621-f11b565e765d.jpg?v=1771333282"
       ].map((src, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { aspectRatio: "4/5", overflow: "hidden" }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", { src, alt: "", style: { width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" } }) }, i)) })
