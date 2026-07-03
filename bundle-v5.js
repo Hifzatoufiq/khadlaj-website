@@ -23495,7 +23495,7 @@ function Navbar({ page, setPage, cartCount }) {
     ] }),
     /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("nav", { style: { position: "sticky", top: 0, zIndex: 100, background: "rgba(255,255,255,.97)", backdropFilter: "blur(20px)", borderBottom: "1px solid #E8E4DC" }, children: [
       /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { padding: "0 5%" }, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "grid", gridTemplateColumns: "1fr auto 1fr", alignItems: "center", height: "clamp(60px,7vw,76px)", gap: 16 }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "grid", gridTemplateColumns: "1fr auto 1fr", alignItems: "center", height: "clamp(70px,8vw,90px)", gap: 16 }, children: [
           /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", gap: 24, alignItems: "center", fontSize: 9, letterSpacing: 2.5, color: "#777", textTransform: "uppercase", fontFamily: "'DM Sans',sans-serif" }, children: [
             /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "hide-mob", style: { cursor: "pointer", transition: "color .2s" }, onMouseEnter: (e) => e.target.style.color = "#000", onMouseLeave: (e) => e.target.style.color = "#777", onClick: () => setPage("contact"), children: "Find a Store" }),
             /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "hide-mob", style: { opacity: 0.25, fontSize: 14 }, children: "|" }),
@@ -23507,7 +23507,7 @@ function Navbar({ page, setPage, cartCount }) {
             {
               src: "https://khadlaj-perfumes.com/cdn/shop/files/Khadlaj_logo_2026--2_160x.png?v=1773752104",
               alt: "Khadlaj Perfumes",
-              style: { height: "clamp(52px,7vw,80px)", width: "auto", objectFit: "contain", display: "block" }
+              style: { height: "clamp(44px,5.5vw,68px)", width: "auto", objectFit: "contain", display: "block", maxWidth: 160 }
             }
           ) }),
           /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", alignItems: "center", justifyContent: "flex-end", gap: 22 }, children: [
