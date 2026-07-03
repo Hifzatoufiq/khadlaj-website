@@ -21780,7 +21780,7 @@ var STATS = [
 ];
 var PRODUCTS = [
   // ── Local products (own images) ──
-  { id: 13, name: "Island", col: "Master Perfumery", price: 355, size: "100ml Extrait", badge: "Best Seller", gender: "Unisex", notes: ["Marine", "Amber", "Oud"], img: "./assets/images/products/island-packshot.png" },
+  { id: 13, name: "Island", col: "Master Perfumery", price: 355, size: "100ml Extrait", badge: "Best Seller", gender: "Unisex", notes: ["Marine", "Amber", "Oud"], img: "./assets/images/products/island-packshot-removebg-preview.png" },
   { id: 14, name: "Cream Velvet", col: "Master Perfumery", price: 345, size: "Gift Set", badge: "Best Seller", gender: "Unisex", notes: ["Cream", "Velvet", "Musk"], img: "./assets/images/products/cream-velvet-lineup.png", images: ["./assets/images/products/cream-velvet-lineup.png", "./assets/images/products/cream-velvet-front-box.png", "./assets/images/products/cream-velvet-open-box.png", "./assets/images/products/cream-velvet-back-box.png"] },
   { id: 15, name: "Cloud Candy", col: "Atyaab", price: 325, size: "Gift Set", badge: "Best Seller", gender: "Her", notes: ["Peach", "Musk", "Vanilla"], img: "./assets/images/products/cloud-candy-lineup.png", images: ["./assets/images/products/cloud-candy-lineup.png", "./assets/images/products/cloud-candy-front-box.png", "./assets/images/products/cloud-candy-open-box.png", "./assets/images/products/cloud-candy-back-box.png"] },
   { id: 16, name: "Strawberry Shake", col: "Atyaab", price: 295, size: "100ml EDP", badge: "Best Seller", gender: "Her", notes: ["Strawberry", "Musk", "Vanilla"], img: "./assets/images/products/strawberry-shake-single.png" },
@@ -22042,7 +22042,7 @@ function ProductCard({ p, onView }) {
           textTransform: "uppercase",
           fontFamily: "'DM Sans',sans-serif"
         }, children: p.badge }),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { position: "relative", aspectRatio: "1/1", overflow: "hidden", background: "#F5F5F5" }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { position: "relative", aspectRatio: "1/1", overflow: "hidden", background: "#fff" }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
           "img",
           {
             src: p.img,
