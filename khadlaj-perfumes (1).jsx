@@ -1667,16 +1667,16 @@ function Navbar({ page, setPage, cartCount }){
       )}
 
       {/* ── Announcement bar ── */}
-      <div style={{background:"#0a0a0a",color:"#fff",textAlign:"center",padding:"8px 16px",fontSize:"8.5px",letterSpacing:"4px",fontFamily:"'Montserrat',sans-serif",textTransform:"uppercase",borderBottom:"1px solid rgba(184,146,42,0.15)"}}>
-        <span style={{color:"#B8922A",marginRight:8,fontWeight:600}}>✦</span>
-        REGISTER NOW & RECEIVE 10% OFF — CODE: <span style={{color:"#B8922A",fontWeight:700}}>10OFF</span>
-        <span style={{color:"#B8922A",marginLeft:8,fontWeight:600}}>✦</span>
+      <div style={{background:"#000",color:"#fff",textAlign:"center",padding:"10px 16px",fontSize:"9px",letterSpacing:"3px",fontFamily:"'DM Sans',sans-serif",textTransform:"uppercase",fontWeight:500}}>
+        <span style={{color:"#B8922A",marginRight:6}}>★</span>
+        FREE SHIPPING ON ORDERS OVER AED 300
+        <span style={{color:"#B8922A",marginLeft:6}}>★</span>
       </div>
 
       {/* ── Main nav ── */}
-      <nav style={{position:"sticky",top:0,zIndex:100,background:"rgba(255,255,255,.96)",backdropFilter:"blur(15px)",borderBottom:"1px solid #f0f0f0"}}>
-        <div style={{padding:"0 6%"}}>
-          <div style={{display:"grid",gridTemplateColumns:"1fr auto 1fr",alignItems:"center",padding:"16px 0",gap:16}}>
+      <nav style={{position:"sticky",top:0,zIndex:100,background:"#fff",boxShadow:"0 2px 12px rgba(0,0,0,.04)",borderBottom:"1px solid #E8E4DC"}}>
+        <div style={{padding:"0 5%"}}>
+          <div style={{display:"grid",gridTemplateColumns:"1fr auto 1fr",alignItems:"center",height:72,gap:24}}>
             {/* Left utility */}
             <div style={{display:"flex",gap:6,alignItems:"center"}}>
               <div style={{display:"flex",gap:4,alignItems:"center"}} className="hide-mob">
@@ -1795,21 +1795,21 @@ function Footer({ setPage }){
   return (
     <footer style={{background:"#fff",borderTop:"1px solid #E8E4DC"}}>
       {/* Newsletter */}
-      <div style={{background:"#0a0a0a",padding:"80px 5%",textAlign:"center",borderBottom:"1px solid rgba(184,146,42,0.2)"}}>
-        <div style={{width:32,height:1,background:"#B8922A",margin:"0 auto 20px"}}/>
-        <p style={{fontSize:9,letterSpacing:5,color:"#B8922A",textTransform:"uppercase",fontFamily:"'Montserrat',sans-serif",marginBottom:16,fontWeight:600}}>Stay Inspired</p>
-        <h2 className="disp" style={{fontSize:"clamp(28px,3.5vw,46px)",fontWeight:300,marginBottom:14,color:"#fff",letterSpacing:"-0.5px"}}>Join the Khadlaj Circle</h2>
-        <p style={{color:"rgba(255,255,255,.5)",fontSize:13,marginBottom:36,fontFamily:"'Montserrat',sans-serif",maxWidth:400,margin:"0 auto 36px",lineHeight:1.7}}>New launches, exclusive offers, and fragrance stories — direct to your inbox.</p>
-        <div style={{display:"flex",gap:0,maxWidth:420,margin:"0 auto",justifyContent:"center"}}>
-          <input type="email" placeholder="Your email address"
-            style={{flex:1,background:"transparent",border:"1px solid rgba(255,255,255,.20)",borderRight:"none",color:"#fff",padding:"14px 20px",fontSize:12,outline:"none",fontFamily:"'Montserrat',sans-serif",letterSpacing:.5,transition:"border-color .3s"}}
-            onFocus={e=>e.currentTarget.style.borderColor="rgba(255,255,255,.4)"}
-            onBlur={e=>e.currentTarget.style.borderColor="rgba(255,255,255,.2)"}
-          />
-          <button style={{background:"#B8922A",border:"none",color:"#fff",padding:"14px 32px",fontSize:9,letterSpacing:3,textTransform:"uppercase",cursor:"pointer",fontFamily:"'Montserrat',sans-serif",fontWeight:600,whiteSpace:"nowrap",transition:"background .3s"}}
-            onMouseEnter={e=>e.currentTarget.style.background="#C9A84C"}
-            onMouseLeave={e=>e.currentTarget.style.background="#B8922A"}
-          >Subscribe</button>
+      <div style={{background:"#f9f9f9",padding:"70px 5%",textAlign:"center",borderBottom:"1px solid #E8E4DC"}}>
+        <div style={{maxWidth:560,margin:"0 auto"}}>
+          <div style={{width:40,height:1,background:"#B8922A",margin:"0 auto 18px"}}/>
+          <p style={{fontSize:9,letterSpacing:4,color:"#B8922A",textTransform:"uppercase",fontFamily:"'DM Sans',sans-serif",marginBottom:14,fontWeight:600}}>Newsletter</p>
+          <h2 style={{fontSize:"clamp(24px,3vw,38px)",fontWeight:600,marginBottom:12,color:"#000",letterSpacing:"-0.5px",fontFamily:"'DM Sans',sans-serif"}}>Join the Khadlaj Circle</h2>
+          <p style={{color:"#666",fontSize:13,marginBottom:32,fontFamily:"'DM Sans',sans-serif",lineHeight:1.7}}>Get exclusive access to new launches and special offers</p>
+          <div style={{display:"flex",gap:0,maxWidth:440,margin:"0 auto"}}>
+            <input type="email" placeholder="Enter your email"
+              style={{flex:1,background:"#fff",border:"1px solid #E0E0E0",borderRight:"none",color:"#000",padding:"14px 20px",fontSize:13,outline:"none",fontFamily:"'DM Sans',sans-serif"}}
+            />
+            <button style={{background:"#000",border:"none",color:"#fff",padding:"14px 32px",fontSize:10,letterSpacing:2.5,textTransform:"uppercase",cursor:"pointer",fontFamily:"'DM Sans',sans-serif",fontWeight:600,transition:"background .3s"}}
+              onMouseEnter={e=>e.currentTarget.style.background="#B8922A"}
+              onMouseLeave={e=>e.currentTarget.style.background="#000"}
+            >Subscribe</button>
+          </div>
         </div>
       </div>
 
