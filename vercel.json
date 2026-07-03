@@ -1,5 +1,11 @@
 {
-  "cleanUrls": true,
+  "version": 2,
+  "builds": [
+    { "src": "index.html", "use": "@vercel/static" },
+    { "src": "bundle-v5.js", "use": "@vercel/static" },
+    { "src": "assets/**", "use": "@vercel/static" },
+    { "src": "video/**", "use": "@vercel/static" }
+  ],
   "routes": [
     { "src": "/video/(.*)", "dest": "/video/$1" },
     { "src": "/assets/(.*)", "dest": "/assets/$1" },
