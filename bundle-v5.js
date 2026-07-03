@@ -21780,14 +21780,14 @@ var STATS = [
 ];
 var PRODUCTS = [
   // ── Local products (own images) ──
-  { id: 13, name: "Island", col: "Master Perfumery", price: 355, size: "100ml Extrait", badge: "Best Seller", gender: "Unisex", notes: ["Marine", "Amber", "Oud"], img: "./assets/images/products/island-packshot-removebg-preview.png" },
-  { id: 14, name: "Cream Velvet", col: "Master Perfumery", price: 345, size: "Gift Set", badge: "Best Seller", gender: "Unisex", notes: ["Cream", "Velvet", "Musk"], img: "./assets/images/products/cream-velvet-lineup.png", images: ["./assets/images/products/cream-velvet-lineup.png", "./assets/images/products/cream-velvet-front-box.png", "./assets/images/products/cream-velvet-open-box.png", "./assets/images/products/cream-velvet-back-box.png"] },
-  { id: 15, name: "Cloud Candy", col: "Atyaab", price: 325, size: "Gift Set", badge: "Best Seller", gender: "Her", notes: ["Peach", "Musk", "Vanilla"], img: "./assets/images/products/cloud-candy-lineup.png", images: ["./assets/images/products/cloud-candy-lineup.png", "./assets/images/products/cloud-candy-front-box.png", "./assets/images/products/cloud-candy-open-box.png", "./assets/images/products/cloud-candy-back-box.png"] },
-  { id: 16, name: "Strawberry Shake", col: "Atyaab", price: 295, size: "100ml EDP", badge: "Best Seller", gender: "Her", notes: ["Strawberry", "Musk", "Vanilla"], img: "./assets/images/products/strawberry-shake-single.png" },
+  { id: 13, name: "Island", col: "Master Perfumery", price: 150, size: "100ml Extrait", badge: "Best Seller", gender: "Unisex", notes: ["Marine", "Amber", "Oud"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/3.jpg?v=1724330325" },
+  { id: 14, name: "Cream Velvet", col: "Master Perfumery", price: 130, size: "Gift Set", badge: "Best Seller", gender: "Unisex", notes: ["Cream", "Velvet", "Musk"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Cream_Velvet_03.jpg?v=1736149481" },
+  { id: 15, name: "Cloud Candy", col: "Atyaab", price: 325, size: "Gift Set", badge: null, gender: "Her", notes: ["Peach", "Musk", "Vanilla"], img: "./assets/images/products/cloud-candy-lineup.png", images: ["./assets/images/products/cloud-candy-lineup.png", "./assets/images/products/cloud-candy-front-box.png", "./assets/images/products/cloud-candy-open-box.png", "./assets/images/products/cloud-candy-back-box.png"] },
+  { id: 16, name: "Strawberry Shake", col: "Atyaab", price: 295, size: "100ml EDP", badge: null, gender: "Her", notes: ["Strawberry", "Musk", "Vanilla"], img: "./assets/images/products/strawberry-shake-single.png" },
   { id: 17, name: "Biscotti Date Toffee", col: "Lafede", price: 315, size: "100ml EDP", badge: "New", gender: "Unisex", notes: ["Date", "Coffee", "Gourmand"], img: "./assets/images/products/biscotti-date-toffee-single.png" },
   { id: 18, name: "Biscotti Melon Musk", col: "Lafede", price: 315, size: "100ml EDP", badge: "New", gender: "Unisex", notes: ["Melon", "Musk", "Cream"], img: "./assets/images/products/blue-glace-single-1.png" },
   { id: 19, name: "Uno Intimo", col: "Lafede", price: 285, size: "100ml EDP", badge: null, gender: "Her", notes: ["Rose", "Musk", "Peony"], img: "./assets/images/products/uno-intimo-single.png" },
-  { id: 20, name: "Shahi Oud", col: "Master Perfumery", price: 360, size: "100ml EDP", badge: "Best Seller", gender: "Unisex", notes: ["Oud", "Amber", "Saffron"], img: "./assets/images/products/shahi-oud-single.png" },
+  { id: 20, name: "Shahi Oud", col: "Master Perfumery", price: 360, size: "100ml EDP", badge: null, gender: "Unisex", notes: ["Oud", "Amber", "Saffron"], img: "./assets/images/products/shahi-oud-single.png" },
   { id: 21, name: "Bleu Glac\xE9", col: "Atyaab", price: 275, size: "100ml EDP", badge: "New", gender: "Unisex", notes: ["Marine", "Bergamot", "Musk"], img: "./assets/images/products/blue-glace-single-2.png" },
   // ── Live products from khadlaj-perfumes.com ──
   { id: 200, name: "Saraya", col: "Master Perfumery", price: 105, size: "60ml Extrait", badge: "New", gender: "Unisex", notes: ["Amber", "Bergamot", "Vetiver"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/saraya_2.png?v=1781332291" },
@@ -21795,18 +21795,24 @@ var PRODUCTS = [
   { id: 203, name: "Zayaan Silver", col: "Atyaab", price: 150, size: "100ml EDP", badge: "New", gender: "Him", notes: ["Citrus", "Lavender", "Sandalwood"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/ZayanSilver-1.jpg?v=1776430327" },
   { id: 204, name: "Ihthiraam", col: "Master Perfumery", price: 150, size: "60ml Extrait", badge: "New", gender: "Unisex", notes: ["Bergamot", "Oud", "Musk"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Ihthiraam-1.jpg?v=1775635386" },
   { id: 205, name: "Qarar", col: "Master Perfumery", price: 150, size: "60ml Extrait", badge: "New", gender: "Unisex", notes: ["Oud", "Leather", "Vetiver"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Qarar-1.jpg?v=1775636739" },
-  { id: 206, name: "Icon", col: "Atyaab", price: 130, size: "100ml EDP", badge: "New", gender: "Him", notes: ["Bergamot", "Lavender", "Amber"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Icon.2.jpg?v=1773206615" },
+  { id: 206, name: "Icon", col: "Atyaab", price: 130, size: "100ml EDP", badge: "Best Seller", gender: "Him", notes: ["Bergamot", "Lavender", "Amber"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Icon.1.jpg?v=1773206615" },
   { id: 207, name: "Intoxicate Mystique", col: "Lafede", price: 150, size: "100ml Extrait", badge: null, gender: "Him", notes: ["Musk", "Vetiver", "Vanilla"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/IntoxicateMystique.1.png?v=1772518099" },
-  { id: 208, name: "Angel Dust", col: "Master Perfumery", price: 200, size: "100ml Extrait", badge: "New", gender: "Her", notes: ["Vanilla", "Sandalwood", "Musk"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Panache_2_jpg_0bc7a1f3-8af9-4188-98f1-c58151159f55.jpg?v=1771333283" },
+  { id: 208, name: "Panache", col: "Master Perfumery", price: 200, size: "100ml Extrait", badge: "Best Seller", gender: "Her", notes: ["Vanilla", "Sandalwood", "Musk"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Panache_1_jpg_c97c705a-aebf-4bf9-a621-f11b565e765d.jpg?v=1771333282" },
   { id: 209, name: "Onyx Silver", col: "Atyaab", price: 125, size: "100ml EDP", badge: "New", gender: "Unisex", notes: ["Bergamot", "Patchouli", "Tonka"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/OnyxSilver1.jpg?v=1769502676" },
   { id: 210, name: "Nuha Bon Bon", col: "Atyaab", price: 85, size: "85ml EDP", badge: "New", gender: "Her", notes: ["Strawberry", "Vanilla", "Musk"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/NUHABONBON-01.jpg?v=1768477611" },
-  { id: 211, name: "Sawaar Vanille Blanc", col: "Master Perfumery", price: 200, size: "100ml Extrait", badge: null, gender: "Her", notes: ["Vanilla", "Sandalwood", "Amber"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/SAWAAR-01.jpg?v=1771151092" },
-  { id: 212, name: "Onyx Gold", col: "Atyaab", price: 125, size: "100ml EDP", badge: "Best Seller", gender: "Him", notes: ["Cardamom", "Sandalwood", "Tonka"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/ONYX-01_b085642f-9033-4997-a1fd-4e97be2a8575.jpg?v=1762324228" },
-  { id: 213, name: "Shiyaaka Snow", col: "Master Perfumery", price: 126, size: "100ml EDP", badge: "Limited", gender: "Him", notes: ["Bergamot", "Vetiver", "Cardamom"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/shiyaaka-snow.png?v=1781615422" },
+  { id: 211, name: "Sawaar", col: "Master Perfumery", price: 200, size: "100ml Extrait", badge: "Best Seller", gender: "Her", notes: ["Vanilla", "Sandalwood", "Amber"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/SAWAAR-03.jpg?v=1764151207" },
+  { id: 212, name: "Onyx", col: "Atyaab", price: 125, size: "100ml EDP", badge: "Best Seller", gender: "Him", notes: ["Cardamom", "Sandalwood", "Tonka"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/ONYX-03.jpg?v=1762324228" },
+  { id: 213, name: "Shiyaaka", col: "Master Perfumery", price: 65, size: "100ml EDP", badge: "Best Seller", gender: "Him", notes: ["Bergamot", "Vetiver", "Cardamom"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Shiyaaka.2.jpg?v=1771043858" },
   { id: 214, name: "Nafais Magrib", col: "Atyaab", price: 110, size: "100ml EDP", badge: "New", gender: "Unisex", notes: ["Citrus", "Marine", "Musk"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/NafaisMagrib-1.jpg?v=1761115734" },
   { id: 215, name: "Island Gift Set", col: "Master Perfumery", price: 179, size: "Gift Set", badge: null, gender: "Unisex", notes: ["Marine", "Amber", "Musk"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Island2.jpg?v=1767168643" },
-  { id: 22, name: "Hareem Al Sultan", col: "Atyaab", price: 195, size: "75ml EDP", badge: "Best Seller", gender: "Her", notes: ["Rose", "Amber", "Musk"], img: "./assets/images/products/shahi-oud-single.png" },
-  { id: 23, name: "Shiyaaka Shadow", col: "Master Perfumery", price: 340, size: "100ml EDP", badge: "Limited", gender: "Him", notes: ["Oud", "Leather", "Vetiver"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Shiyaaka_Shadow-3_bef3b7fa-b2c9-4ec5-adcc-0b3f9ac42034.jpg?v=1761113212" }
+  { id: 22, name: "Hareem Al Sultan", col: "Atyaab", price: 195, size: "75ml EDP", badge: null, gender: "Her", notes: ["Rose", "Amber", "Musk"], img: "./assets/images/products/shahi-oud-single.png" },
+  { id: 23, name: "Shiyaaka Shadow", col: "Master Perfumery", price: 340, size: "100ml EDP", badge: "Limited", gender: "Him", notes: ["Oud", "Leather", "Vetiver"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Shiyaaka_Shadow-3_bef3b7fa-b2c9-4ec5-adcc-0b3f9ac42034.jpg?v=1761113212" },
+  // ── New Best Sellers (requested list additions) ──
+  { id: 301, name: "Island Dreams", col: "Master Perfumery", price: 150, size: "100ml EDP", badge: "Best Seller", gender: "Her", notes: ["Coconut", "Vanilla", "Musk"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Island_Dreams-3.jpg?v=1754913321" },
+  { id: 302, name: "Ria", col: "Lafede", price: 125, size: "100ml EDP", badge: "Best Seller", gender: "Her", notes: ["Rose", "Jasmine", "Amber"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Ria-3.jpg?v=1760188227" },
+  { id: 303, name: "Pure Musk Pure Blend", col: "Atyaab", price: 200, size: "100ml EDP", badge: "Best Seller", gender: "Unisex", notes: ["White Musk", "Clean", "Iris"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/MUSK_PURE_MUSK_BLEND_CREATION_OF_IQBAL_60_ML_EDP_SPRAY_-_Khadlaj_Perfumes-1965450.jpg?v=1722411181" },
+  { id: 304, name: "Musk Ice", col: "Atyaab", price: 150, size: "100ml EDP", badge: "Best Seller", gender: "Unisex", notes: ["Mint", "Ice", "White Musk"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Musk_Ice_03.jpg?v=1771398752" },
+  { id: 305, name: "Karus", col: "Lafede", price: 150, size: "100ml EDP", badge: "Best Seller", gender: "Him", notes: ["Oud", "Leather", "Incense"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/KARUS_OUD_FIRE_100_ML_EDP_SPRAY_-_Khadlaj_Perfumes-1964843.jpg?v=1722409981" }
 ];
 var REVIEWS = [
   { name: "Reem Al Hashimi", country: "UAE", stars: 5, text: "The richest oud I've ever worn. Lasts 14+ hours on my skin. Khadlaj has a customer for life." },
@@ -21872,20 +21878,20 @@ var GLOBAL_CSS = `
   @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap');
   *{box-sizing:border-box;margin:0;padding:0;}
   html{scroll-behavior:smooth;}
-  body{background:#fff;color:#000;font-family:'Outfit',sans-serif;}
+  body{background:#fff;color:#000;font-family:'Montserrat',sans-serif;}
   ::-webkit-scrollbar{width:3px;}
   ::-webkit-scrollbar-track{background:#fff;}
   ::-webkit-scrollbar-thumb{background:#000;}
   .hide-scrollbar::-webkit-scrollbar { display: none; }
   .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-  .disp{font-family:'Cormorant Garamond',serif;}
-  .mono{font-family:'Outfit',sans-serif;}
+  .disp{font-family:'Cinzel',serif;}
+  .mono{font-family:'Montserrat',sans-serif;}
 
   /* YSL-style primary button: solid black */
   .btn-gold{
     background:#000;color:#fff;border:1px solid #000;
     padding:14px 32px;
-    font-family:'Outfit',sans-serif;font-weight:500;font-size:11px;
+    font-family:'Montserrat',sans-serif;font-weight:500;font-size:11px;
     letter-spacing:2.5px;text-transform:uppercase;cursor:pointer;
     transition:background .22s,color .22s;
   }
@@ -21895,14 +21901,14 @@ var GLOBAL_CSS = `
   .btn-ghost{
     background:transparent;color:#000;border:1px solid #000;
     padding:13px 28px;
-    font-family:'Outfit',sans-serif;font-weight:400;font-size:11px;
+    font-family:'Montserrat',sans-serif;font-weight:400;font-size:11px;
     letter-spacing:2.5px;text-transform:uppercase;cursor:pointer;
     transition:all .22s;
   }
   .btn-ghost:hover{background:#000;color:#fff;}
 
   .gold-line{width:40px;height:1px;background:#B8922A;margin:0 auto;}
-  .eyebrow{font-size:10px;letter-spacing:4px;color:#B8922A;text-transform:uppercase;font-family:'Outfit',sans-serif;}
+  .eyebrow{font-size:10px;letter-spacing:4px;color:#B8922A;text-transform:uppercase;font-family:'Montserrat',sans-serif;}
 
   /* Product card \u2014 YSL-style: no lift, just a clean image reveal */
   .card-lift{transition:opacity .25s;}
@@ -21926,7 +21932,7 @@ var GLOBAL_CSS = `
   .tiktok-card{overflow:hidden;position:relative;}
   .tiktok-card iframe{pointer-events:none;border:none;overflow:hidden;}
 
-  input,textarea{font-family:'Outfit',sans-serif;}
+  input,textarea{font-family:'Montserrat',sans-serif;}
 
   /* New arrivals horizontal scroll */
   .new-scroll::-webkit-scrollbar{height:2px;}
@@ -22040,7 +22046,7 @@ function ProductCard({ p, onView }) {
           padding: "4px 10px",
           fontWeight: 700,
           textTransform: "uppercase",
-          fontFamily: "'Outfit',sans-serif"
+          fontFamily: "'Montserrat',sans-serif"
         }, children: p.badge }),
         /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { position: "relative", aspectRatio: "1/1", overflow: "hidden", background: "transparent", display: "flex", alignItems: "center", justifyContent: "center" }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
           "img",
@@ -22058,19 +22064,19 @@ function ProductCard({ p, onView }) {
           }
         ) }),
         /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { padding: "16px 10px 18px", flex: 1, display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center" }, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 8, letterSpacing: 3, color: "#B8922A", textTransform: "uppercase", marginBottom: 6, fontFamily: "'Outfit',sans-serif", fontWeight: 600 }, children: p.col }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", { style: { fontSize: 13, fontWeight: 700, color: "#000", lineHeight: 1.3, marginBottom: 4, textTransform: "uppercase", letterSpacing: 1, fontFamily: "'Outfit',sans-serif" }, children: p.name }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 11, color: "#999", marginBottom: 10, fontFamily: "'Outfit',sans-serif", letterSpacing: 0.4 }, children: p.size }),
-          notes.length > 0 && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { display: "flex", flexWrap: "wrap", gap: 5, marginBottom: 12, justifyContent: "center" }, children: notes.map((n, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { style: { display: "inline-flex", alignItems: "center", gap: 4, padding: "3px 8px", background: "#F5F5F5", fontSize: 8, letterSpacing: 1, color: "#666", textTransform: "uppercase", fontFamily: "'Outfit',sans-serif" }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 8, letterSpacing: 3, color: "#B8922A", textTransform: "uppercase", marginBottom: 6, fontFamily: "'Montserrat',sans-serif", fontWeight: 600 }, children: p.col }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", { style: { fontSize: 13, fontWeight: 700, color: "#000", lineHeight: 1.3, marginBottom: 4, textTransform: "uppercase", letterSpacing: 1, fontFamily: "'Montserrat',sans-serif" }, children: p.name }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 11, color: "#999", marginBottom: 10, fontFamily: "'Montserrat',sans-serif", letterSpacing: 0.4 }, children: p.size }),
+          notes.length > 0 && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { display: "flex", flexWrap: "wrap", gap: 5, marginBottom: 12, justifyContent: "center" }, children: notes.map((n, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { style: { display: "inline-flex", alignItems: "center", gap: 4, padding: "3px 8px", background: "#F5F5F5", fontSize: 8, letterSpacing: 1, color: "#666", textTransform: "uppercase", fontFamily: "'Montserrat',sans-serif" }, children: [
             /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { width: 5, height: 5, borderRadius: "50%", background: noteColors[i % noteColors.length], flexShrink: 0, display: "inline-block" } }),
             n
           ] }, n)) }),
           /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { marginTop: "auto", width: "100%", display: "flex", flexDirection: "column", alignItems: "center", gap: 6, paddingTop: 12, borderTop: "1px solid #F0F0F0" }, children: [
             /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", alignItems: "center", gap: 4, justifyContent: "center" }, children: [
               /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { color: "#C8A96E", fontSize: 11, letterSpacing: 1 }, children: "\u2605".repeat(5) }),
-              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { fontSize: 9, color: "#aaa", fontFamily: "'Outfit',sans-serif" }, children: "(905)" })
+              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { fontSize: 9, color: "#aaa", fontFamily: "'Montserrat',sans-serif" }, children: "(905)" })
             ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { style: { fontSize: 15, fontWeight: 700, color: "#000", fontFamily: "'Outfit',sans-serif" }, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { style: { fontSize: 15, fontWeight: 700, color: "#000", fontFamily: "'Montserrat',sans-serif" }, children: [
               "AED ",
               p.price
             ] })
@@ -22084,7 +22090,7 @@ function SectionHeader({ eyebrow, title, sub, light = false }) {
   return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { textAlign: "center", marginBottom: 52 }, children: [
     /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "eyebrow", style: { marginBottom: 14, color: "#B8922A" }, children: eyebrow }),
     /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", { className: "disp", style: { fontSize: "clamp(28px,3.8vw,52px)", fontWeight: 300, color: light ? "#fff" : "#000", lineHeight: 1.15, letterSpacing: "-0.5px", marginBottom: sub ? 14 : 0 }, children: title }),
-    sub && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { color: light ? "rgba(255,255,255,0.7)" : "#777", fontSize: 14, maxWidth: 500, margin: "0 auto", lineHeight: 1.8, fontFamily: "'Outfit',sans-serif" }, children: sub }),
+    sub && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { color: light ? "rgba(255,255,255,0.7)" : "#777", fontSize: 14, maxWidth: 500, margin: "0 auto", lineHeight: 1.8, fontFamily: "'Montserrat',sans-serif" }, children: sub }),
     /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "gold-line", style: { marginTop: 22 } })
   ] });
 }
@@ -22143,16 +22149,16 @@ function TikTokCard({ t }) {
           /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", alignItems: "center", gap: 12, marginBottom: 20 }, children: [
             /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { width: 48, height: 48, borderRadius: "50%", background: "#fff", display: "flex", alignItems: "center", justifyContent: "center", padding: 6 }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", { src: t.img, alt: "", style: { width: "100%", height: "100%", objectFit: "contain", mixBlendMode: "multiply" } }) }),
             /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
-              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 9, letterSpacing: 2.5, textTransform: "uppercase", color: "#C1A46A", fontFamily: "'Outfit',sans-serif", marginBottom: 4 }, children: t.tag || "Trending" }),
-              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 18, fontWeight: 500, fontFamily: "'Outfit',sans-serif", lineHeight: 1, color: "#fff" }, children: t.title })
+              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 9, letterSpacing: 2.5, textTransform: "uppercase", color: "#C1A46A", fontFamily: "'Montserrat',sans-serif", marginBottom: 4 }, children: t.tag || "Trending" }),
+              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 18, fontWeight: 500, fontFamily: "'Montserrat',sans-serif", lineHeight: 1, color: "#fff" }, children: t.title })
             ] })
           ] }),
           /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", alignItems: "center", justifyContent: "space-between", borderTop: "1px solid rgba(255,255,255,0.15)", paddingTop: 16 }, children: [
-            /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { style: { fontSize: 16, fontWeight: 700, fontFamily: "'Outfit',sans-serif", color: "#fff" }, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { style: { fontSize: 16, fontWeight: 700, fontFamily: "'Montserrat',sans-serif", color: "#fff" }, children: [
               "AED ",
               t.price?.toFixed(2)
             ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { style: { fontSize: 11, letterSpacing: 2, textTransform: "uppercase", fontWeight: 700, fontFamily: "'Outfit',sans-serif", display: "flex", alignItems: "center", gap: 6, color: "#fff" }, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { style: { fontSize: 11, letterSpacing: 2, textTransform: "uppercase", fontWeight: 700, fontFamily: "'Montserrat',sans-serif", display: "flex", alignItems: "center", gap: 6, color: "#fff" }, children: [
               "Shop Now ",
               /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "\u2192" })
             ] })
@@ -22173,7 +22179,7 @@ function HomePage({ setPage, addToCart, setViewProduct }) {
     if (activeCat === "For Her") return p.gender === "Her";
     if (activeCat === "Unisex") return p.gender === "Unisex";
     return p.col === activeCat;
-  }).slice(0, 8);
+  }).slice(0, 12);
   return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [
     /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", { className: "hero-section", style: { position: "relative", width: "100%", height: "100svh", minHeight: "500px", overflow: "hidden", background: "#0a0a0a" }, children: [
       /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
@@ -22199,11 +22205,11 @@ function HomePage({ setPage, addToCart, setViewProduct }) {
       /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { position: "absolute", inset: 0, background: "linear-gradient(to bottom,rgba(0,0,0,.1) 0%,rgba(0,0,0,.0) 30%,rgba(0,0,0,.6) 70%,rgba(0,0,0,.92) 100%)", pointerEvents: "none" } }),
       /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { position: "absolute", inset: 0, background: "linear-gradient(to right,rgba(0,0,0,.4) 0%,transparent 55%)", pointerEvents: "none" } })
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { overflow: "hidden", background: "#FAFAFA", padding: "20px 0", borderTop: "1px solid #E8E4DC", borderBottom: "1px solid #E8E4DC" }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "ribbon-inner", children: [...SCENT_RIBBON, ...SCENT_RIBBON, ...SCENT_RIBBON].map((n, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { padding: "0 32px", fontSize: 10, letterSpacing: 4, color: i % 4 === 0 ? "#C1A46A" : "#777", textTransform: "uppercase", whiteSpace: "nowrap", fontFamily: "'Outfit',sans-serif" }, children: n }, i)) }) }),
+    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { overflow: "hidden", background: "#FAFAFA", padding: "20px 0", borderTop: "1px solid #E8E4DC", borderBottom: "1px solid #E8E4DC" }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "ribbon-inner", children: [...SCENT_RIBBON, ...SCENT_RIBBON, ...SCENT_RIBBON].map((n, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { padding: "0 32px", fontSize: 10, letterSpacing: 4, color: i % 4 === 0 ? "#C1A46A" : "#777", textTransform: "uppercase", whiteSpace: "nowrap", fontFamily: "'Montserrat',sans-serif" }, children: n }, i)) }) }),
     /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", { style: { padding: "0 5% 104px", background: "#fff" }, children: [
       /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { paddingTop: 96, marginBottom: 52, display: "flex", alignItems: "flex-end", justifyContent: "space-between", flexWrap: "wrap", gap: 16 }, children: [
         /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 9, letterSpacing: 5, color: "#B8922A", textTransform: "uppercase", fontFamily: "'Outfit',sans-serif", marginBottom: 14 }, children: "Featured Fragrances" }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 9, letterSpacing: 5, color: "#B8922A", textTransform: "uppercase", fontFamily: "'Montserrat',sans-serif", marginBottom: 14 }, children: "Featured Fragrances" }),
           /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", { className: "disp", style: { fontSize: "clamp(32px,4vw,54px)", fontWeight: 300, color: "#000", lineHeight: 1.05, letterSpacing: -1 }, children: [
             "Discover Your",
             /* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {}),
@@ -22229,7 +22235,7 @@ function HomePage({ setPage, addToCart, setViewProduct }) {
             fontWeight: activeCat === c ? 600 : 400,
             transition: "all .2s",
             textTransform: "uppercase",
-            fontFamily: "'Outfit',sans-serif"
+            fontFamily: "'Montserrat',sans-serif"
           },
           children: c
         },
@@ -22243,9 +22249,9 @@ function HomePage({ setPage, addToCart, setViewProduct }) {
     /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", { style: { padding: "80px 5%", background: "#000" }, children: [
       /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { marginBottom: 48, textAlign: "center" }, children: [
         /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { width: 40, height: 1, background: "#B8922A", margin: "0 auto 16px" } }),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 8, letterSpacing: 3, color: "#B8922A", textTransform: "uppercase", fontFamily: "'Outfit',sans-serif", marginBottom: 12 }, children: "@KhadlajPerfumes" }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 8, letterSpacing: 3, color: "#B8922A", textTransform: "uppercase", fontFamily: "'Montserrat',sans-serif", marginBottom: 12 }, children: "@KhadlajPerfumes" }),
         /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", { className: "disp", style: { fontSize: "clamp(24px,3vw,42px)", fontWeight: 300, color: "#fff", letterSpacing: -0.5, marginBottom: 10, lineHeight: 1.2 }, children: "Watch Us on TikTok" }),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { color: "rgba(255,255,255,.5)", fontSize: 12, fontFamily: "'Outfit',sans-serif", letterSpacing: 0.3 }, children: "Real fragrances. Real stories. Follow us for the latest drops." })
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { color: "rgba(255,255,255,.5)", fontSize: 12, fontFamily: "'Montserrat',sans-serif", letterSpacing: 0.3 }, children: "Real fragrances. Real stories. Follow us for the latest drops." })
       ] }),
       /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
         "div",
@@ -22280,7 +22286,7 @@ function HomePage({ setPage, addToCart, setViewProduct }) {
             letterSpacing: 3,
             textTransform: "uppercase",
             textDecoration: "none",
-            fontFamily: "'Outfit',sans-serif",
+            fontFamily: "'Montserrat',sans-serif",
             transition: "all .2s"
           },
           onMouseEnter: (e) => {
@@ -22302,7 +22308,7 @@ function HomePage({ setPage, addToCart, setViewProduct }) {
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {}),
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)("em", { style: { color: "#B8922A", fontStyle: "italic" }, children: "French Perfumery" })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { color: "rgba(255,255,255,.6)", lineHeight: 1.85, fontSize: 14, marginBottom: 36, maxWidth: 440, fontFamily: "'Outfit',sans-serif" }, children: "Founded by Mohamed Iqbal Abdul Sattar \u2014 each creation blends the ancient soul of Arabian oud with the precision of French fragrance tradition." }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { color: "rgba(255,255,255,.6)", lineHeight: 1.85, fontSize: 14, marginBottom: 36, maxWidth: 440, fontFamily: "'Montserrat',sans-serif" }, children: "Founded by Mohamed Iqbal Abdul Sattar \u2014 each creation blends the ancient soul of Arabian oud with the precision of French fragrance tradition." }),
         /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", { className: "btn-gold", style: { borderColor: "#fff", background: "#fff", color: "#000" }, onClick: () => setPage("story"), children: "Meet the Perfumers" }) })
       ] }),
       /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { position: "relative", overflow: "hidden", minHeight: "350px" }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
@@ -22387,8 +22393,8 @@ function HomePage({ setPage, addToCart, setViewProduct }) {
         },
         children: [
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { marginBottom: 22, display: "flex", justifyContent: "center" }, children: item.icon }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 11, fontWeight: 700, color: "#111", letterSpacing: 2, fontFamily: "'Outfit',sans-serif", marginBottom: 12, textTransform: "uppercase" }, children: item.title }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 12, color: "#777", lineHeight: 1.7, fontFamily: "'Outfit',sans-serif", maxWidth: 220, margin: "0 auto" }, children: item.desc })
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 11, fontWeight: 700, color: "#111", letterSpacing: 2, fontFamily: "'Montserrat',sans-serif", marginBottom: 12, textTransform: "uppercase" }, children: item.title }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 12, color: "#777", lineHeight: 1.7, fontFamily: "'Montserrat',sans-serif", maxWidth: 220, margin: "0 auto" }, children: item.desc })
         ]
       },
       item.title
@@ -22397,7 +22403,7 @@ function HomePage({ setPage, addToCart, setViewProduct }) {
       /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", alignItems: "flex-end", justifyContent: "space-between", marginBottom: 40 }, children: [
         /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { width: 32, height: 1, background: "#B8922A", marginBottom: 16 } }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 9, letterSpacing: 5, color: "#B8922A", textTransform: "uppercase", fontFamily: "'Outfit',sans-serif", marginBottom: 10 }, children: "Just Dropped" }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 9, letterSpacing: 5, color: "#B8922A", textTransform: "uppercase", fontFamily: "'Montserrat',sans-serif", marginBottom: 10 }, children: "Just Dropped" }),
           /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", { className: "disp", style: { fontSize: "clamp(28px,3.5vw,50px)", fontWeight: 300, color: "#000", letterSpacing: -1, lineHeight: 1.05 }, children: [
             "New ",
             /* @__PURE__ */ (0, import_jsx_runtime.jsx)("em", { style: { fontStyle: "italic", color: "#B8922A" }, children: "Arrivals" })
@@ -22417,7 +22423,7 @@ function HomePage({ setPage, addToCart, setViewProduct }) {
       /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", alignItems: "flex-end", justifyContent: "space-between", flexWrap: "wrap", gap: 16, marginBottom: 60 }, children: [
         /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { width: 32, height: 1, background: "#B8922A", marginBottom: 18 } }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 9, letterSpacing: 5, color: "#B8922A", textTransform: "uppercase", fontFamily: "'Outfit',sans-serif", marginBottom: 12 }, children: "Gifting" }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 9, letterSpacing: 5, color: "#B8922A", textTransform: "uppercase", fontFamily: "'Montserrat',sans-serif", marginBottom: 12 }, children: "Gifting" }),
           /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", { className: "disp", style: { fontSize: "clamp(30px,3.8vw,52px)", fontWeight: 300, color: "#000", lineHeight: 1, letterSpacing: -1 }, children: [
             "Curated",
             /* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {}),
@@ -22441,20 +22447,20 @@ function HomePage({ setPage, addToCart, setViewProduct }) {
           '"'
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { marginTop: "auto" }, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 9, fontWeight: 600, color: "#fff", letterSpacing: 2, fontFamily: "'Outfit',sans-serif", textTransform: "uppercase" }, children: r.name }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 8, letterSpacing: 4, color: "#B8922A", marginTop: 6, textTransform: "uppercase", fontFamily: "'Outfit',sans-serif" }, children: r.country })
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 9, fontWeight: 600, color: "#fff", letterSpacing: 2, fontFamily: "'Montserrat',sans-serif", textTransform: "uppercase" }, children: r.name }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 8, letterSpacing: 4, color: "#B8922A", marginTop: 6, textTransform: "uppercase", fontFamily: "'Montserrat',sans-serif" }, children: r.country })
         ] })
       ] }, i)) })
     ] }),
     /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", { style: { padding: "0 5% 96px", background: "#fff" }, children: [
       /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { textAlign: "center", paddingTop: 96, marginBottom: 52 }, children: [
         /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { width: 40, height: 1, background: "#B8922A", margin: "0 auto 20px" } }),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 9, letterSpacing: 5, color: "#B8922A", textTransform: "uppercase", fontFamily: "'Outfit',sans-serif", marginBottom: 16 }, children: "@KhadlajPerfumes" }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 9, letterSpacing: 5, color: "#B8922A", textTransform: "uppercase", fontFamily: "'Montserrat',sans-serif", marginBottom: 16 }, children: "@KhadlajPerfumes" }),
         /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", { className: "disp", style: { fontSize: "clamp(28px,3.5vw,50px)", fontWeight: 300, color: "#000", letterSpacing: -0.5, lineHeight: 1.1, marginBottom: 20 }, children: [
           "Feel the World of ",
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)("em", { style: { fontStyle: "italic", color: "#B8922A" }, children: "Khadlaj" })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 13, color: "#888", fontFamily: "'Outfit',sans-serif", letterSpacing: 0.3, marginBottom: 28, maxWidth: 420, margin: "0 auto 28px" }, children: "Real moments. Real fragrance. Follow us for the latest drops and stories." }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 13, color: "#888", fontFamily: "'Montserrat',sans-serif", letterSpacing: 0.3, marginBottom: 28, maxWidth: 420, margin: "0 auto 28px" }, children: "Real moments. Real fragrance. Follow us for the latest drops and stories." }),
         /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
           "a",
           {
@@ -22473,7 +22479,7 @@ function HomePage({ setPage, addToCart, setViewProduct }) {
               letterSpacing: 2.5,
               textTransform: "uppercase",
               textDecoration: "none",
-              fontFamily: "'Outfit',sans-serif",
+              fontFamily: "'Montserrat',sans-serif",
               transition: "all .22s"
             },
             onMouseEnter: (e) => {
@@ -22502,7 +22508,7 @@ function HomePage({ setPage, addToCart, setViewProduct }) {
             }
           ),
           /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { position: "absolute", bottom: 0, left: 0, right: 0, padding: "20px", background: "linear-gradient(to top,rgba(0,0,0,.7),transparent)" }, children: [
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { color: "#B8922A", fontSize: 8, letterSpacing: 2.5, textTransform: "uppercase", fontFamily: "'Outfit',sans-serif", marginBottom: 3 }, children: "Master Perfumery" }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { color: "#B8922A", fontSize: 8, letterSpacing: 2.5, textTransform: "uppercase", fontFamily: "'Montserrat',sans-serif", marginBottom: 3 }, children: "Master Perfumery" }),
             /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "disp", style: { color: "#fff", fontSize: 18, fontWeight: 300 }, children: "Ihthiraam" })
           ] })
         ] }),
@@ -22524,7 +22530,7 @@ function HomePage({ setPage, addToCart, setViewProduct }) {
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
             "img",
             {
-              src: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Panache_2_jpg_0bc7a1f3-8af9-4188-98f1-c58151159f55.jpg?v=1771333283",
+              src: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Panache_1_jpg_c97c705a-aebf-4bf9-a621-f11b565e765d.jpg?v=1771333282",
               alt: "Angel Dust",
               loading: "lazy",
               style: { width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top", transition: "transform .6s ease" },
@@ -22533,7 +22539,7 @@ function HomePage({ setPage, addToCart, setViewProduct }) {
             }
           ),
           /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { position: "absolute", bottom: 0, left: 0, right: 0, padding: "20px", background: "linear-gradient(to top,rgba(0,0,0,.7),transparent)" }, children: [
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { color: "#B8922A", fontSize: 8, letterSpacing: 2.5, textTransform: "uppercase", fontFamily: "'Outfit',sans-serif", marginBottom: 3 }, children: "Master Perfumery" }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { color: "#B8922A", fontSize: 8, letterSpacing: 2.5, textTransform: "uppercase", fontFamily: "'Montserrat',sans-serif", marginBottom: 3 }, children: "Master Perfumery" }),
             /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "disp", style: { color: "#fff", fontSize: 18, fontWeight: 300 }, children: "Angel Dust" })
           ] })
         ] }),
@@ -22541,7 +22547,7 @@ function HomePage({ setPage, addToCart, setViewProduct }) {
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
             "img",
             {
-              src: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/ONYX-01_b085642f-9033-4997-a1fd-4e97be2a8575.jpg?v=1762324228",
+              src: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/ONYX-03.jpg?v=1762324228",
               alt: "Onyx Gold",
               loading: "lazy",
               style: { width: "100%", height: "100%", objectFit: "cover", aspectRatio: "1/1", transition: "transform .6s ease" },
@@ -22571,7 +22577,7 @@ function HomePage({ setPage, addToCart, setViewProduct }) {
           { src: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/NafaisMagrib-1.jpg?v=1761115734", name: "Nafais Magrib" },
           { src: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Qarar-1.jpg?v=1775636739", name: "Qarar" },
           { src: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/ZayanSilver-1.jpg?v=1776430327", name: "Zayaan Silver" },
-          { src: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Icon.2.jpg?v=1773206615", name: "Icon" }
+          { src: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Icon.1.jpg?v=1773206615", name: "Icon" }
         ].map((item, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { gridColumn: `${i + 1}/${i + 2}`, gridRow: "3/4", position: "relative", overflow: "hidden", cursor: "pointer", background: "#F5F3EF" }, children: [
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
             "img",
@@ -22627,7 +22633,7 @@ function CollectionsPage({ addToCart, setViewProduct, setPage }) {
         "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/saraya_2.png?v=1781332291",
         "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Ihthiraam-1.jpg?v=1775635386",
         "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/IntoxicateMystique.1.png?v=1772518099",
-        "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/ONYX-01_b085642f-9033-4997-a1fd-4e97be2a8575.jpg?v=1762324228",
+        "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/ONYX-03.jpg?v=1762324228",
         "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/shiyaaka-snow.png?v=1781615422"
       ].map((src, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { overflow: "hidden", height: "100%" }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", { src, alt: "", style: { width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" } }) }, i)) }),
       /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { position: "absolute", inset: 0, background: "linear-gradient(to right,rgba(0,0,0,.85) 0%,rgba(0,0,0,.65) 50%,rgba(0,0,0,.80) 100%)" } }),
@@ -22642,7 +22648,7 @@ function CollectionsPage({ addToCart, setViewProduct, setPage }) {
         textAlign: "center"
       }, children: [
         /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { width: 40, height: 1, background: "#B8922A", marginBottom: 24 } }),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 9, letterSpacing: 6, color: "#B8922A", textTransform: "uppercase", fontFamily: "'Outfit',sans-serif", marginBottom: 16 }, children: "Khadlaj \xB7 Est. 1997" }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 9, letterSpacing: 6, color: "#B8922A", textTransform: "uppercase", fontFamily: "'Montserrat',sans-serif", marginBottom: 16 }, children: "Khadlaj \xB7 Est. 1997" }),
         /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", { className: "disp", style: {
           fontSize: "clamp(42px,6vw,88px)",
           fontWeight: 300,
@@ -22654,7 +22660,7 @@ function CollectionsPage({ addToCart, setViewProduct, setPage }) {
         /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { style: {
           color: "rgba(255,255,255,.6)",
           fontSize: 14,
-          fontFamily: "'Outfit',sans-serif",
+          fontFamily: "'Montserrat',sans-serif",
           letterSpacing: 0.5,
           marginBottom: 32
         }, children: [
@@ -22674,7 +22680,7 @@ function CollectionsPage({ addToCart, setViewProduct, setPage }) {
               letterSpacing: 2,
               textTransform: "uppercase",
               cursor: "pointer",
-              fontFamily: "'Outfit',sans-serif",
+              fontFamily: "'Montserrat',sans-serif",
               transition: "all .2s"
             },
             onMouseEnter: (e) => {
@@ -22723,7 +22729,7 @@ function CollectionsPage({ addToCart, setViewProduct, setPage }) {
             fontWeight: activeCat === c ? 700 : 400,
             transition: "all .18s",
             textTransform: "uppercase",
-            fontFamily: "'Outfit',sans-serif"
+            fontFamily: "'Montserrat',sans-serif"
           },
           children: c
         },
@@ -22731,7 +22737,7 @@ function CollectionsPage({ addToCart, setViewProduct, setPage }) {
       )) }),
       /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", gap: 12, alignItems: "center", flexShrink: 0 }, children: [
         /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", alignItems: "center", gap: 8 }, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { style: { fontSize: 10, color: "#888", letterSpacing: 1, fontFamily: "'Outfit',sans-serif", whiteSpace: "nowrap" }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { style: { fontSize: 10, color: "#888", letterSpacing: 1, fontFamily: "'Montserrat',sans-serif", whiteSpace: "nowrap" }, children: [
             "Max AED ",
             priceMax
           ] }),
@@ -22760,7 +22766,7 @@ function CollectionsPage({ addToCart, setViewProduct, setPage }) {
               fontSize: 10,
               cursor: "pointer",
               letterSpacing: 1,
-              fontFamily: "'Outfit',sans-serif",
+              fontFamily: "'Montserrat',sans-serif",
               outline: "none"
             },
             children: [
@@ -22778,7 +22784,7 @@ function CollectionsPage({ addToCart, setViewProduct, setPage }) {
         color: "#999",
         marginBottom: 32,
         letterSpacing: 2,
-        fontFamily: "'Outfit',sans-serif",
+        fontFamily: "'Montserrat',sans-serif",
         textTransform: "uppercase"
       }, children: [
         filtered.length,
@@ -22790,7 +22796,7 @@ function CollectionsPage({ addToCart, setViewProduct, setPage }) {
       }, onCart: addToCart }, p.id)) }),
       filtered.length === 0 && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { textAlign: "center", padding: "96px 0" }, children: [
         /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "disp", style: { fontSize: 36, fontWeight: 300, color: "#000", marginBottom: 12 }, children: "No fragrances found" }),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 13, color: "#888", fontFamily: "'Outfit',sans-serif" }, children: "Try adjusting the filters above." })
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 13, color: "#888", fontFamily: "'Montserrat',sans-serif" }, children: "Try adjusting the filters above." })
       ] })
     ] })
   ] });
@@ -22814,7 +22820,7 @@ function Accordion({ title, children, defaultOpen = false }) {
           fontSize: 12,
           letterSpacing: 2,
           textTransform: "uppercase",
-          fontFamily: "'Outfit',sans-serif",
+          fontFamily: "'Montserrat',sans-serif",
           fontWeight: 600,
           color: "#111"
         },
@@ -22824,7 +22830,7 @@ function Accordion({ title, children, defaultOpen = false }) {
         ]
       }
     ),
-    open && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { paddingBottom: 24, fontSize: 14, color: "#555", lineHeight: 1.8, fontFamily: "'Outfit',sans-serif" }, children })
+    open && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { paddingBottom: 24, fontSize: 14, color: "#555", lineHeight: 1.8, fontFamily: "'Montserrat',sans-serif" }, children })
   ] });
 }
 function ProductPage({ product, addToCart, setPage, setViewProduct }) {
@@ -22848,7 +22854,7 @@ function ProductPage({ product, addToCart, setPage, setViewProduct }) {
     setTimeout(() => setAdded(false), 2200);
   };
   return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { background: "#fff", minHeight: "100vh" }, children: [
-    /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { padding: "32px 5% 0", maxWidth: 1440, margin: "0 auto", fontSize: 10, letterSpacing: 1.5, textTransform: "uppercase", color: "#888", fontFamily: "'Outfit',sans-serif" }, children: [
+    /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { padding: "32px 5% 0", maxWidth: 1440, margin: "0 auto", fontSize: 10, letterSpacing: 1.5, textTransform: "uppercase", color: "#888", fontFamily: "'Montserrat',sans-serif" }, children: [
       /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { cursor: "pointer", color: "#111" }, onClick: () => setPage("home"), children: "Home" }),
       /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { margin: "0 12px" }, children: "|" }),
       /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { cursor: "pointer", color: "#111" }, onClick: () => setPage("collections"), children: "Collections" }),
@@ -22858,25 +22864,25 @@ function ProductPage({ product, addToCart, setPage, setViewProduct }) {
     /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { maxWidth: 1440, margin: "0 auto", padding: "40px 5% 120px" }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "grid", gridTemplateColumns: "1fr 1fr", gap: "clamp(40px, 8vw, 100px)", alignItems: "start" }, className: "grid-2", children: [
       /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { display: "flex", flexDirection: "column", gap: 16 }, children: thumbs.map((t, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { width: "100%", aspectRatio: "1/1", display: "flex", alignItems: "center", justifyContent: "center", background: "#FAFAFA" }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", { src: t, alt: `${product.name} - ${i + 1}`, style: { width: "85%", height: "85%", objectFit: "contain", mixBlendMode: "multiply", transition: "opacity .3s" } }) }, i)) }),
       /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { paddingTop: 8, maxWidth: 540, position: "sticky", top: 120, alignSelf: "start" }, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 10, letterSpacing: 3, color: "#111", textTransform: "uppercase", fontFamily: "'Outfit',sans-serif", marginBottom: 16 }, children: "Khadlaj Perfumes" }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 10, letterSpacing: 3, color: "#111", textTransform: "uppercase", fontFamily: "'Montserrat',sans-serif", marginBottom: 16 }, children: "Khadlaj Perfumes" }),
         /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", { className: "disp", style: { fontSize: "clamp(36px, 4.5vw, 52px)", fontWeight: 300, color: "#000", lineHeight: 1.05, letterSpacing: "-0.5px", textTransform: "uppercase", marginBottom: 16 }, children: product.name }),
         /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", alignItems: "center", gap: 8, marginBottom: 24 }, children: [
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)(StarRating, { n: 5, color: "#111" }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { fontSize: 13, color: "#555", fontFamily: "'Outfit',sans-serif", borderBottom: "1px solid #ccc", cursor: "pointer", paddingBottom: 2 }, children: "4.9 rating (55 reviews)" })
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { fontSize: 13, color: "#555", fontFamily: "'Montserrat',sans-serif", borderBottom: "1px solid #ccc", cursor: "pointer", paddingBottom: 2 }, children: "4.9 rating (55 reviews)" })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { style: { fontSize: 24, fontWeight: 400, color: "#111", fontFamily: "'Outfit',sans-serif", marginBottom: 8 }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { style: { fontSize: 24, fontWeight: 400, color: "#111", fontFamily: "'Montserrat',sans-serif", marginBottom: 8 }, children: [
           "AED ",
           product.price.toFixed(2)
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 12, color: "#777", fontFamily: "'Outfit',sans-serif", marginBottom: 40 }, children: "Tax included. Shipping calculated at checkout." }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 12, color: "#777", fontFamily: "'Montserrat',sans-serif", marginBottom: 40 }, children: "Tax included. Shipping calculated at checkout." }),
         /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { marginBottom: 40 }, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 11, letterSpacing: 1.5, textTransform: "uppercase", color: "#111", fontFamily: "'Outfit',sans-serif", marginBottom: 12, fontWeight: 600 }, children: "Size" }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", { style: { border: "1px solid #111", background: "#fff", color: "#111", padding: "12px 28px", fontSize: 12, letterSpacing: 1.5, fontFamily: "'Outfit',sans-serif", cursor: "default" }, children: product.size })
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 11, letterSpacing: 1.5, textTransform: "uppercase", color: "#111", fontFamily: "'Montserrat',sans-serif", marginBottom: 12, fontWeight: 600 }, children: "Size" }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", { style: { border: "1px solid #111", background: "#fff", color: "#111", padding: "12px 28px", fontSize: 12, letterSpacing: 1.5, fontFamily: "'Montserrat',sans-serif", cursor: "default" }, children: product.size })
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", gap: 16, marginBottom: 32, flexWrap: "wrap" }, children: [
           /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", alignItems: "center", border: "1px solid #E8E4DC", width: 130, height: 56 }, children: [
             /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", { onClick: () => setQty((q) => Math.max(1, q - 1)), style: { flex: 1, height: "100%", border: "none", background: "transparent", fontSize: 20, cursor: "pointer", color: "#555" }, children: "\u2212" }),
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { flex: 1, textAlign: "center", fontSize: 15, fontFamily: "'Outfit',sans-serif" }, children: qty }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { flex: 1, textAlign: "center", fontSize: 15, fontFamily: "'Montserrat',sans-serif" }, children: qty }),
             /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", { onClick: () => setQty((q) => q + 1), style: { flex: 1, height: "100%", border: "none", background: "transparent", fontSize: 20, cursor: "pointer", color: "#555" }, children: "+" })
           ] }),
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
@@ -22894,7 +22900,7 @@ function ProductPage({ product, addToCart, setPage, setViewProduct }) {
                 fontWeight: 700,
                 letterSpacing: 2,
                 textTransform: "uppercase",
-                fontFamily: "'Outfit',sans-serif",
+                fontFamily: "'Montserrat',sans-serif",
                 cursor: "pointer",
                 transition: "background .2s"
               },
@@ -22905,15 +22911,15 @@ function ProductPage({ product, addToCart, setPage, setViewProduct }) {
           )
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", gap: 24, marginBottom: 48, paddingTop: 24, borderTop: "1px solid #E8E4DC" }, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", alignItems: "center", gap: 8, fontSize: 10, color: "#555", fontFamily: "'Outfit',sans-serif", textTransform: "uppercase", letterSpacing: 1.5 }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", alignItems: "center", gap: 8, fontSize: 10, color: "#555", fontFamily: "'Montserrat',sans-serif", textTransform: "uppercase", letterSpacing: 1.5 }, children: [
             /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { fontSize: 14 }, children: "\u2713" }),
             " Authentic"
           ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", alignItems: "center", gap: 8, fontSize: 10, color: "#555", fontFamily: "'Outfit',sans-serif", textTransform: "uppercase", letterSpacing: 1.5 }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", alignItems: "center", gap: 8, fontSize: 10, color: "#555", fontFamily: "'Montserrat',sans-serif", textTransform: "uppercase", letterSpacing: 1.5 }, children: [
             /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { fontSize: 14 }, children: "\u2713" }),
             " Secure Check"
           ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", alignItems: "center", gap: 8, fontSize: 10, color: "#555", fontFamily: "'Outfit',sans-serif", textTransform: "uppercase", letterSpacing: 1.5 }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", alignItems: "center", gap: 8, fontSize: 10, color: "#555", fontFamily: "'Montserrat',sans-serif", textTransform: "uppercase", letterSpacing: 1.5 }, children: [
             /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { fontSize: 14 }, children: "\u2713" }),
             " Fast Ship"
           ] })
@@ -22966,25 +22972,25 @@ function GiftsPage({ addToCart, setViewProduct, setPage }) {
         textAlign: "center"
       }, children: [
         /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { width: 40, height: 1, background: "#B8922A", marginBottom: 24 } }),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 9, letterSpacing: 6, color: "#B8922A", textTransform: "uppercase", fontFamily: "'Outfit',sans-serif", marginBottom: 16 }, children: "Khadlaj Gifting" }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 9, letterSpacing: 6, color: "#B8922A", textTransform: "uppercase", fontFamily: "'Montserrat',sans-serif", marginBottom: 16 }, children: "Khadlaj Gifting" }),
         /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", { className: "disp", style: { fontSize: "clamp(38px,6vw,80px)", fontWeight: 300, color: "#fff", lineHeight: 1, letterSpacing: -2, marginBottom: 16 }, children: [
           "The Gift of",
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {}),
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)("em", { style: { fontStyle: "italic", color: "#B8922A" }, children: "Authentic Fragrance" })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { color: "rgba(255,255,255,.65)", maxWidth: 480, lineHeight: 1.8, fontSize: 14, fontFamily: "'Outfit',sans-serif" }, children: "Every Khadlaj gift set arrives in premium packaging \u2014 a luxury experience from first glance." })
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { color: "rgba(255,255,255,.65)", maxWidth: 480, lineHeight: 1.8, fontSize: 14, fontFamily: "'Montserrat',sans-serif" }, children: "Every Khadlaj gift set arrives in premium packaging \u2014 a luxury experience from first glance." })
       ] })
     ] }),
     /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", { style: { padding: "80px 5%", background: "#fff" }, children: [
       /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", alignItems: "flex-end", justifyContent: "space-between", flexWrap: "wrap", gap: 16, marginBottom: 52 }, children: [
         /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 9, letterSpacing: 5, color: "#B8922A", textTransform: "uppercase", fontFamily: "'Outfit',sans-serif", marginBottom: 12 }, children: "Curated Collections" }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 9, letterSpacing: 5, color: "#B8922A", textTransform: "uppercase", fontFamily: "'Montserrat',sans-serif", marginBottom: 12 }, children: "Curated Collections" }),
           /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", { className: "disp", style: { fontSize: "clamp(28px,3.5vw,50px)", fontWeight: 300, color: "#000", letterSpacing: -1, lineHeight: 1.05 }, children: [
             "Gift Sets & ",
             /* @__PURE__ */ (0, import_jsx_runtime.jsx)("em", { style: { fontStyle: "italic", color: "#B8922A" }, children: "Bundles" })
           ] })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { style: { fontSize: 12, color: "#888", fontFamily: "'Outfit',sans-serif" }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { style: { fontSize: 12, color: "#888", fontFamily: "'Montserrat',sans-serif" }, children: [
           giftProducts.length,
           " gift sets available"
         ] })
@@ -22998,9 +23004,9 @@ function GiftsPage({ addToCart, setViewProduct, setPage }) {
     ] }),
     /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", { style: { background: "#000", padding: "80px 5%", textAlign: "center" }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { maxWidth: 580, margin: "0 auto" }, children: [
       /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { width: 40, height: 1, background: "#B8922A", margin: "0 auto 32px" } }),
-      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 9, letterSpacing: 5, color: "#B8922A", textTransform: "uppercase", fontFamily: "'Outfit',sans-serif", marginBottom: 16 }, children: "Custom Orders" }),
+      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 9, letterSpacing: 5, color: "#B8922A", textTransform: "uppercase", fontFamily: "'Montserrat',sans-serif", marginBottom: 16 }, children: "Custom Orders" }),
       /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", { className: "disp", style: { fontSize: "clamp(30px,4vw,56px)", fontWeight: 300, color: "#fff", marginBottom: 16, letterSpacing: -1 }, children: "Build Your Own Gift Box" }),
-      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { color: "rgba(255,255,255,.55)", fontSize: 14, maxWidth: 460, margin: "0 auto 40px", lineHeight: 1.85, fontFamily: "'Outfit',sans-serif" }, children: "Choose any 2\u20136 fragrances and we'll present them in our signature gift packaging. Perfect for corporate gifting or weddings." }),
+      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { color: "rgba(255,255,255,.55)", fontSize: 14, maxWidth: 460, margin: "0 auto 40px", lineHeight: 1.85, fontFamily: "'Montserrat',sans-serif" }, children: "Choose any 2\u20136 fragrances and we'll present them in our signature gift packaging. Perfect for corporate gifting or weddings." }),
       /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", { className: "btn-gold", style: { fontSize: 10, padding: "15px 44px", letterSpacing: 3 }, children: "Start Building" }),
       /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { width: 40, height: 1, background: "#B8922A", margin: "32px auto 0" } })
     ] }) })
@@ -23037,7 +23043,7 @@ function StoryPage() {
         padding: "0 6% 56px"
       }, children: [
         /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { width: 40, height: 1, background: "#B8922A", marginBottom: 20 } }),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 9, letterSpacing: 6, color: "#B8922A", textTransform: "uppercase", fontFamily: "'Outfit',sans-serif", marginBottom: 14 }, children: "Family-Owned \xB7 UAE \xB7 Est. 1997" }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 9, letterSpacing: 6, color: "#B8922A", textTransform: "uppercase", fontFamily: "'Montserrat',sans-serif", marginBottom: 14 }, children: "Family-Owned \xB7 UAE \xB7 Est. 1997" }),
         /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", { className: "disp", style: {
           fontSize: "clamp(48px,7vw,96px)",
           fontWeight: 300,
@@ -23046,7 +23052,7 @@ function StoryPage() {
           letterSpacing: -3,
           marginBottom: 20
         }, children: "Our Story" }),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { color: "rgba(255,255,255,.6)", fontSize: 14, maxWidth: 480, lineHeight: 1.8, fontFamily: "'Outfit',sans-serif" }, children: "45 years of mastery. One family. 400+ fragrances that define Arabian perfumery." })
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { color: "rgba(255,255,255,.6)", fontSize: 14, maxWidth: 480, lineHeight: 1.8, fontFamily: "'Montserrat',sans-serif" }, children: "45 years of mastery. One family. 400+ fragrances that define Arabian perfumery." })
       ] })
     ] }),
     /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { padding: "80px 5%" }, children: [
@@ -23109,7 +23115,7 @@ function StoryPage() {
       /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 48, marginBottom: 0 }, children: [
         "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/saraya_2.png?v=1781332291",
         "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/IntoxicateMystique.1.png?v=1772518099",
-        "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Panache_2_jpg_0bc7a1f3-8af9-4188-98f1-c58151159f55.jpg?v=1771333283"
+        "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Panache_1_jpg_c97c705a-aebf-4bf9-a621-f11b565e765d.jpg?v=1771333282"
       ].map((src, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { aspectRatio: "4/5", overflow: "hidden" }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", { src, alt: "", style: { width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" } }) }, i)) })
     ] })
   ] });
@@ -23141,7 +23147,7 @@ function ContactPage() {
         padding: "0 6% 52px"
       }, children: [
         /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { width: 40, height: 1, background: "#B8922A", marginBottom: 20 } }),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 9, letterSpacing: 6, color: "#B8922A", textTransform: "uppercase", fontFamily: "'Outfit',sans-serif", marginBottom: 14 }, children: "Get in Touch" }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 9, letterSpacing: 6, color: "#B8922A", textTransform: "uppercase", fontFamily: "'Montserrat',sans-serif", marginBottom: 14 }, children: "Get in Touch" }),
         /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", { className: "disp", style: {
           fontSize: "clamp(44px,6vw,84px)",
           fontWeight: 300,
@@ -23150,15 +23156,15 @@ function ContactPage() {
           letterSpacing: -2,
           marginBottom: 16
         }, children: "Contact Us" }),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { color: "rgba(255,255,255,.55)", fontSize: 13, maxWidth: 420, lineHeight: 1.8, fontFamily: "'Outfit',sans-serif" }, children: "Our team is ready to assist \u2014 whether you're a customer, retailer, or gifting partner." })
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { color: "rgba(255,255,255,.55)", fontSize: 13, maxWidth: 420, lineHeight: 1.8, fontFamily: "'Montserrat',sans-serif" }, children: "Our team is ready to assist \u2014 whether you're a customer, retailer, or gifting partner." })
       ] })
     ] }),
     /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { padding: "80px 5% 96px", display: "grid", gridTemplateColumns: "1fr 1.4fr", gap: 64 }, className: "hero-split", children: [
       /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
         /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { width: 32, height: 1, background: "#B8922A", marginBottom: 20 } }),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 9, letterSpacing: 5, color: "#B8922A", textTransform: "uppercase", fontFamily: "'Outfit',sans-serif", marginBottom: 14 }, children: "Reach Us" }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 9, letterSpacing: 5, color: "#B8922A", textTransform: "uppercase", fontFamily: "'Montserrat',sans-serif", marginBottom: 14 }, children: "Reach Us" }),
         /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", { className: "disp", style: { fontSize: "clamp(28px,3vw,44px)", fontWeight: 300, marginBottom: 24, lineHeight: 1.1, color: "#000", letterSpacing: -1 }, children: "We'd Love to Hear From You" }),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { color: "#777", lineHeight: 1.85, fontSize: 14, marginBottom: 36, fontFamily: "'Outfit',sans-serif" }, children: "Whether you're a fragrance enthusiast, a retail partner, or a gifting client \u2014 our team is here to help." }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { color: "#777", lineHeight: 1.85, fontSize: 14, marginBottom: 36, fontFamily: "'Montserrat',sans-serif" }, children: "Whether you're a fragrance enthusiast, a retail partner, or a gifting client \u2014 our team is here to help." }),
         [
           ["\u{1F4CD}", "Address", "Dubai, United Arab Emirates"],
           ["\u{1F4DE}", "Phone", "+971 4 000 0000"],
@@ -23167,12 +23173,12 @@ function ContactPage() {
         ].map(([icon, label, val]) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", gap: 18, marginBottom: 22, paddingBottom: 22, borderBottom: "1px solid #F0EBE3" }, children: [
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { fontSize: 20, flexShrink: 0, marginTop: 2 }, children: icon }),
           /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 9, letterSpacing: 3, color: "#B8922A", textTransform: "uppercase", fontFamily: "'Outfit',sans-serif", marginBottom: 4 }, children: label }),
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 14, color: "#333", fontFamily: "'Outfit',sans-serif" }, children: val })
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 9, letterSpacing: 3, color: "#B8922A", textTransform: "uppercase", fontFamily: "'Montserrat',sans-serif", marginBottom: 4 }, children: label }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 14, color: "#333", fontFamily: "'Montserrat',sans-serif" }, children: val })
           ] })
         ] }, label)),
         /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { marginTop: 32 }, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 9, letterSpacing: 3, color: "#B8922A", textTransform: "uppercase", fontFamily: "'Outfit',sans-serif", marginBottom: 16 }, children: "Follow Us" }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 9, letterSpacing: 3, color: "#B8922A", textTransform: "uppercase", fontFamily: "'Montserrat',sans-serif", marginBottom: 16 }, children: "Follow Us" }),
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { display: "flex", gap: 10, flexWrap: "wrap" }, children: [
             ["Instagram", "https://www.instagram.com/khadlajperfumes"],
             ["TikTok", SOCIAL_LINKS.tiktok],
@@ -23192,7 +23198,7 @@ function ContactPage() {
                 letterSpacing: 2,
                 cursor: "pointer",
                 textDecoration: "none",
-                fontFamily: "'Outfit',sans-serif",
+                fontFamily: "'Montserrat',sans-serif",
                 textTransform: "uppercase",
                 transition: "all .2s"
               },
@@ -23213,13 +23219,13 @@ function ContactPage() {
       /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { background: "#000", padding: "44px 40px" }, children: sent ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { textAlign: "center", padding: "60px 0" }, children: [
         /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { width: 48, height: 48, borderRadius: "50%", background: "#B8922A", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 24px", fontSize: 22, color: "#fff" }, children: "\u2713" }),
         /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", { className: "disp", style: { fontSize: 32, color: "#fff", margin: "0 0 12px", fontWeight: 300 }, children: "Message Sent" }),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { color: "rgba(255,255,255,.5)", fontSize: 13, fontFamily: "'Outfit',sans-serif" }, children: "We'll get back to you within 24 hours." }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { color: "rgba(255,255,255,.5)", fontSize: 13, fontFamily: "'Montserrat',sans-serif" }, children: "We'll get back to you within 24 hours." }),
         /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", { className: "btn-ghost", onClick: () => setSent(false), style: { marginTop: 32, color: "#fff", borderColor: "rgba(255,255,255,.3)" }, children: "Send Another" })
       ] }) : /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [
         /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { width: 32, height: 1, background: "#B8922A", marginBottom: 20 } }),
         /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", { className: "disp", style: { fontSize: 28, fontWeight: 300, color: "#fff", marginBottom: 32, letterSpacing: -0.5 }, children: "Send a Message" }),
         [["Name", "name", "text"], ["Email", "email", "email"], ["Subject", "subject", "text"]].map(([label, key, type]) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { marginBottom: 18 }, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", { style: { fontSize: 9, letterSpacing: 2.5, color: "rgba(255,255,255,.4)", display: "block", marginBottom: 8, textTransform: "uppercase", fontFamily: "'Outfit',sans-serif" }, children: label }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", { style: { fontSize: 9, letterSpacing: 2.5, color: "rgba(255,255,255,.4)", display: "block", marginBottom: 8, textTransform: "uppercase", fontFamily: "'Montserrat',sans-serif" }, children: label }),
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
             "input",
             {
@@ -23235,13 +23241,13 @@ function ContactPage() {
                 padding: "12px 0",
                 fontSize: 14,
                 outline: "none",
-                fontFamily: "'Outfit',sans-serif"
+                fontFamily: "'Montserrat',sans-serif"
               }
             }
           )
         ] }, key)),
         /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { marginBottom: 28 }, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", { style: { fontSize: 9, letterSpacing: 2.5, color: "rgba(255,255,255,.4)", display: "block", marginBottom: 8, textTransform: "uppercase", fontFamily: "'Outfit',sans-serif" }, children: "Message" }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", { style: { fontSize: 9, letterSpacing: 2.5, color: "rgba(255,255,255,.4)", display: "block", marginBottom: 8, textTransform: "uppercase", fontFamily: "'Montserrat',sans-serif" }, children: "Message" }),
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
             "textarea",
             {
@@ -23258,7 +23264,7 @@ function ContactPage() {
                 fontSize: 14,
                 outline: "none",
                 resize: "vertical",
-                fontFamily: "'Outfit',sans-serif"
+                fontFamily: "'Montserrat',sans-serif"
               }
             }
           )
@@ -23277,7 +23283,7 @@ function ContactPage() {
               letterSpacing: 3,
               textTransform: "uppercase",
               cursor: "pointer",
-              fontFamily: "'Outfit',sans-serif",
+              fontFamily: "'Montserrat',sans-serif",
               fontWeight: 600,
               transition: "opacity .2s"
             },
@@ -23321,7 +23327,7 @@ function Navbar({ page, setPage, cartCount }) {
             value: searchQuery,
             onChange: (e) => handleSearch(e.target.value),
             placeholder: "Search fragrances, collections, notes...",
-            style: { flex: 1, border: "none", outline: "none", fontSize: "clamp(16px,2.5vw,26px)", fontFamily: "'Cormorant Garamond',serif", fontWeight: 300, color: "#000", background: "transparent" }
+            style: { flex: 1, border: "none", outline: "none", fontSize: "clamp(16px,2.5vw,26px)", fontFamily: "'Cinzel',serif", fontWeight: 300, color: "#000", background: "transparent" }
           }
         ),
         /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
@@ -23344,10 +23350,10 @@ function Navbar({ page, setPage, cartCount }) {
             searchQuery,
             '"'
           ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 13, color: "#888", fontFamily: "'Outfit',sans-serif" }, children: 'Try "oud", "musk", "gift"...' })
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 13, color: "#888", fontFamily: "'Montserrat',sans-serif" }, children: 'Try "oud", "musk", "gift"...' })
         ] }),
         searchResults.length > 0 && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { style: { fontSize: 9, letterSpacing: 4, color: "#B8922A", textTransform: "uppercase", fontFamily: "'Outfit',sans-serif", marginBottom: 20 }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { style: { fontSize: 9, letterSpacing: 4, color: "#B8922A", textTransform: "uppercase", fontFamily: "'Montserrat',sans-serif", marginBottom: 20 }, children: [
             searchResults.length,
             ' results for "',
             searchQuery,
@@ -23362,12 +23368,12 @@ function Navbar({ page, setPage, cartCount }) {
             /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { position: "relative", aspectRatio: "3/4", overflow: "hidden", background: "#F7F5F2" }, children: [
               /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", { src: p.img, alt: p.name, loading: "lazy", style: { width: "100%", height: "100%", objectFit: "contain", padding: "16px" } }),
               /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { height: 2, position: "absolute", bottom: 0, left: 0, right: 0, background: "linear-gradient(90deg,#B8922A,#D4AF5A,#B8922A)" } }),
-              p.badge && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { position: "absolute", top: 10, left: 10, background: p.badge === "New" ? "#B8922A" : p.badge === "Limited" ? "#5C0000" : "#000", color: "#fff", fontSize: 8, letterSpacing: 2, padding: "3px 8px", fontFamily: "'Outfit',sans-serif", textTransform: "uppercase" }, children: p.badge })
+              p.badge && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { position: "absolute", top: 10, left: 10, background: p.badge === "New" ? "#B8922A" : p.badge === "Limited" ? "#5C0000" : "#000", color: "#fff", fontSize: 8, letterSpacing: 2, padding: "3px 8px", fontFamily: "'Montserrat',sans-serif", textTransform: "uppercase" }, children: p.badge })
             ] }),
             /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { padding: "10px 6px 14px" }, children: [
-              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 9, color: "#B8922A", letterSpacing: 3, textTransform: "uppercase", fontFamily: "'Outfit',sans-serif", marginBottom: 3 }, children: p.col }),
-              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 12, fontWeight: 700, color: "#000", textTransform: "uppercase", fontFamily: "'Outfit',sans-serif", marginBottom: 4, lineHeight: 1.2 }, children: p.name }),
-              /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { style: { fontSize: 13, fontWeight: 700, color: "#000", fontFamily: "'Outfit',sans-serif" }, children: [
+              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 9, color: "#B8922A", letterSpacing: 3, textTransform: "uppercase", fontFamily: "'Montserrat',sans-serif", marginBottom: 3 }, children: p.col }),
+              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 12, fontWeight: 700, color: "#000", textTransform: "uppercase", fontFamily: "'Montserrat',sans-serif", marginBottom: 4, lineHeight: 1.2 }, children: p.name }),
+              /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { style: { fontSize: 13, fontWeight: 700, color: "#000", fontFamily: "'Montserrat',sans-serif" }, children: [
                 "AED ",
                 p.price
               ] })
@@ -23375,12 +23381,12 @@ function Navbar({ page, setPage, cartCount }) {
           ] }, p.id)) })
         ] }),
         !searchQuery && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 9, letterSpacing: 4, color: "#B8922A", textTransform: "uppercase", fontFamily: "'Outfit',sans-serif", marginBottom: 16 }, children: "Popular Searches" }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 9, letterSpacing: 4, color: "#B8922A", textTransform: "uppercase", fontFamily: "'Montserrat',sans-serif", marginBottom: 16 }, children: "Popular Searches" }),
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { display: "flex", flexWrap: "wrap", gap: 8, marginBottom: 32 }, children: ["Oud", "Musk", "Gift Set", "New Arrivals", "For Her", "For Him", "Amber", "Island"].map((s) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
             "button",
             {
               onClick: () => handleSearch(s),
-              style: { background: "#F7F5F2", border: "1px solid #E8E4DC", padding: "8px 16px", fontSize: 12, color: "#333", cursor: "pointer", fontFamily: "'Outfit',sans-serif", transition: "all .2s" },
+              style: { background: "#F7F5F2", border: "1px solid #E8E4DC", padding: "8px 16px", fontSize: 12, color: "#333", cursor: "pointer", fontFamily: "'Montserrat',sans-serif", transition: "all .2s" },
               onMouseEnter: (e) => {
                 e.currentTarget.style.background = "#000";
                 e.currentTarget.style.color = "#fff";
@@ -23396,7 +23402,7 @@ function Navbar({ page, setPage, cartCount }) {
         ] })
       ] })
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { background: "#0a0a0a", color: "#fff", textAlign: "center", padding: "8px 16px", fontSize: "8.5px", letterSpacing: "4px", fontFamily: "'Outfit',sans-serif", textTransform: "uppercase", borderBottom: "1px solid rgba(184,146,42,0.15)" }, children: [
+    /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { background: "#0a0a0a", color: "#fff", textAlign: "center", padding: "8px 16px", fontSize: "8.5px", letterSpacing: "4px", fontFamily: "'Montserrat',sans-serif", textTransform: "uppercase", borderBottom: "1px solid rgba(184,146,42,0.15)" }, children: [
       /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { color: "#B8922A", marginRight: 8, fontWeight: 600 }, children: "\u2726" }),
       "REGISTER NOW & RECEIVE 10% OFF \u2014 CODE: ",
       /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { color: "#B8922A", fontWeight: 700 }, children: "10OFF" }),
@@ -23424,7 +23430,7 @@ function Navbar({ page, setPage, cartCount }) {
                     /* @__PURE__ */ (0, import_jsx_runtime.jsx)("line", { x1: "2", y1: "12", x2: "22", y2: "12" }),
                     /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", { d: "M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" })
                   ] }) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", { src: c.flagUrl, alt: "", style: { width: 16, height: 11, objectFit: "cover", borderRadius: 1 } }),
-                  /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { fontSize: "8px", color: "#111", fontFamily: "'Outfit',sans-serif", fontWeight: 600, letterSpacing: "1px", textTransform: "uppercase" }, children: c.name })
+                  /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { fontSize: "8px", color: "#111", fontFamily: "'Montserrat',sans-serif", fontWeight: 600, letterSpacing: "1px", textTransform: "uppercase" }, children: c.name })
                 ]
               },
               c.name
@@ -23439,13 +23445,13 @@ function Navbar({ page, setPage, cartCount }) {
             {
               src: "https://khadlaj-perfumes.com/cdn/shop/files/Khadlaj_logo_2026--2_160x.png?v=1773752104",
               alt: "Khadlaj Perfumes",
-              style: { height: "clamp(46px,5.5vw,64px)", width: "auto", objectFit: "contain", display: "block", maxWidth: 160, transition: "transform 0.3s ease" },
+              style: { height: "clamp(60px,7.5vw,90px)", width: "auto", objectFit: "contain", display: "block", maxWidth: 240, transition: "transform 0.3s ease" },
               onMouseEnter: (e) => e.currentTarget.style.transform = "scale(1.02)",
               onMouseLeave: (e) => e.currentTarget.style.transform = "scale(1)"
             }
           ) }),
           /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", alignItems: "center", justifyContent: "flex-end", gap: 24 }, children: [
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "hide-mob", style: { fontSize: "8.5px", letterSpacing: "2.5px", color: "#111", textTransform: "uppercase", cursor: "pointer", fontFamily: "'Outfit',sans-serif", fontWeight: 600, transition: "color .2s" }, onMouseEnter: (e) => e.target.style.color = "#B8922A", onMouseLeave: (e) => e.target.style.color = "#111", onClick: () => setPage("contact"), children: "Sign Up" }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "hide-mob", style: { fontSize: "8.5px", letterSpacing: "2.5px", color: "#111", textTransform: "uppercase", cursor: "pointer", fontFamily: "'Montserrat',sans-serif", fontWeight: 600, transition: "color .2s" }, onMouseEnter: (e) => e.target.style.color = "#B8922A", onMouseLeave: (e) => e.target.style.color = "#111", onClick: () => setPage("contact"), children: "Sign Up" }),
             /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "hide-mob", style: { cursor: "pointer", display: "flex", alignItems: "center", transition: "transform .2s" }, onMouseEnter: (e) => e.currentTarget.style.transform = "scale(1.1)", onMouseLeave: (e) => e.currentTarget.style.transform = "scale(1)", onClick: () => setSearchOpen(true), children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("svg", { width: "18", height: "18", viewBox: "0 0 24 24", fill: "none", stroke: "#111", strokeWidth: "1.5", strokeLinecap: "round", strokeLinejoin: "round", children: [
               /* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", { cx: "11", cy: "11", r: "8" }),
               /* @__PURE__ */ (0, import_jsx_runtime.jsx)("line", { x1: "21", y1: "21", x2: "16.65", y2: "16.65" })
@@ -23456,7 +23462,7 @@ function Navbar({ page, setPage, cartCount }) {
                 /* @__PURE__ */ (0, import_jsx_runtime.jsx)("line", { x1: "3", y1: "6", x2: "21", y2: "6" }),
                 /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", { d: "M16 10a4 4 0 01-8 0" })
               ] }),
-              cartCount > 0 && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { position: "absolute", top: -5, right: -7, background: "#B8922A", color: "#fff", borderRadius: "50%", width: 14, height: 14, fontSize: 8, display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 700, fontFamily: "'Outfit',sans-serif" }, children: cartCount })
+              cartCount > 0 && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { position: "absolute", top: -5, right: -7, background: "#B8922A", color: "#fff", borderRadius: "50%", width: 14, height: 14, fontSize: 8, display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 700, fontFamily: "'Montserrat',sans-serif" }, children: cartCount })
             ] }),
             /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(
               "button",
@@ -23474,7 +23480,7 @@ function Navbar({ page, setPage, cartCount }) {
             )
           ] })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "hide-mob", style: { display: "flex", justifyContent: "center", gap: 40, paddingBottom: 16, fontSize: "8.5px", letterSpacing: "3px", textTransform: "uppercase", color: "#111", fontFamily: "'Outfit',sans-serif", fontWeight: 600 }, children: [["Offers", "collections"], ["Bestsellers", "collections"], ["New In", "collections"], ["Gifts", "gifts"], ["Perfume", "collections"], ["Our Story", "story"], ["Contact", "contact"]].map(([label, pg]) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "hide-mob", style: { display: "flex", justifyContent: "center", gap: 40, paddingBottom: 16, fontSize: "12px", letterSpacing: "1.5px", textTransform: "uppercase", color: "#111", fontFamily: "'Montserrat',sans-serif", fontWeight: 600 }, children: [["Offers", "collections"], ["Bestsellers", "collections"], ["New In", "collections"], ["Gifts", "gifts"], ["Perfume", "collections"], ["Our Story", "story"], ["Contact", "contact"]].map(([label, pg]) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
           "span",
           {
             onClick: () => setPage(pg),
@@ -23517,7 +23523,7 @@ function Navbar({ page, setPage, cartCount }) {
               textTransform: "uppercase",
               color: "#000",
               cursor: "pointer",
-              fontFamily: "'Outfit',sans-serif",
+              fontFamily: "'Montserrat',sans-serif",
               borderBottom: "1px solid #F0EBE3",
               display: "flex",
               alignItems: "center",
@@ -23536,7 +23542,7 @@ function Navbar({ page, setPage, cartCount }) {
             href,
             target: "_blank",
             rel: "noreferrer",
-            style: { fontSize: 9, letterSpacing: 2, color: "#888", border: "1px solid #E0E0E0", padding: "7px 14px", textDecoration: "none", fontFamily: "'Outfit',sans-serif", textTransform: "uppercase" },
+            style: { fontSize: 9, letterSpacing: 2, color: "#888", border: "1px solid #E0E0E0", padding: "7px 14px", textDecoration: "none", fontFamily: "'Montserrat',sans-serif", textTransform: "uppercase" },
             children: s
           },
           s
@@ -23550,16 +23556,16 @@ function Footer({ setPage }) {
   return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("footer", { style: { background: "#fff", borderTop: "1px solid #E8E4DC" }, children: [
     /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { background: "#0a0a0a", padding: "80px 5%", textAlign: "center", borderBottom: "1px solid rgba(184,146,42,0.2)" }, children: [
       /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { width: 32, height: 1, background: "#B8922A", margin: "0 auto 20px" } }),
-      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 9, letterSpacing: 5, color: "#B8922A", textTransform: "uppercase", fontFamily: "'Outfit',sans-serif", marginBottom: 16, fontWeight: 600 }, children: "Stay Inspired" }),
+      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 9, letterSpacing: 5, color: "#B8922A", textTransform: "uppercase", fontFamily: "'Montserrat',sans-serif", marginBottom: 16, fontWeight: 600 }, children: "Stay Inspired" }),
       /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", { className: "disp", style: { fontSize: "clamp(28px,3.5vw,46px)", fontWeight: 300, marginBottom: 14, color: "#fff", letterSpacing: "-0.5px" }, children: "Join the Khadlaj Circle" }),
-      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { color: "rgba(255,255,255,.5)", fontSize: 13, marginBottom: 36, fontFamily: "'Outfit',sans-serif", maxWidth: 400, margin: "0 auto 36px", lineHeight: 1.7 }, children: "New launches, exclusive offers, and fragrance stories \u2014 direct to your inbox." }),
+      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { color: "rgba(255,255,255,.5)", fontSize: 13, marginBottom: 36, fontFamily: "'Montserrat',sans-serif", maxWidth: 400, margin: "0 auto 36px", lineHeight: 1.7 }, children: "New launches, exclusive offers, and fragrance stories \u2014 direct to your inbox." }),
       /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", gap: 0, maxWidth: 420, margin: "0 auto", justifyContent: "center" }, children: [
         /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
           "input",
           {
             type: "email",
             placeholder: "Your email address",
-            style: { flex: 1, background: "transparent", border: "1px solid rgba(255,255,255,.20)", borderRight: "none", color: "#fff", padding: "14px 20px", fontSize: 12, outline: "none", fontFamily: "'Outfit',sans-serif", letterSpacing: 0.5, transition: "border-color .3s" },
+            style: { flex: 1, background: "transparent", border: "1px solid rgba(255,255,255,.20)", borderRight: "none", color: "#fff", padding: "14px 20px", fontSize: 12, outline: "none", fontFamily: "'Montserrat',sans-serif", letterSpacing: 0.5, transition: "border-color .3s" },
             onFocus: (e) => e.currentTarget.style.borderColor = "rgba(255,255,255,.4)",
             onBlur: (e) => e.currentTarget.style.borderColor = "rgba(255,255,255,.2)"
           }
@@ -23567,7 +23573,7 @@ function Footer({ setPage }) {
         /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
           "button",
           {
-            style: { background: "#B8922A", border: "none", color: "#fff", padding: "14px 32px", fontSize: 9, letterSpacing: 3, textTransform: "uppercase", cursor: "pointer", fontFamily: "'Outfit',sans-serif", fontWeight: 600, whiteSpace: "nowrap", transition: "background .3s" },
+            style: { background: "#B8922A", border: "none", color: "#fff", padding: "14px 32px", fontSize: 9, letterSpacing: 3, textTransform: "uppercase", cursor: "pointer", fontFamily: "'Montserrat',sans-serif", fontWeight: 600, whiteSpace: "nowrap", transition: "background .3s" },
             onMouseEnter: (e) => e.currentTarget.style.background = "#C9A84C",
             onMouseLeave: (e) => e.currentTarget.style.background = "#B8922A",
             children: "Subscribe"
@@ -23582,11 +23588,11 @@ function Footer({ setPage }) {
           {
             src: "https://khadlaj-perfumes.com/cdn/shop/files/Khadlaj_logo_2026--2_160x.png?v=1773752104",
             alt: "Khadlaj Perfumes",
-            style: { height: 52, width: "auto", objectFit: "contain", display: "block", marginBottom: 24 }
+            style: { height: 84, width: "auto", objectFit: "contain", display: "block", marginBottom: 24 }
           }
         ),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: "8px", letterSpacing: 3.5, color: "#B8922A", fontFamily: "'Outfit',sans-serif", marginBottom: 16, textTransform: "uppercase", fontWeight: 700 }, children: "Perfumes \xB7 UAE \xB7 Est. 1997" }),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 13, color: "#555", lineHeight: 1.85, maxWidth: 260, marginBottom: 32, fontFamily: "'Outfit',sans-serif" }, children: "Family-owned UAE perfume house. Authentic Arabian & French fragrance artistry since 1997." }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: "8px", letterSpacing: 3.5, color: "#B8922A", fontFamily: "'Montserrat',sans-serif", marginBottom: 16, textTransform: "uppercase", fontWeight: 700 }, children: "Perfumes \xB7 UAE \xB7 Est. 1997" }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 13, color: "#555", lineHeight: 1.85, maxWidth: 260, marginBottom: 32, fontFamily: "'Montserrat',sans-serif" }, children: "Family-owned UAE perfume house. Authentic Arabian & French fragrance artistry since 1997." }),
         /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { display: "flex", gap: 8, flexWrap: "wrap" }, children: COUNTRIES.map((c) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(
           "div",
           {
@@ -23603,19 +23609,19 @@ function Footer({ setPage }) {
                 /* @__PURE__ */ (0, import_jsx_runtime.jsx)("line", { x1: "2", y1: "12", x2: "22", y2: "12" }),
                 /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", { d: "M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" })
               ] }) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", { src: c.flagUrl, alt: "", style: { width: 16, height: 11, objectFit: "cover", borderRadius: 1 } }),
-              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { fontSize: 9, color: "#222", fontFamily: "'Outfit',sans-serif", fontWeight: 600 }, children: c.name })
+              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { fontSize: 9, color: "#222", fontFamily: "'Montserrat',sans-serif", fontWeight: 600 }, children: c.name })
             ]
           },
           c.name
         )) })
       ] }),
       /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: "8.5px", letterSpacing: 2.5, color: "#000", textTransform: "uppercase", marginBottom: 24, fontFamily: "'Outfit',sans-serif", fontWeight: 700 }, children: "Collections" }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: "8.5px", letterSpacing: 2.5, color: "#000", textTransform: "uppercase", marginBottom: 24, fontFamily: "'Montserrat',sans-serif", fontWeight: 700 }, children: "Collections" }),
         ["Atyaab", "Lafede", "Master Perfumery", "Gift Sets", "New Arrivals", "Best Sellers"].map((l) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
           "p",
           {
             onClick: () => setPage("collections"),
-            style: { fontSize: 12, color: "#555", marginBottom: 14, cursor: "pointer", fontFamily: "'Outfit',sans-serif", letterSpacing: 0.5, transition: "all .25s ease" },
+            style: { fontSize: 12, color: "#555", marginBottom: 14, cursor: "pointer", fontFamily: "'Montserrat',sans-serif", letterSpacing: 0.5, transition: "all .25s ease" },
             onMouseEnter: (e) => e.target.style.color = "#B8922A",
             onMouseLeave: (e) => e.target.style.color = "#555",
             children: l
@@ -23624,12 +23630,12 @@ function Footer({ setPage }) {
         ))
       ] }),
       /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: "8.5px", letterSpacing: 2.5, color: "#000", textTransform: "uppercase", marginBottom: 24, fontFamily: "'Outfit',sans-serif", fontWeight: 700 }, children: "Company" }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: "8.5px", letterSpacing: 2.5, color: "#000", textTransform: "uppercase", marginBottom: 24, fontFamily: "'Montserrat',sans-serif", fontWeight: 700 }, children: "Company" }),
         [["Our Story", "story"], ["Contact Us", "contact"], ["Find a Store", "contact"], ["Careers", "contact"], ["Press", "contact"]].map(([l, pg]) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
           "p",
           {
             onClick: () => setPage(pg),
-            style: { fontSize: 12, color: "#555", marginBottom: 14, cursor: "pointer", fontFamily: "'Outfit',sans-serif", letterSpacing: 0.5, transition: "all .25s ease" },
+            style: { fontSize: 12, color: "#555", marginBottom: 14, cursor: "pointer", fontFamily: "'Montserrat',sans-serif", letterSpacing: 0.5, transition: "all .25s ease" },
             onMouseEnter: (e) => e.target.style.color = "#B8922A",
             onMouseLeave: (e) => e.target.style.color = "#555",
             children: l
@@ -23638,11 +23644,11 @@ function Footer({ setPage }) {
         ))
       ] }),
       /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: "8.5px", letterSpacing: 2.5, color: "#000", textTransform: "uppercase", marginBottom: 24, fontFamily: "'Outfit',sans-serif", fontWeight: 700 }, children: "Support" }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: "8.5px", letterSpacing: 2.5, color: "#000", textTransform: "uppercase", marginBottom: 24, fontFamily: "'Montserrat',sans-serif", fontWeight: 700 }, children: "Support" }),
         ["Shipping & Returns", "FAQ", "Track My Order", "Fragrance Guide", "Gift Wrapping"].map((l) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
           "p",
           {
-            style: { fontSize: 12, color: "#555", marginBottom: 14, cursor: "pointer", fontFamily: "'Outfit',sans-serif", letterSpacing: 0.5, transition: "all .25s ease" },
+            style: { fontSize: 12, color: "#555", marginBottom: 14, cursor: "pointer", fontFamily: "'Montserrat',sans-serif", letterSpacing: 0.5, transition: "all .25s ease" },
             onMouseEnter: (e) => e.target.style.color = "#B8922A",
             onMouseLeave: (e) => e.target.style.color = "#555",
             children: l
@@ -23650,12 +23656,12 @@ function Footer({ setPage }) {
           l
         )),
         /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { marginTop: 32, paddingTop: 24, borderTop: "1px solid #e5e5e5" }, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: "8px", letterSpacing: 2.5, color: "#000", textTransform: "uppercase", marginBottom: 14, fontFamily: "'Outfit',sans-serif", fontWeight: 700 }, children: "Ships With" }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { display: "flex", flexWrap: "wrap", gap: 6 }, children: ["DHL", "Aramex", "EMX"].map((s) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { border: "1px solid #e5e5e5", padding: "4px 12px", fontSize: 9, color: "#444", fontFamily: "'Outfit',sans-serif", letterSpacing: 1, background: "#fff", borderRadius: 1 }, children: s }, s)) })
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: "8px", letterSpacing: 2.5, color: "#000", textTransform: "uppercase", marginBottom: 14, fontFamily: "'Montserrat',sans-serif", fontWeight: 700 }, children: "Ships With" }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { display: "flex", flexWrap: "wrap", gap: 6 }, children: ["DHL", "Aramex", "EMX"].map((s) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { border: "1px solid #e5e5e5", padding: "4px 12px", fontSize: 9, color: "#444", fontFamily: "'Montserrat',sans-serif", letterSpacing: 1, background: "#fff", borderRadius: 1 }, children: s }, s)) })
         ] })
       ] })
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { background: "#fff", borderTop: "1px solid #E8E4DC", padding: "20px 5%", display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: 12, fontSize: 9, color: "#888", letterSpacing: 1.5, fontFamily: "'Outfit',sans-serif", textTransform: "uppercase" }, children: [
+    /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { background: "#fff", borderTop: "1px solid #E8E4DC", padding: "20px 5%", display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: 12, fontSize: 9, color: "#888", letterSpacing: 1.5, fontFamily: "'Montserrat',sans-serif", textTransform: "uppercase" }, children: [
       /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "\xA9 2025 Khadlaj Perfumes LLC. All rights reserved. UAE." }),
       /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { display: "flex", gap: 24 }, children: ["Privacy Policy", "Terms of Use", "Cookie Settings"].map((l) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { cursor: "pointer", transition: "color .2s" }, onMouseEnter: (e) => e.target.style.color = "#B8922A", onMouseLeave: (e) => e.target.style.color = "#888", children: l }, l)) })
     ] })
@@ -23694,7 +23700,7 @@ function App() {
         return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(HomePage, { setPage, addToCart, setViewProduct });
     }
   };
-  return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { fontFamily: "'Outfit',sans-serif", background: "#fff", color: "#000", minHeight: "100vh", overflowX: "hidden" }, children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { fontFamily: "'Montserrat',sans-serif", background: "#fff", color: "#000", minHeight: "100vh", overflowX: "hidden" }, children: [
     /* @__PURE__ */ (0, import_jsx_runtime.jsx)("style", { children: GLOBAL_CSS }),
     /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Navbar, { page, setPage, cartCount }),
     /* @__PURE__ */ (0, import_jsx_runtime.jsx)("main", { children: renderPage() }),
@@ -23756,7 +23762,7 @@ function App() {
               /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", { onClick: () => setShowPopup(false), style: { position: "absolute", top: 14, right: 14, background: "none", border: "none", fontSize: 22, cursor: "pointer", color: "#000", zIndex: 1, lineHeight: 1, fontWeight: 300 }, children: "\xD7" }),
               /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { position: "relative", minHeight: 340, overflow: "hidden" }, children: [
                 /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", { src: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/CloudCandy3.jpg?v=1767169755", alt: "", style: { width: "100%", height: "100%", objectFit: "cover" } }),
-                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { position: "absolute", inset: 0, background: "rgba(0,0,0,.35)", display: "flex", flexDirection: "column", justifyContent: "flex-end", padding: 24 }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { className: "shimmer-text", style: { fontSize: 30, fontFamily: "'Cormorant Garamond',serif", fontWeight: 300, lineHeight: 1.1 }, children: [
+                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { position: "absolute", inset: 0, background: "rgba(0,0,0,.35)", display: "flex", flexDirection: "column", justifyContent: "flex-end", padding: 24 }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { className: "shimmer-text", style: { fontSize: 30, fontFamily: "'Cinzel',serif", fontWeight: 300, lineHeight: 1.1 }, children: [
                   "10% Off",
                   /* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {}),
                   "First Order"
@@ -23764,9 +23770,9 @@ function App() {
               ] }),
               /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { padding: "40px 28px", display: "flex", flexDirection: "column", justifyContent: "center" }, children: [
                 /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { width: 28, height: 1, background: "#B8922A", marginBottom: 16 } }),
-                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 9, letterSpacing: 4, color: "#B8922A", textTransform: "uppercase", fontFamily: "'Outfit',sans-serif", marginBottom: 12 }, children: "Welcome" }),
+                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 9, letterSpacing: 4, color: "#B8922A", textTransform: "uppercase", fontFamily: "'Montserrat',sans-serif", marginBottom: 12 }, children: "Welcome" }),
                 /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", { className: "disp", style: { fontSize: 24, fontWeight: 300, color: "#000", marginBottom: 10, lineHeight: 1.15, letterSpacing: -0.5 }, children: "Join the Khadlaj Circle" }),
-                /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { style: { fontSize: 12, color: "#888", lineHeight: 1.7, fontFamily: "'Outfit',sans-serif", marginBottom: 24 }, children: [
+                /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { style: { fontSize: 12, color: "#888", lineHeight: 1.7, fontFamily: "'Montserrat',sans-serif", marginBottom: 24 }, children: [
                   "Subscribe & get ",
                   /* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { style: { color: "#000" }, children: "10% off" }),
                   " your first order plus early access to new launches."
@@ -23778,7 +23784,7 @@ function App() {
                     placeholder: "Your email address",
                     value: popupEmail,
                     onChange: (e) => setPopupEmail(e.target.value),
-                    style: { width: "100%", border: "none", borderBottom: "1px solid #000", padding: "10px 0", fontSize: 13, outline: "none", fontFamily: "'Outfit',sans-serif", marginBottom: 16, background: "transparent" }
+                    style: { width: "100%", border: "none", borderBottom: "1px solid #000", padding: "10px 0", fontSize: 13, outline: "none", fontFamily: "'Montserrat',sans-serif", marginBottom: 16, background: "transparent" }
                   }
                 ),
                 /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
@@ -23788,13 +23794,13 @@ function App() {
                       setPopupDone(true);
                       setShowPopup(false);
                     },
-                    style: { width: "100%", background: "#000", color: "#fff", border: "none", padding: "14px", fontSize: 10, letterSpacing: 3, textTransform: "uppercase", cursor: "pointer", fontFamily: "'Outfit',sans-serif", fontWeight: 600, transition: "background .2s" },
+                    style: { width: "100%", background: "#000", color: "#fff", border: "none", padding: "14px", fontSize: 10, letterSpacing: 3, textTransform: "uppercase", cursor: "pointer", fontFamily: "'Montserrat',sans-serif", fontWeight: 600, transition: "background .2s" },
                     onMouseEnter: (e) => e.currentTarget.style.background = "#B8922A",
                     onMouseLeave: (e) => e.currentTarget.style.background = "#000",
                     children: "Claim 10% Off"
                   }
                 ),
-                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { onClick: () => setShowPopup(false), style: { fontSize: 11, color: "#bbb", textAlign: "center", marginTop: 12, cursor: "pointer", fontFamily: "'Outfit',sans-serif", textDecoration: "underline" }, children: "No thanks" })
+                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { onClick: () => setShowPopup(false), style: { fontSize: 11, color: "#bbb", textAlign: "center", marginTop: 12, cursor: "pointer", fontFamily: "'Montserrat',sans-serif", textDecoration: "underline" }, children: "No thanks" })
               ] })
             ]
           }
