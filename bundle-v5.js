@@ -22051,7 +22051,8 @@ function ProductCard({ p, onView }) {
             style: {
               width: "100%",
               height: "100%",
-              objectFit: "cover",
+              objectFit: "contain",
+              padding: "20px",
               transition: "transform .6s cubic-bezier(0.25,0.8,0.25,1)",
               transform: hov ? "scale(1.05)" : "scale(1)"
             }
