@@ -22408,7 +22408,7 @@ function HomePage({ setPage, addToCart, setViewProduct }) {
           setPage("collections");
         }, children: "View All New" })
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 40 }, className: "grid-3", children: PRODUCTS.filter((p) => p.badge === "New").slice(0, 6).map((p) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ProductCard, { p, onView: (prod) => {
+      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 24 }, className: "grid-4", children: PRODUCTS.filter((p) => p.badge === "New").slice(0, 4).map((p) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ProductCard, { p, onView: (prod) => {
         setViewProduct(prod);
         setPage("product");
       } }, p.id)) })
@@ -22426,10 +22426,10 @@ function HomePage({ setPage, addToCart, setViewProduct }) {
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", { className: "btn-ghost", style: { flexShrink: 0 }, onClick: () => setPage("gifts"), children: "View All Gifts" })
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 40 }, className: "grid-3", children: PRODUCTS.filter((p) => p.size === "Gift Set").slice(0, 6).map((p) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ProductCard, { p, onView: (prod) => {
+      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 24 }, className: "grid-4", children: PRODUCTS.filter((p) => p.size === "Gift Set").slice(0, 4).map((p) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ProductCard, { p, onView: (prod) => {
         setViewProduct(prod);
         setPage("product");
-      }, aspect: "4/3" }, p.id)) })
+      } }, p.id)) })
     ] }),
     /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", { style: { background: "#000", padding: "96px 5%" }, children: [
       /* @__PURE__ */ (0, import_jsx_runtime.jsx)(SectionHeader, { eyebrow: "Reviews", title: "Loved Across the Gulf", light: true }),
@@ -22784,7 +22784,7 @@ function CollectionsPage({ addToCart, setViewProduct, setPage }) {
         filtered.length,
         " fragrances found"
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 24, alignItems: "start" }, className: "grid-3", children: filtered.map((p) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ProductCard, { p, onView: (prod) => {
+      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 24, alignItems: "start" }, className: "grid-4", children: filtered.map((p) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ProductCard, { p, onView: (prod) => {
         setViewProduct(prod);
         setPage("product");
       }, onCart: addToCart }, p.id)) }),
@@ -22989,7 +22989,7 @@ function GiftsPage({ addToCart, setViewProduct, setPage }) {
           " gift sets available"
         ] })
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 48, alignItems: "start" }, className: "grid-3", children: giftProducts.map((p) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ProductCard, { p, onView: (prod) => {
+      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 24, alignItems: "start" }, className: "grid-4", children: giftProducts.map((p) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ProductCard, { p, onView: (prod) => {
         if (setViewProduct) {
           setViewProduct(prod);
           setPage("product");

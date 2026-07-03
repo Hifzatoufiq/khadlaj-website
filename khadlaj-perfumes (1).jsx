@@ -688,8 +688,8 @@ function HomePage({ setPage, addToCart, setViewProduct }){
           </div>
           <button className="btn-ghost" style={{flexShrink:0}} onClick={()=>{setActiveCat("New");setPage("collections");}}>View All New</button>
         </div>
-        <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:40}} className="grid-3">
-          {PRODUCTS.filter(p=>p.badge==="New").slice(0,6).map(p=>(
+        <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:24}} className="grid-4">
+          {PRODUCTS.filter(p=>p.badge==="New").slice(0,4).map(p=>(
             <ProductCard key={p.id} p={p} onView={(prod)=>{setViewProduct(prod);setPage("product");}} />
           ))}
         </div>
@@ -708,9 +708,9 @@ function HomePage({ setPage, addToCart, setViewProduct }){
           <button className="btn-ghost" style={{flexShrink:0}} onClick={()=>setPage("gifts")}>View All Gifts</button>
         </div>
 
-        <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:40}} className="grid-3">
-          {PRODUCTS.filter(p=>p.size==="Gift Set").slice(0,6).map(p=>(
-            <ProductCard key={p.id} p={p} onView={(prod)=>{setViewProduct(prod);setPage("product");}} aspect="4/3" />
+        <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:24}} className="grid-4">
+          {PRODUCTS.filter(p=>p.size==="Gift Set").slice(0,4).map(p=>(
+            <ProductCard key={p.id} p={p} onView={(prod)=>{setViewProduct(prod);setPage("product");}} />
           ))}
         </div>
       </section>
@@ -1008,7 +1008,7 @@ function CollectionsPage({ addToCart, setViewProduct, setPage }){
           textTransform:"uppercase",
         }}>{filtered.length} fragrances found</p>
 
-        <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:24,alignItems:"start"}} className="grid-3">
+        <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:24,alignItems:"start"}} className="grid-4">
           {filtered.map(p=>(
             <ProductCard key={p.id} p={p} onView={(prod)=>{setViewProduct(prod);setPage("product");}} onCart={addToCart}/>
           ))}
@@ -1254,7 +1254,7 @@ function GiftsPage({ addToCart, setViewProduct, setPage }){
           <p style={{fontSize:12,color:"#888",fontFamily:"'DM Sans',sans-serif"}}>{giftProducts.length} gift sets available</p>
         </div>
 
-        <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:48,alignItems:"start"}} className="grid-3">
+        <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:24,alignItems:"start"}} className="grid-4">
           {giftProducts.map(p=>(
             <ProductCard key={p.id} p={p} onView={(prod)=>{if(setViewProduct){setViewProduct(prod);setPage("product");}}} onCart={addToCart}/>
           ))}
