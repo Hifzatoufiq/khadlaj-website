@@ -22018,14 +22018,13 @@ function ProductCard({ p, onView }) {
       onMouseLeave: () => setHov(false),
       onClick: () => onView(p),
       style: {
-        background: "#fff",
+        background: "transparent",
         display: "flex",
         flexDirection: "column",
         position: "relative",
         cursor: "pointer",
-        border: "1px solid #f0f0f0",
-        transition: "all .4s cubic-bezier(0.25, 0.8, 0.25, 1)",
-        boxShadow: hov ? "0 15px 35px rgba(0,0,0,0.06)" : "none",
+        border: "none",
+        transition: "transform .4s cubic-bezier(0.25, 0.8, 0.25, 1)",
         transform: hov ? "translateY(-4px)" : "translateY(0)"
       },
       children: [
@@ -22043,31 +22042,31 @@ function ProductCard({ p, onView }) {
           textTransform: "uppercase",
           fontFamily: "'DM Sans',sans-serif"
         }, children: p.badge }),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { position: "relative", aspectRatio: "1/1", overflow: "hidden", background: "#fafafa", display: "flex", alignItems: "center", justifyContent: "center" }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { position: "relative", aspectRatio: "1/1", overflow: "hidden", background: "transparent", display: "flex", alignItems: "center", justifyContent: "center" }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
           "img",
           {
             src: p.img,
             alt: p.name,
             loading: "lazy",
             style: {
-              width: "92%",
-              height: "92%",
+              width: "95%",
+              height: "95%",
               objectFit: "contain",
               transition: "transform .6s cubic-bezier(0.25, 0.8, 0.25, 1)",
               transform: hov ? "scale(1.06)" : "scale(1)"
             }
           }
         ) }),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { padding: "16px 14px 18px", flex: 1, display: "flex", flexDirection: "column" }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { padding: "16px 10px 18px", flex: 1, display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center" }, children: [
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 8, letterSpacing: 3, color: "#B8922A", textTransform: "uppercase", marginBottom: 6, fontFamily: "'DM Sans',sans-serif", fontWeight: 600 }, children: p.col }),
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", { style: { fontSize: 13, fontWeight: 700, color: "#000", lineHeight: 1.3, marginBottom: 4, textTransform: "uppercase", letterSpacing: 1, fontFamily: "'DM Sans',sans-serif" }, children: p.name }),
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 11, color: "#999", marginBottom: 10, fontFamily: "'DM Sans',sans-serif", letterSpacing: 0.4 }, children: p.size }),
-          notes.length > 0 && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { display: "flex", flexWrap: "wrap", gap: 5, marginBottom: 12 }, children: notes.map((n, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { style: { display: "inline-flex", alignItems: "center", gap: 4, padding: "3px 8px", background: "#F5F5F5", fontSize: 8, letterSpacing: 1, color: "#666", textTransform: "uppercase", fontFamily: "'DM Sans',sans-serif" }, children: [
+          notes.length > 0 && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { display: "flex", flexWrap: "wrap", gap: 5, marginBottom: 12, justifyContent: "center" }, children: notes.map((n, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { style: { display: "inline-flex", alignItems: "center", gap: 4, padding: "3px 8px", background: "#F5F5F5", fontSize: 8, letterSpacing: 1, color: "#666", textTransform: "uppercase", fontFamily: "'DM Sans',sans-serif" }, children: [
             /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { width: 5, height: 5, borderRadius: "50%", background: noteColors[i % noteColors.length], flexShrink: 0, display: "inline-block" } }),
             n
           ] }, n)) }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", alignItems: "center", justifyContent: "space-between", marginTop: "auto", paddingTop: 12, borderTop: "1px solid #F0F0F0" }, children: [
-            /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", alignItems: "center", gap: 4 }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { marginTop: "auto", width: "100%", display: "flex", flexDirection: "column", alignItems: "center", gap: 6, paddingTop: 12, borderTop: "1px solid #F0F0F0" }, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", alignItems: "center", gap: 4, justifyContent: "center" }, children: [
               /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { color: "#C8A96E", fontSize: 11, letterSpacing: 1 }, children: "\u2605".repeat(5) }),
               /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { fontSize: 9, color: "#aaa", fontFamily: "'DM Sans',sans-serif" }, children: "(905)" })
             ] }),

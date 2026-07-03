@@ -328,14 +328,13 @@ function ProductCard({ p, onView }){
       onMouseLeave={()=>setHov(false)}
       onClick={()=>onView(p)}
       style={{
-        background:"#fff",
+        background:"transparent",
         display:"flex",
         flexDirection:"column",
         position:"relative",
         cursor:"pointer",
-        border: "1px solid #f0f0f0",
-        transition:"all .4s cubic-bezier(0.25, 0.8, 0.25, 1)",
-        boxShadow: hov ? "0 15px 35px rgba(0,0,0,0.06)" : "none",
+        border: "none",
+        transition:"transform .4s cubic-bezier(0.25, 0.8, 0.25, 1)",
         transform: hov ? "translateY(-4px)" : "translateY(0)",
       }}
     >
@@ -348,22 +347,22 @@ function ProductCard({ p, onView }){
           fontFamily:"'DM Sans',sans-serif",
         }}>{p.badge}</span>
       )}
-      <div style={{ position:"relative", aspectRatio:"1/1", overflow:"hidden", background:"#fafafa", display:"flex", alignItems:"center", justifyContent:"center" }}>
+      <div style={{ position:"relative", aspectRatio:"1/1", overflow:"hidden", background:"transparent", display:"flex", alignItems:"center", justifyContent:"center" }}>
         <img
           src={p.img} alt={p.name} loading="lazy"
           style={{
-            width:"92%", height:"92%", objectFit:"contain",
+            width:"95%", height:"95%", objectFit:"contain",
             transition:"transform .6s cubic-bezier(0.25, 0.8, 0.25, 1)",
             transform: hov ? "scale(1.06)" : "scale(1)",
           }}
         />
       </div>
-      <div style={{padding:"16px 14px 18px", flex:1, display:"flex", flexDirection:"column"}}>
+      <div style={{padding:"16px 10px 18px", flex:1, display:"flex", flexDirection:"column", alignItems:"center", textAlign:"center"}}>
         <p style={{fontSize:8, letterSpacing:3, color:"#B8922A", textTransform:"uppercase", marginBottom:6, fontFamily:"'DM Sans',sans-serif", fontWeight:600}}>{p.col}</p>
         <h3 style={{fontSize:13, fontWeight:700, color:"#000", lineHeight:1.3, marginBottom:4, textTransform:"uppercase", letterSpacing:1, fontFamily:"'DM Sans',sans-serif"}}>{p.name}</h3>
         <p style={{fontSize:11, color:"#999", marginBottom:10, fontFamily:"'DM Sans',sans-serif", letterSpacing:.4}}>{p.size}</p>
         {notes.length > 0 && (
-          <div style={{display:"flex", flexWrap:"wrap", gap:5, marginBottom:12}}>
+          <div style={{display:"flex", flexWrap:"wrap", gap:5, marginBottom:12, justifyContent:"center"}}>
             {notes.map((n, i) => (
               <span key={n} style={{display:"inline-flex", alignItems:"center", gap:4, padding:"3px 8px", background:"#F5F5F5", fontSize:8, letterSpacing:1, color:"#666", textTransform:"uppercase", fontFamily:"'DM Sans',sans-serif"}}>
                 <span style={{width:5, height:5, borderRadius:"50%", background: noteColors[i % noteColors.length], flexShrink:0, display:"inline-block"}}/>
@@ -372,8 +371,8 @@ function ProductCard({ p, onView }){
             ))}
           </div>
         )}
-        <div style={{display:"flex", alignItems:"center", justifyContent:"space-between", marginTop:"auto", paddingTop:12, borderTop:"1px solid #F0F0F0"}}>
-          <div style={{display:"flex", alignItems:"center", gap:4}}>
+        <div style={{marginTop:"auto", width:"100%", display:"flex", flexDirection:"column", alignItems:"center", gap:6, paddingTop:12, borderTop:"1px solid #F0F0F0"}}>
+          <div style={{display:"flex", alignItems:"center", gap:4, justifyContent:"center"}}>
             <span style={{color:"#C8A96E", fontSize:11, letterSpacing:1}}>{"★".repeat(5)}</span>
             <span style={{fontSize:9, color:"#aaa", fontFamily:"'DM Sans',sans-serif"}}>(905)</span>
           </div>
