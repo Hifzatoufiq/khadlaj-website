@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Permissions-Policy" content="unload=()" />
+    <title>Khadlaj Perfumes</title>
+    <meta name="description" content="Khadlaj Perfumes — Authentic Arabian & French fragrance artistry since 1997. Shop 400+ unique fragrances from UAE." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <style>
+      *{box-sizing:border-box;margin:0;padding:0;}
+      body{background:#fff;font-family:'DM Sans',sans-serif;}
+      #root{min-height:100vh;}
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      window.addEventListener('error', function(e) {
+        document.body.innerHTML = '<div style="font-family:monospace;padding:40px;color:red;background:#fff;white-space:pre-wrap;"><h2>JS Error</h2>' + (e.message || '') + '<br><br>' + (e.filename || '') + ':' + (e.lineno || '') + '<br><br>' + (e.error && e.error.stack ? e.error.stack : '') + '</div>';
+      });
+      window.addEventListener('unhandledrejection', function(e) {
+        document.body.innerHTML = '<div style="font-family:monospace;padding:40px;color:red;background:#fff;white-space:pre-wrap;"><h2>Unhandled Promise Rejection</h2>' + String(e.reason) + '</div>';
+      });
+    </script>
+    <script src="./bundle-v5.js"></script>
+  </body>
+</html>
