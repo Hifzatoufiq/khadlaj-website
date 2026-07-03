@@ -22048,23 +22048,59 @@ function ProductCard({ p, onView }) {
           textTransform: "uppercase",
           fontFamily: "'Montserrat',sans-serif"
         }, children: p.badge }),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { position: "relative", aspectRatio: "1/1", overflow: "hidden", background: "transparent", display: "flex", alignItems: "center", justifyContent: "center" }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
-          "img",
-          {
-            src: p.img,
-            alt: p.name,
-            loading: "lazy",
-            style: {
-              width: "95%",
-              height: "95%",
-              objectFit: "contain",
-              mixBlendMode: "multiply",
-              filter: "contrast(1.05) brightness(1.04)",
-              transition: "transform .6s cubic-bezier(0.25, 0.8, 0.25, 1)",
-              transform: hov ? "scale(1.06)" : "scale(1)"
+        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { position: "relative", aspectRatio: "1/1", overflow: "hidden", background: "transparent", display: "flex", alignItems: "center", justifyContent: "center" }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+            "img",
+            {
+              src: p.img,
+              alt: p.name,
+              loading: "lazy",
+              style: {
+                width: "95%",
+                height: "95%",
+                objectFit: "contain",
+                mixBlendMode: "multiply",
+                filter: "contrast(1.05) brightness(1.04)",
+                transition: "transform .8s cubic-bezier(0.25, 1, 0.25, 1)",
+                transform: hov ? "scale(1.08)" : "scale(1)"
+              }
             }
-          }
-        ) }),
+          ),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: {
+            position: "absolute",
+            bottom: 0,
+            left: 0,
+            right: 0,
+            padding: "15px",
+            display: "flex",
+            justifyContent: "center",
+            transition: "all .4s cubic-bezier(0.25, 1, 0.25, 1)",
+            transform: hov ? "translateY(0)" : "translateY(20px)",
+            opacity: hov ? 1 : 0,
+            zIndex: 10
+          }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+            "button",
+            {
+              style: {
+                width: "100%",
+                background: "#111",
+                color: "#fff",
+                border: "none",
+                padding: "12px",
+                fontSize: 10,
+                letterSpacing: 2,
+                fontWeight: 500,
+                cursor: "pointer",
+                textTransform: "uppercase",
+                fontFamily: "'Montserrat',sans-serif",
+                transition: "background .3s"
+              },
+              onMouseEnter: (e) => e.target.style.background = "#444",
+              onMouseLeave: (e) => e.target.style.background = "#111",
+              children: "Quick View"
+            }
+          ) })
+        ] }),
         /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { padding: "16px 10px 18px", flex: 1, display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center" }, children: [
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 8, letterSpacing: 3, color: "#B8922A", textTransform: "uppercase", marginBottom: 6, fontFamily: "'Montserrat',sans-serif", fontWeight: 600 }, children: p.col }),
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", { style: { fontSize: 13, fontWeight: 700, color: "#000", lineHeight: 1.3, marginBottom: 4, textTransform: "uppercase", letterSpacing: 1, fontFamily: "'Montserrat',sans-serif" }, children: p.name }),

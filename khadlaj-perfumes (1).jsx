@@ -359,10 +359,29 @@ function ProductCard({ p, onView }){
           style={{
             width:"95%", height:"95%", objectFit:"contain",
             mixBlendMode:"multiply", filter:"contrast(1.05) brightness(1.04)",
-            transition:"transform .6s cubic-bezier(0.25, 0.8, 0.25, 1)",
-            transform: hov ? "scale(1.06)" : "scale(1)",
+            transition:"transform .8s cubic-bezier(0.25, 1, 0.25, 1)",
+            transform: hov ? "scale(1.08)" : "scale(1)",
           }}
         />
+        <div style={{
+          position:"absolute", bottom:0, left:0, right:0,
+          padding:"15px", display:"flex", justifyContent:"center",
+          transition:"all .4s cubic-bezier(0.25, 1, 0.25, 1)",
+          transform: hov ? "translateY(0)" : "translateY(20px)",
+          opacity: hov ? 1 : 0, zIndex:10
+        }}>
+          <button style={{
+            width:"100%", background:"#111", color:"#fff", border:"none", 
+            padding:"12px", fontSize:10, letterSpacing:2, fontWeight:500, 
+            cursor:"pointer", textTransform:"uppercase",
+            fontFamily:"'Montserrat',sans-serif", transition:"background .3s"
+          }}
+          onMouseEnter={(e)=>e.target.style.background="#444"}
+          onMouseLeave={(e)=>e.target.style.background="#111"}
+          >
+            Quick View
+          </button>
+        </div>
       </div>
       <div style={{padding:"16px 10px 18px", flex:1, display:"flex", flexDirection:"column", alignItems:"center", textAlign:"center"}}>
         <p style={{fontSize:8, letterSpacing:3, color:"#B8922A", textTransform:"uppercase", marginBottom:6, fontFamily:"'Montserrat',sans-serif", fontWeight:600}}>{p.col}</p>
