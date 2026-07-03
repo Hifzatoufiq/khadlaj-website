@@ -21782,13 +21782,13 @@ var PRODUCTS = [
   // ── Local products (own images) ──
   { id: 13, name: "Island", col: "Master Perfumery", price: 150, size: "100ml Extrait", badge: "Best Seller", gender: "Unisex", notes: ["Marine", "Amber", "Oud"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/3.jpg?v=1724330325" },
   { id: 14, name: "Cream Velvet", col: "Master Perfumery", price: 130, size: "Gift Set", badge: "Best Seller", gender: "Unisex", notes: ["Cream", "Velvet", "Musk"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Cream_Velvet_03.jpg?v=1736149481" },
-  { id: 15, name: "Cloud Candy", col: "Atyaab", price: 325, size: "Gift Set", badge: null, gender: "Her", notes: ["Peach", "Musk", "Vanilla"], img: "./assets/images/products/cloud-candy-lineup.png", images: ["./assets/images/products/cloud-candy-lineup.png", "./assets/images/products/cloud-candy-lineup.png", "./assets/images/products/cloud-candy-open-box.png", "./assets/images/products/cloud-candy-back-box.png"] },
-  { id: 16, name: "Strawberry Shake", col: "Atyaab", price: 295, size: "100ml EDP", badge: null, gender: "Her", notes: ["Strawberry", "Musk", "Vanilla"], img: "./assets/images/products/strawberry-shake-single.png" },
-  { id: 17, name: "Biscotti Date Toffee", col: "Lafede", price: 315, size: "100ml EDP", badge: "New", gender: "Unisex", notes: ["Date", "Coffee", "Gourmand"], img: "./assets/images/products/biscotti-date-toffee-single.png" },
-  { id: 18, name: "Biscotti Melon Musk", col: "Lafede", price: 315, size: "100ml EDP", badge: "New", gender: "Unisex", notes: ["Melon", "Musk", "Cream"], img: "./assets/images/products/blue-glace-single-1.png" },
-  { id: 19, name: "Uno Intimo", col: "Lafede", price: 285, size: "100ml EDP", badge: null, gender: "Her", notes: ["Rose", "Musk", "Peony"], img: "./assets/images/products/uno-intimo-single.png" },
-  { id: 20, name: "Shahi Oud", col: "Master Perfumery", price: 360, size: "100ml EDP", badge: null, gender: "Unisex", notes: ["Oud", "Amber", "Saffron"], img: "./assets/images/products/shahi-oud-single.png" },
-  { id: 21, name: "Bleu Glac\xE9", col: "Atyaab", price: 275, size: "100ml EDP", badge: "New", gender: "Unisex", notes: ["Marine", "Bergamot", "Musk"], img: "./assets/images/products/blue-glace-single-2.png" },
+  { id: 15, name: "Cloud Candy", col: "Atyaab", price: 325, size: "Gift Set", badge: null, gender: "Her", notes: ["Peach", "Musk", "Vanilla"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Cloud_Candy-3.jpg?v=1746078194", images: ["https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Cloud_Candy-3.jpg?v=1746078194", "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Cloud_Candy-3.jpg?v=1746078194", "./assets/images/products/cloud-candy-open-box.png", "./assets/images/products/cloud-candy-back-box.png"] },
+  { id: 16, name: "Strawberry Shake", col: "Atyaab", price: 295, size: "100ml EDP", badge: null, gender: "Her", notes: ["Strawberry", "Musk", "Vanilla"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/STRAWBERRY_SHAKE-03.jpg?v=1764228432" },
+  { id: 17, name: "Biscotti Date Toffee", col: "Lafede", price: 315, size: "100ml EDP", badge: "New", gender: "Unisex", notes: ["Date", "Coffee", "Gourmand"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Biscotti_Date_Toffee-3.jpg?v=1776407655" },
+  { id: 18, name: "Biscotti Melon Musk", col: "Lafede", price: 315, size: "100ml EDP", badge: "New", gender: "Unisex", notes: ["Melon", "Musk", "Cream"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Bleu_Glace_02.jpg?v=1738325363" },
+  { id: 19, name: "Uno Intimo", col: "Lafede", price: 285, size: "100ml EDP", badge: null, gender: "Her", notes: ["Rose", "Musk", "Peony"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/UNO_INTIMO_EDP_SPRAY_100_ML_-_Khadlaj_Perfumes-1966036.jpg?v=1722412332" },
+  { id: 20, name: "Shahi Oud", col: "Master Perfumery", price: 360, size: "100ml EDP", badge: null, gender: "Unisex", notes: ["Oud", "Amber", "Saffron"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/SHAHI_OUD_EDP_SPRAY_100_ML_-_Khadlaj_Perfumes-1965925.jpg?v=1722412108" },
+  { id: 21, name: "Bleu Glac\xE9", col: "Atyaab", price: 275, size: "100ml EDP", badge: "New", gender: "Unisex", notes: ["Marine", "Bergamot", "Musk"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Bleu_Glace_02.jpg?v=1738325363" },
   // ── Live products from khadlaj-perfumes.com ──
   { id: 200, name: "Saraya", col: "Master Perfumery", price: 105, size: "60ml Extrait", badge: "New", gender: "Unisex", notes: ["Amber", "Bergamot", "Vetiver"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/saraya_2.png?v=1781332291" },
   { id: 201, name: "Nafais Sharq Gift Set", col: "Atyaab", price: 150, size: "Gift Set", badge: null, gender: "Her", notes: ["Rose", "Amber", "Musk"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Nafais-Sharq-1.jpg?v=1779352739" },
@@ -21805,7 +21805,7 @@ var PRODUCTS = [
   { id: 213, name: "Shiyaaka", col: "Master Perfumery", price: 65, size: "100ml EDP", badge: "Best Seller", gender: "Him", notes: ["Bergamot", "Vetiver", "Cardamom"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Shiyaaka.2.jpg?v=1771043858" },
   { id: 214, name: "Nafais Magrib", col: "Atyaab", price: 110, size: "100ml EDP", badge: "New", gender: "Unisex", notes: ["Citrus", "Marine", "Musk"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Nafais_Magrib-3.jpg?v=1761115886" },
   { id: 215, name: "Island Gift Set", col: "Master Perfumery", price: 179, size: "Gift Set", badge: null, gender: "Unisex", notes: ["Marine", "Amber", "Musk"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Island2.jpg?v=1767168643" },
-  { id: 22, name: "Hareem Al Sultan", col: "Atyaab", price: 195, size: "75ml EDP", badge: null, gender: "Her", notes: ["Rose", "Amber", "Musk"], img: "./assets/images/products/shahi-oud-single.png" },
+  { id: 22, name: "Hareem Al Sultan", col: "Atyaab", price: 195, size: "75ml EDP", badge: null, gender: "Her", notes: ["Rose", "Amber", "Musk"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/SHAHI_OUD_EDP_SPRAY_100_ML_-_Khadlaj_Perfumes-1965925.jpg?v=1722412108" },
   { id: 23, name: "Shiyaaka Shadow", col: "Master Perfumery", price: 340, size: "100ml EDP", badge: "Limited", gender: "Him", notes: ["Oud", "Leather", "Vetiver"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/ShiyaakaShadow-1.jpg?v=1751436581" },
   // ── New Best Sellers (requested list additions) ──
   { id: 301, name: "Island Dreams", col: "Master Perfumery", price: 150, size: "100ml EDP", badge: "Best Seller", gender: "Her", notes: ["Coconut", "Vanilla", "Musk"], img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Island_Dreams-3.jpg?v=1754913321" },
@@ -21827,7 +21827,7 @@ var REELS = [
     caption: "The viral sensation on #perfumetok. Does it live up to the hype?",
     tag: "Viral on TikTok",
     price: 195,
-    img: "./assets/images/products/cloud-candy-lineup.png"
+    img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Cloud_Candy-3.jpg?v=1746078194"
   },
   {
     id: "7614741288168066334",
@@ -21835,7 +21835,7 @@ var REELS = [
     caption: "A gorgeous creamy floral gourmand. Completely blind buy safe!",
     tag: "First Impressions",
     price: 200,
-    img: "./assets/images/products/island-packshot.png"
+    img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/3.jpg?v=1724330325"
   },
   {
     id: "7639701570875165985",
@@ -21843,7 +21843,7 @@ var REELS = [
     caption: "This smells 10x more expensive than it is. Unbelievable quality.",
     tag: "Hidden Gem",
     price: 126,
-    img: "./assets/images/products/shahi-oud-single.png"
+    img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/SHAHI_OUD_EDP_SPRAY_100_ML_-_Khadlaj_Perfumes-1965925.jpg?v=1722412108"
   },
   {
     id: "7608773049986469134",
@@ -21851,7 +21851,7 @@ var REELS = [
     caption: "How I layer Khadlaj Island for a 24-hour scent bubble.",
     tag: "Layering Tip",
     price: 355,
-    img: "./assets/images/products/uno-intimo-single.png"
+    img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/UNO_INTIMO_EDP_SPRAY_100_ML_-_Khadlaj_Perfumes-1966036.jpg?v=1722412332"
   },
   {
     id: "7643796160100191496",
@@ -21859,7 +21859,7 @@ var REELS = [
     caption: "The packaging on this is insane. Luxury on a budget.",
     tag: "Unboxing",
     price: 150,
-    img: "./assets/images/products/blue-glace-single-1.png"
+    img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Bleu_Glace_02.jpg?v=1738325363"
   },
   {
     id: "7602275376135408918",
@@ -21867,7 +21867,7 @@ var REELS = [
     caption: "Wore this today and got stopped 3 times. Must have for gourmand lovers.",
     tag: "Review",
     price: 345,
-    img: "./assets/images/products/cream-velvet-front-box.png"
+    img: "https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Cream_Velvet_03.jpg?v=1736149481"
   }
 ];
 var SOCIAL_LINKS = {
