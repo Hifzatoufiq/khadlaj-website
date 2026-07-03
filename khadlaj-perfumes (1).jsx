@@ -527,10 +527,13 @@ function HomePage({ setPage, addToCart, setViewProduct }){
       </section>
 
       {/* ── SCENT RIBBON ── */}
-      <div style={{overflow:"hidden",background:"#FAFAFA",padding:"20px 0", borderTop:"1px solid #E8E4DC", borderBottom:"1px solid #E8E4DC"}}>
-        <div className="ribbon-inner">
+      <div style={{overflow:"hidden",background:"#050505",padding:"24px 0", borderTop:"1px solid rgba(193,164,106,0.15)", borderBottom:"1px solid rgba(193,164,106,0.15)"}}>
+        <div className="ribbon-inner" style={{display:"flex", alignItems:"center"}}>
           {[...SCENT_RIBBON,...SCENT_RIBBON,...SCENT_RIBBON].map((n,i)=>(
-            <span key={i} style={{padding:"0 32px",fontSize:10,letterSpacing:4,color:i%4===0?"#C1A46A":"#777",textTransform:"uppercase",whiteSpace:"nowrap",fontFamily:"'Montserrat',sans-serif"}}>{n}</span>
+            <div key={i} style={{display:"flex", alignItems:"center"}}>
+              <span style={{fontSize:12,fontWeight:400,letterSpacing:8,color:"#E8E4DC",textTransform:"uppercase",whiteSpace:"nowrap",fontFamily:"'Montserrat',sans-serif"}}>{n}</span>
+              <span style={{margin:"0 64px",color:"#C1A46A",fontSize:10}}>✦</span>
+            </div>
           ))}
         </div>
       </div>
