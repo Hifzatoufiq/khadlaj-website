@@ -1637,45 +1637,51 @@ function Navbar({ page, setPage, cartCount }){
       )}
 
       {/* ── Announcement bar ── */}
-      <div style={{background:"#111",color:"#fff",textAlign:"center",padding:"11px 16px",fontSize:9,letterSpacing:"3.5px",fontFamily:"'DM Sans',sans-serif",textTransform:"uppercase",borderBottom:"1px solid rgba(184,146,42,0.3)"}}>
-        <span style={{color:"#B8922A",marginRight:10,fontWeight:600}}>✦</span>
+      <div style={{background:"#0a0a0a",color:"#fff",textAlign:"center",padding:"8px 16px",fontSize:"8.5px",letterSpacing:"4px",fontFamily:"'DM Sans',sans-serif",textTransform:"uppercase",borderBottom:"1px solid rgba(184,146,42,0.15)"}}>
+        <span style={{color:"#B8922A",marginRight:8,fontWeight:600}}>✦</span>
         REGISTER NOW & RECEIVE 10% OFF — CODE: <span style={{color:"#B8922A",fontWeight:700}}>10OFF</span>
-        <span style={{color:"#B8922A",marginLeft:10,fontWeight:600}}>✦</span>
+        <span style={{color:"#B8922A",marginLeft:8,fontWeight:600}}>✦</span>
       </div>
 
       {/* ── Main nav ── */}
-      <nav style={{position:"sticky",top:0,zIndex:100,background:"rgba(255,255,255,.97)",backdropFilter:"blur(20px)",borderBottom:"1px solid #E8E4DC"}}>
-        <div style={{padding:"0 5%"}}>
-          <div style={{display:"grid",gridTemplateColumns:"1fr auto 1fr",alignItems:"center",height:"clamp(70px,8vw,90px)",gap:16}}>
+      <nav style={{position:"sticky",top:0,zIndex:100,background:"rgba(255,255,255,.96)",backdropFilter:"blur(15px)",borderBottom:"1px solid #f0f0f0"}}>
+        <div style={{padding:"0 6%"}}>
+          <div style={{display:"grid",gridTemplateColumns:"1fr auto 1fr",alignItems:"center",height:"80px",gap:16}}>
             {/* Left utility */}
             <div style={{display:"flex",gap:6,alignItems:"center"}}>
-              <div style={{display:"flex",gap:5,alignItems:"center"}} className="hide-mob">
+              <div style={{display:"flex",gap:4,alignItems:"center"}} className="hide-mob">
                 {COUNTRIES.map(c=>(
-                  <div key={c.name} style={{display:"flex",alignItems:"center",gap:4,padding:"4px 8px",border:"1px solid #EBEBEB",background:"#FCFBFA",cursor:"pointer",transition:"all .2s ease"}}
-                    onMouseEnter={e=>{e.currentTarget.style.borderColor="#000";e.currentTarget.style.background="#fff";}}
-                    onMouseLeave={e=>{e.currentTarget.style.borderColor="#EBEBEB";e.currentTarget.style.background="#FCFBFA";}}
+                  <div key={c.name} style={{display:"flex",alignItems:"center",gap:3,padding:"5px 10px",background:"transparent",cursor:"pointer",transition:"all .25s ease",opacity:0.75}}
+                    onMouseEnter={e=>{e.currentTarget.style.opacity="1";e.currentTarget.style.transform="scale(1.05)";}}
+                    onMouseLeave={e=>{e.currentTarget.style.opacity="0.75";e.currentTarget.style.transform="scale(1)";}}
                   >
-                    <span style={{fontSize:11}}>{c.flag}</span>
-                    <span style={{fontSize:9,color:"#444",fontFamily:"'DM Sans',sans-serif",fontWeight:500}}>{c.name}</span>
+                    <span style={{fontSize:12}}>{c.flag}</span>
+                    <span style={{fontSize:"8px",color:"#111",fontFamily:"'DM Sans',sans-serif",fontWeight:600,letterSpacing:"1px",textTransform:"uppercase"}}>{c.name}</span>
                   </div>
                 ))}
               </div>
-              <span className="mob-search-left" style={{cursor:"pointer",fontSize:18,color:"#000",lineHeight:1}} onClick={()=>setSearchOpen(true)}>⌕</span>
+              <span className="mob-search-left" style={{cursor:"pointer",display:"flex",alignItems:"center"}} onClick={()=>setSearchOpen(true)}>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#111" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              </span>
             </div>
             {/* Logo */}
             <div onClick={()=>setPage("home")} style={{cursor:"pointer",textAlign:"center",userSelect:"none",display:"flex",alignItems:"center",justifyContent:"center"}}>
               <img
                 src="https://khadlaj-perfumes.com/cdn/shop/files/Khadlaj_logo_2026--2_160x.png?v=1773752104"
                 alt="Khadlaj Perfumes"
-                style={{height:"clamp(44px,5.5vw,68px)",width:"auto",objectFit:"contain",display:"block",maxWidth:160}}
+                style={{height:"clamp(46px,5.5vw,64px)",width:"auto",objectFit:"contain",display:"block",maxWidth:160,transition:"transform 0.3s ease"}}
+                onMouseEnter={e=>e.currentTarget.style.transform="scale(1.02)"}
+                onMouseLeave={e=>e.currentTarget.style.transform="scale(1)"}
               />
             </div>
             {/* Right icons */}
-            <div style={{display:"flex",alignItems:"center",justifyContent:"flex-end",gap:22}}>
-              <span className="hide-mob" style={{fontSize:9,letterSpacing:2.5,color:"#777",textTransform:"uppercase",cursor:"pointer",fontFamily:"'DM Sans',sans-serif",transition:"color .2s"}} onMouseEnter={e=>e.target.style.color="#000"} onMouseLeave={e=>e.target.style.color="#777"} onClick={()=>setPage("contact")}>Sign Up</span>
-              <span className="hide-mob" style={{cursor:"pointer",fontSize:17,color:"#444",lineHeight:1,transition:"color .2s"}} onMouseEnter={e=>e.target.style.color="#000"} onMouseLeave={e=>e.target.style.color="#444"} onClick={()=>setSearchOpen(true)}>⌕</span>
-              <div onClick={()=>setPage("collections")} style={{position:"relative",cursor:"pointer",transition:"transform .2s ease"}} onMouseEnter={e=>e.currentTarget.style.transform="scale(1.05)"} onMouseLeave={e=>e.currentTarget.style.transform="scale(1)"}>
-                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#111" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+            <div style={{display:"flex",alignItems:"center",justifyContent:"flex-end",gap:24}}>
+              <span className="hide-mob" style={{fontSize:"8.5px",letterSpacing:"2.5px",color:"#111",textTransform:"uppercase",cursor:"pointer",fontFamily:"'DM Sans',sans-serif",fontWeight:600,transition:"color .2s"}} onMouseEnter={e=>e.target.style.color="#B8922A"} onMouseLeave={e=>e.target.style.color="#111"} onClick={()=>setPage("contact")}>Sign Up</span>
+              <span className="hide-mob" style={{cursor:"pointer",display:"flex",alignItems:"center",transition:"transform .2s"}} onMouseEnter={e=>e.currentTarget.style.transform="scale(1.1)"} onMouseLeave={e=>e.currentTarget.style.transform="scale(1)"} onClick={()=>setSearchOpen(true)}>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#111" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              </span>
+              <div onClick={()=>setPage("collections")} style={{position:"relative",cursor:"pointer",transition:"transform .2s ease"}} onMouseEnter={e=>e.currentTarget.style.transform="scale(1.1)"} onMouseLeave={e=>e.currentTarget.style.transform="scale(1)"}>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#111" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
                 {cartCount>0 && (
                   <span style={{position:"absolute",top:-5,right:-7,background:"#B8922A",color:"#fff",borderRadius:"50%",width:14,height:14,fontSize:8,display:"flex",alignItems:"center",justifyContent:"center",fontWeight:700,fontFamily:"'DM Sans',sans-serif"}}>{cartCount}</span>
                 )}
@@ -1687,17 +1693,17 @@ function Navbar({ page, setPage, cartCount }){
                 className="mob-burger"
                 aria-label="Menu"
               >
-                <span style={{display:"block",width:22,height:1.5,background:"#000",transition:"all .25s"}}/>
-                <span style={{display:"block",width:22,height:1.5,background:"#000",transition:"all .25s"}}/>
+                <span style={{display:"block",width:20,height:1.5,background:"#000",transition:"all .25s"}}/>
+                <span style={{display:"block",width:20,height:1.5,background:"#000",transition:"all .25s"}}/>
                 <span style={{display:"block",width:14,height:1.5,background:"#000",transition:"all .25s"}}/>
               </button>
             </div>
           </div>
-          <div className="hide-mob" style={{display:"flex",justifyContent:"center",gap:44,paddingBottom:18,fontSize:9,letterSpacing:"2.5px",textTransform:"uppercase",color:"#555",fontFamily:"'DM Sans',sans-serif",fontWeight:500}}>
+          <div className="hide-mob" style={{display:"flex",justifyContent:"center",gap:40,paddingBottom:16,fontSize:"8.5px",letterSpacing:"3px",textTransform:"uppercase",color:"#111",fontFamily:"'DM Sans',sans-serif",fontWeight:600}}>
             {[["Offers","collections"],["Bestsellers","collections"],["New In","collections"],["Gifts","gifts"],["Perfume","collections"],["Our Story","story"],["Contact","contact"]].map(([label,pg])=>(
-              <span key={label} onClick={()=>setPage(pg)} style={{cursor:"pointer",paddingBottom:4,borderBottom:page===pg?"1px solid #B8922A":"1px solid transparent",color:page===pg?"#B8922A":"#555",transition:"all .25s ease"}}
-                onMouseEnter={e=>{e.currentTarget.style.color="#000";e.currentTarget.style.borderBottomColor="#000";}}
-                onMouseLeave={e=>{e.currentTarget.style.color=page===pg?"#B8922A":"#555";e.currentTarget.style.borderBottomColor=page===pg?"#B8922A":"transparent";}}
+              <span key={label} onClick={()=>setPage(pg)} style={{cursor:"pointer",paddingBottom:4,borderBottom:page===pg?"1px solid #B8922A":"1px solid transparent",color:page===pg?"#B8922A":"#111",transition:"all .25s ease"}}
+                onMouseEnter={e=>{e.currentTarget.style.color="#B8922A";e.currentTarget.style.borderBottomColor="#B8922A";}}
+                onMouseLeave={e=>{e.currentTarget.style.color=page===pg?"#B8922A":"#111";e.currentTarget.style.borderBottomColor=page===pg?"#B8922A":"transparent";}}
               >{label}</span>
             ))}
           </div>
@@ -1774,52 +1780,53 @@ function Footer({ setPage }){
       </div>
 
       {/* Links */}
-      <div style={{background:"#fff",padding:"72px 5% 48px",display:"grid",gridTemplateColumns:"2fr 1fr 1fr 1fr",gap:48}} className="grid-3">
+      <div style={{background:"#FAF9F6",padding:"80px 6% 48px",display:"grid",gridTemplateColumns:"2fr 1fr 1fr 1fr",gap:48,borderTop:"1px solid #f0f0f0"}} className="grid-3">
         <div>
           <img
             src="https://khadlaj-perfumes.com/cdn/shop/files/Khadlaj_logo_2026--2_160x.png?v=1773752104"
             alt="Khadlaj Perfumes"
-            style={{height:80,width:"auto",objectFit:"contain",display:"block",marginBottom:20}}
+            style={{height:52,width:"auto",objectFit:"contain",display:"block",marginBottom:24}}
           />
-          <p style={{fontSize:8,letterSpacing:4,color:"#B8922A",fontFamily:"'DM Sans',sans-serif",marginBottom:16,textTransform:"uppercase",fontWeight:600}}>Perfumes · UAE · Est. 1997</p>
-          <p style={{fontSize:13,color:"#666",lineHeight:1.9,maxWidth:240,marginBottom:32,fontFamily:"'DM Sans',sans-serif"}}>Family-owned UAE perfume house. Authentic Arabian &amp; French fragrance artistry since 1997.</p>
+          <p style={{fontSize:"8px",letterSpacing:3.5,color:"#B8922A",fontFamily:"'DM Sans',sans-serif",marginBottom:16,textTransform:"uppercase",fontWeight:700}}>Perfumes · UAE · Est. 1997</p>
+          <p style={{fontSize:13,color:"#555",lineHeight:1.85,maxWidth:260,marginBottom:32,fontFamily:"'DM Sans',sans-serif"}}>Family-owned UAE perfume house. Authentic Arabian &amp; French fragrance artistry since 1997.</p>
+          
           <div style={{display:"flex",gap:8,flexWrap:"wrap"}}>
             {COUNTRIES.map(c=>(
-              <div key={c.name} style={{display:"flex",alignItems:"center",gap:5,padding:"5px 12px",border:"1px solid #EBEBEB",background:"#FCFBFA",cursor:"pointer",transition:"all .2s ease"}}
-                onMouseEnter={e=>{e.currentTarget.style.borderColor="#000";e.currentTarget.style.background="#fff";}}
-                onMouseLeave={e=>{e.currentTarget.style.borderColor="#EBEBEB";e.currentTarget.style.background="#FCFBFA";}}
+              <div key={c.name} style={{display:"flex",alignItems:"center",gap:4,padding:"5px 12px",border:"1px solid #e5e5e5",background:"#fff",cursor:"pointer",transition:"all .2s ease"}}
+                onMouseEnter={e=>{e.currentTarget.style.borderColor="#000";}}
+                onMouseLeave={e=>{e.currentTarget.style.borderColor="#e5e5e5";}}
               >
                 <span style={{fontSize:12}}>{c.flag}</span>
-                <span style={{fontSize:10,color:"#444",fontFamily:"'DM Sans',sans-serif",fontWeight:500}}>{c.name}</span>
+                <span style={{fontSize:9,color:"#222",fontFamily:"'DM Sans',sans-serif",fontWeight:600}}>{c.name}</span>
               </div>
             ))}
           </div>
         </div>
         <div>
-          <p style={{fontSize:9,letterSpacing:3,color:"#000",textTransform:"uppercase",marginBottom:24,fontFamily:"'DM Sans',sans-serif",fontWeight:600}}>Collections</p>
+          <p style={{fontSize:"8.5px",letterSpacing:2.5,color:"#000",textTransform:"uppercase",marginBottom:24,fontFamily:"'DM Sans',sans-serif",fontWeight:700}}>Collections</p>
           {["Atyaab","Lafede","Master Perfumery","Gift Sets","New Arrivals","Best Sellers"].map(l=>(
-            <p key={l} onClick={()=>setPage("collections")} style={{fontSize:12,color:"#666",marginBottom:14,cursor:"pointer",fontFamily:"'DM Sans',sans-serif",letterSpacing:.5,transition:"all .25s ease"}}
-              onMouseEnter={e=>e.target.style.color="#B8922A"} onMouseLeave={e=>e.target.style.color="#666"}>{l}</p>
+            <p key={l} onClick={()=>setPage("collections")} style={{fontSize:12,color:"#555",marginBottom:14,cursor:"pointer",fontFamily:"'DM Sans',sans-serif",letterSpacing:.5,transition:"all .25s ease"}}
+              onMouseEnter={e=>e.target.style.color="#B8922A"} onMouseLeave={e=>e.target.style.color="#555"}>{l}</p>
           ))}
         </div>
         <div>
-          <p style={{fontSize:9,letterSpacing:3,color:"#000",textTransform:"uppercase",marginBottom:24,fontFamily:"'DM Sans',sans-serif",fontWeight:600}}>Company</p>
+          <p style={{fontSize:"8.5px",letterSpacing:2.5,color:"#000",textTransform:"uppercase",marginBottom:24,fontFamily:"'DM Sans',sans-serif",fontWeight:700}}>Company</p>
           {[["Our Story","story"],["Contact Us","contact"],["Find a Store","contact"],["Careers","contact"],["Press","contact"]].map(([l,pg])=>(
-            <p key={l} onClick={()=>setPage(pg)} style={{fontSize:12,color:"#666",marginBottom:14,cursor:"pointer",fontFamily:"'DM Sans',sans-serif",letterSpacing:.5,transition:"all .25s ease"}}
-              onMouseEnter={e=>e.target.style.color="#B8922A"} onMouseLeave={e=>e.target.style.color="#666"}>{l}</p>
+            <p key={l} onClick={()=>setPage(pg)} style={{fontSize:12,color:"#555",marginBottom:14,cursor:"pointer",fontFamily:"'DM Sans',sans-serif",letterSpacing:.5,transition:"all .25s ease"}}
+              onMouseEnter={e=>e.target.style.color="#B8922A"} onMouseLeave={e=>e.target.style.color="#555"}>{l}</p>
           ))}
         </div>
         <div>
-          <p style={{fontSize:9,letterSpacing:3,color:"#000",textTransform:"uppercase",marginBottom:24,fontFamily:"'DM Sans',sans-serif",fontWeight:600}}>Support</p>
+          <p style={{fontSize:"8.5px",letterSpacing:2.5,color:"#000",textTransform:"uppercase",marginBottom:24,fontFamily:"'DM Sans',sans-serif",fontWeight:700}}>Support</p>
           {["Shipping & Returns","FAQ","Track My Order","Fragrance Guide","Gift Wrapping"].map(l=>(
-            <p key={l} style={{fontSize:12,color:"#666",marginBottom:14,cursor:"pointer",fontFamily:"'DM Sans',sans-serif",letterSpacing:.5,transition:"all .25s ease"}}
-              onMouseEnter={e=>e.target.style.color="#B8922A"} onMouseLeave={e=>e.target.style.color="#666"}>{l}</p>
+            <p key={l} style={{fontSize:12,color:"#555",marginBottom:14,cursor:"pointer",fontFamily:"'DM Sans',sans-serif",letterSpacing:.5,transition:"all .25s ease"}}
+              onMouseEnter={e=>e.target.style.color="#B8922A"} onMouseLeave={e=>e.target.style.color="#555"}>{l}</p>
           ))}
-          <div style={{marginTop:32,paddingTop:24,borderTop:"1px solid #E8E4DC"}}>
-            <p style={{fontSize:9,letterSpacing:3,color:"#000",textTransform:"uppercase",marginBottom:14,fontFamily:"'DM Sans',sans-serif",fontWeight:600}}>Ships With</p>
+          <div style={{marginTop:32,paddingTop:24,borderTop:"1px solid #e5e5e5"}}>
+            <p style={{fontSize:"8px",letterSpacing:2.5,color:"#000",textTransform:"uppercase",marginBottom:14,fontFamily:"'DM Sans',sans-serif",fontWeight:700}}>Ships With</p>
             <div style={{display:"flex",flexWrap:"wrap",gap:6}}>
               {["DHL","Aramex","EMX"].map(s=>(
-                <span key={s} style={{border:"1px solid #EBEBEB",padding:"4px 12px",fontSize:9,color:"#555",fontFamily:"'DM Sans',sans-serif",letterSpacing:1,background:"#FCFBFA",borderRadius:1}}>{s}</span>
+                <span key={s} style={{border:"1px solid #e5e5e5",padding:"4px 12px",fontSize:9,color:"#444",fontFamily:"'DM Sans',sans-serif",letterSpacing:1,background:"#fff",borderRadius:1}}>{s}</span>
               ))}
             </div>
           </div>

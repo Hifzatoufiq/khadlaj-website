@@ -23396,50 +23396,58 @@ function Navbar({ page, setPage, cartCount }) {
         ] })
       ] })
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { background: "#111", color: "#fff", textAlign: "center", padding: "11px 16px", fontSize: 9, letterSpacing: "3.5px", fontFamily: "'DM Sans',sans-serif", textTransform: "uppercase", borderBottom: "1px solid rgba(184,146,42,0.3)" }, children: [
-      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { color: "#B8922A", marginRight: 10, fontWeight: 600 }, children: "\u2726" }),
+    /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { background: "#0a0a0a", color: "#fff", textAlign: "center", padding: "8px 16px", fontSize: "8.5px", letterSpacing: "4px", fontFamily: "'DM Sans',sans-serif", textTransform: "uppercase", borderBottom: "1px solid rgba(184,146,42,0.15)" }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { color: "#B8922A", marginRight: 8, fontWeight: 600 }, children: "\u2726" }),
       "REGISTER NOW & RECEIVE 10% OFF \u2014 CODE: ",
       /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { color: "#B8922A", fontWeight: 700 }, children: "10OFF" }),
-      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { color: "#B8922A", marginLeft: 10, fontWeight: 600 }, children: "\u2726" })
+      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { color: "#B8922A", marginLeft: 8, fontWeight: 600 }, children: "\u2726" })
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("nav", { style: { position: "sticky", top: 0, zIndex: 100, background: "rgba(255,255,255,.97)", backdropFilter: "blur(20px)", borderBottom: "1px solid #E8E4DC" }, children: [
-      /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { padding: "0 5%" }, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "grid", gridTemplateColumns: "1fr auto 1fr", alignItems: "center", height: "clamp(70px,8vw,90px)", gap: 16 }, children: [
+    /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("nav", { style: { position: "sticky", top: 0, zIndex: 100, background: "rgba(255,255,255,.96)", backdropFilter: "blur(15px)", borderBottom: "1px solid #f0f0f0" }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { padding: "0 6%" }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "grid", gridTemplateColumns: "1fr auto 1fr", alignItems: "center", height: "80px", gap: 16 }, children: [
           /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", gap: 6, alignItems: "center" }, children: [
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { display: "flex", gap: 5, alignItems: "center" }, className: "hide-mob", children: COUNTRIES.map((c) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { display: "flex", gap: 4, alignItems: "center" }, className: "hide-mob", children: COUNTRIES.map((c) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(
               "div",
               {
-                style: { display: "flex", alignItems: "center", gap: 4, padding: "4px 8px", border: "1px solid #EBEBEB", background: "#FCFBFA", cursor: "pointer", transition: "all .2s ease" },
+                style: { display: "flex", alignItems: "center", gap: 3, padding: "5px 10px", background: "transparent", cursor: "pointer", transition: "all .25s ease", opacity: 0.75 },
                 onMouseEnter: (e) => {
-                  e.currentTarget.style.borderColor = "#000";
-                  e.currentTarget.style.background = "#fff";
+                  e.currentTarget.style.opacity = "1";
+                  e.currentTarget.style.transform = "scale(1.05)";
                 },
                 onMouseLeave: (e) => {
-                  e.currentTarget.style.borderColor = "#EBEBEB";
-                  e.currentTarget.style.background = "#FCFBFA";
+                  e.currentTarget.style.opacity = "0.75";
+                  e.currentTarget.style.transform = "scale(1)";
                 },
                 children: [
-                  /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { fontSize: 11 }, children: c.flag }),
-                  /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { fontSize: 9, color: "#444", fontFamily: "'DM Sans',sans-serif", fontWeight: 500 }, children: c.name })
+                  /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { fontSize: 12 }, children: c.flag }),
+                  /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { fontSize: "8px", color: "#111", fontFamily: "'DM Sans',sans-serif", fontWeight: 600, letterSpacing: "1px", textTransform: "uppercase" }, children: c.name })
                 ]
               },
               c.name
             )) }),
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "mob-search-left", style: { cursor: "pointer", fontSize: 18, color: "#000", lineHeight: 1 }, onClick: () => setSearchOpen(true), children: "\u2315" })
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "mob-search-left", style: { cursor: "pointer", display: "flex", alignItems: "center" }, onClick: () => setSearchOpen(true), children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("svg", { width: "18", height: "18", viewBox: "0 0 24 24", fill: "none", stroke: "#111", strokeWidth: "1.5", strokeLinecap: "round", strokeLinejoin: "round", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", { cx: "11", cy: "11", r: "8" }),
+              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("line", { x1: "21", y1: "21", x2: "16.65", y2: "16.65" })
+            ] }) })
           ] }),
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { onClick: () => setPage("home"), style: { cursor: "pointer", textAlign: "center", userSelect: "none", display: "flex", alignItems: "center", justifyContent: "center" }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
             "img",
             {
               src: "https://khadlaj-perfumes.com/cdn/shop/files/Khadlaj_logo_2026--2_160x.png?v=1773752104",
               alt: "Khadlaj Perfumes",
-              style: { height: "clamp(44px,5.5vw,68px)", width: "auto", objectFit: "contain", display: "block", maxWidth: 160 }
+              style: { height: "clamp(46px,5.5vw,64px)", width: "auto", objectFit: "contain", display: "block", maxWidth: 160, transition: "transform 0.3s ease" },
+              onMouseEnter: (e) => e.currentTarget.style.transform = "scale(1.02)",
+              onMouseLeave: (e) => e.currentTarget.style.transform = "scale(1)"
             }
           ) }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", alignItems: "center", justifyContent: "flex-end", gap: 22 }, children: [
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "hide-mob", style: { fontSize: 9, letterSpacing: 2.5, color: "#777", textTransform: "uppercase", cursor: "pointer", fontFamily: "'DM Sans',sans-serif", transition: "color .2s" }, onMouseEnter: (e) => e.target.style.color = "#000", onMouseLeave: (e) => e.target.style.color = "#777", onClick: () => setPage("contact"), children: "Sign Up" }),
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "hide-mob", style: { cursor: "pointer", fontSize: 17, color: "#444", lineHeight: 1, transition: "color .2s" }, onMouseEnter: (e) => e.target.style.color = "#000", onMouseLeave: (e) => e.target.style.color = "#444", onClick: () => setSearchOpen(true), children: "\u2315" }),
-            /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { onClick: () => setPage("collections"), style: { position: "relative", cursor: "pointer", transition: "transform .2s ease" }, onMouseEnter: (e) => e.currentTarget.style.transform = "scale(1.05)", onMouseLeave: (e) => e.currentTarget.style.transform = "scale(1)", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("svg", { width: "19", height: "19", viewBox: "0 0 24 24", fill: "none", stroke: "#111", strokeWidth: "1.2", strokeLinecap: "round", strokeLinejoin: "round", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", alignItems: "center", justifyContent: "flex-end", gap: 24 }, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "hide-mob", style: { fontSize: "8.5px", letterSpacing: "2.5px", color: "#111", textTransform: "uppercase", cursor: "pointer", fontFamily: "'DM Sans',sans-serif", fontWeight: 600, transition: "color .2s" }, onMouseEnter: (e) => e.target.style.color = "#B8922A", onMouseLeave: (e) => e.target.style.color = "#111", onClick: () => setPage("contact"), children: "Sign Up" }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "hide-mob", style: { cursor: "pointer", display: "flex", alignItems: "center", transition: "transform .2s" }, onMouseEnter: (e) => e.currentTarget.style.transform = "scale(1.1)", onMouseLeave: (e) => e.currentTarget.style.transform = "scale(1)", onClick: () => setSearchOpen(true), children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("svg", { width: "18", height: "18", viewBox: "0 0 24 24", fill: "none", stroke: "#111", strokeWidth: "1.5", strokeLinecap: "round", strokeLinejoin: "round", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", { cx: "11", cy: "11", r: "8" }),
+              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("line", { x1: "21", y1: "21", x2: "16.65", y2: "16.65" })
+            ] }) }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { onClick: () => setPage("collections"), style: { position: "relative", cursor: "pointer", transition: "transform .2s ease" }, onMouseEnter: (e) => e.currentTarget.style.transform = "scale(1.1)", onMouseLeave: (e) => e.currentTarget.style.transform = "scale(1)", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("svg", { width: "18", height: "18", viewBox: "0 0 24 24", fill: "none", stroke: "#111", strokeWidth: "1.5", strokeLinecap: "round", strokeLinejoin: "round", children: [
                 /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", { d: "M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" }),
                 /* @__PURE__ */ (0, import_jsx_runtime.jsx)("line", { x1: "3", y1: "6", x2: "21", y2: "6" }),
                 /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", { d: "M16 10a4 4 0 01-8 0" })
@@ -23454,25 +23462,25 @@ function Navbar({ page, setPage, cartCount }) {
                 className: "mob-burger",
                 "aria-label": "Menu",
                 children: [
-                  /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { display: "block", width: 22, height: 1.5, background: "#000", transition: "all .25s" } }),
-                  /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { display: "block", width: 22, height: 1.5, background: "#000", transition: "all .25s" } }),
+                  /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { display: "block", width: 20, height: 1.5, background: "#000", transition: "all .25s" } }),
+                  /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { display: "block", width: 20, height: 1.5, background: "#000", transition: "all .25s" } }),
                   /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { display: "block", width: 14, height: 1.5, background: "#000", transition: "all .25s" } })
                 ]
               }
             )
           ] })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "hide-mob", style: { display: "flex", justifyContent: "center", gap: 44, paddingBottom: 18, fontSize: 9, letterSpacing: "2.5px", textTransform: "uppercase", color: "#555", fontFamily: "'DM Sans',sans-serif", fontWeight: 500 }, children: [["Offers", "collections"], ["Bestsellers", "collections"], ["New In", "collections"], ["Gifts", "gifts"], ["Perfume", "collections"], ["Our Story", "story"], ["Contact", "contact"]].map(([label, pg]) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "hide-mob", style: { display: "flex", justifyContent: "center", gap: 40, paddingBottom: 16, fontSize: "8.5px", letterSpacing: "3px", textTransform: "uppercase", color: "#111", fontFamily: "'DM Sans',sans-serif", fontWeight: 600 }, children: [["Offers", "collections"], ["Bestsellers", "collections"], ["New In", "collections"], ["Gifts", "gifts"], ["Perfume", "collections"], ["Our Story", "story"], ["Contact", "contact"]].map(([label, pg]) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
           "span",
           {
             onClick: () => setPage(pg),
-            style: { cursor: "pointer", paddingBottom: 4, borderBottom: page === pg ? "1px solid #B8922A" : "1px solid transparent", color: page === pg ? "#B8922A" : "#555", transition: "all .25s ease" },
+            style: { cursor: "pointer", paddingBottom: 4, borderBottom: page === pg ? "1px solid #B8922A" : "1px solid transparent", color: page === pg ? "#B8922A" : "#111", transition: "all .25s ease" },
             onMouseEnter: (e) => {
-              e.currentTarget.style.color = "#000";
-              e.currentTarget.style.borderBottomColor = "#000";
+              e.currentTarget.style.color = "#B8922A";
+              e.currentTarget.style.borderBottomColor = "#B8922A";
             },
             onMouseLeave: (e) => {
-              e.currentTarget.style.color = page === pg ? "#B8922A" : "#555";
+              e.currentTarget.style.color = page === pg ? "#B8922A" : "#111";
               e.currentTarget.style.borderBottomColor = page === pg ? "#B8922A" : "transparent";
             },
             children: label
@@ -23563,81 +23571,79 @@ function Footer({ setPage }) {
         )
       ] })
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { background: "#fff", padding: "72px 5% 48px", display: "grid", gridTemplateColumns: "2fr 1fr 1fr 1fr", gap: 48 }, className: "grid-3", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { background: "#FAF9F6", padding: "80px 6% 48px", display: "grid", gridTemplateColumns: "2fr 1fr 1fr 1fr", gap: 48, borderTop: "1px solid #f0f0f0" }, className: "grid-3", children: [
       /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
         /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
           "img",
           {
             src: "https://khadlaj-perfumes.com/cdn/shop/files/Khadlaj_logo_2026--2_160x.png?v=1773752104",
             alt: "Khadlaj Perfumes",
-            style: { height: 80, width: "auto", objectFit: "contain", display: "block", marginBottom: 20 }
+            style: { height: 52, width: "auto", objectFit: "contain", display: "block", marginBottom: 24 }
           }
         ),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 8, letterSpacing: 4, color: "#B8922A", fontFamily: "'DM Sans',sans-serif", marginBottom: 16, textTransform: "uppercase", fontWeight: 600 }, children: "Perfumes \xB7 UAE \xB7 Est. 1997" }),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 13, color: "#666", lineHeight: 1.9, maxWidth: 240, marginBottom: 32, fontFamily: "'DM Sans',sans-serif" }, children: "Family-owned UAE perfume house. Authentic Arabian & French fragrance artistry since 1997." }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: "8px", letterSpacing: 3.5, color: "#B8922A", fontFamily: "'DM Sans',sans-serif", marginBottom: 16, textTransform: "uppercase", fontWeight: 700 }, children: "Perfumes \xB7 UAE \xB7 Est. 1997" }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 13, color: "#555", lineHeight: 1.85, maxWidth: 260, marginBottom: 32, fontFamily: "'DM Sans',sans-serif" }, children: "Family-owned UAE perfume house. Authentic Arabian & French fragrance artistry since 1997." }),
         /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { display: "flex", gap: 8, flexWrap: "wrap" }, children: COUNTRIES.map((c) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(
           "div",
           {
-            style: { display: "flex", alignItems: "center", gap: 5, padding: "5px 12px", border: "1px solid #EBEBEB", background: "#FCFBFA", cursor: "pointer", transition: "all .2s ease" },
+            style: { display: "flex", alignItems: "center", gap: 4, padding: "5px 12px", border: "1px solid #e5e5e5", background: "#fff", cursor: "pointer", transition: "all .2s ease" },
             onMouseEnter: (e) => {
               e.currentTarget.style.borderColor = "#000";
-              e.currentTarget.style.background = "#fff";
             },
             onMouseLeave: (e) => {
-              e.currentTarget.style.borderColor = "#EBEBEB";
-              e.currentTarget.style.background = "#FCFBFA";
+              e.currentTarget.style.borderColor = "#e5e5e5";
             },
             children: [
               /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { fontSize: 12 }, children: c.flag }),
-              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { fontSize: 10, color: "#444", fontFamily: "'DM Sans',sans-serif", fontWeight: 500 }, children: c.name })
+              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { fontSize: 9, color: "#222", fontFamily: "'DM Sans',sans-serif", fontWeight: 600 }, children: c.name })
             ]
           },
           c.name
         )) })
       ] }),
       /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 9, letterSpacing: 3, color: "#000", textTransform: "uppercase", marginBottom: 24, fontFamily: "'DM Sans',sans-serif", fontWeight: 600 }, children: "Collections" }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: "8.5px", letterSpacing: 2.5, color: "#000", textTransform: "uppercase", marginBottom: 24, fontFamily: "'DM Sans',sans-serif", fontWeight: 700 }, children: "Collections" }),
         ["Atyaab", "Lafede", "Master Perfumery", "Gift Sets", "New Arrivals", "Best Sellers"].map((l) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
           "p",
           {
             onClick: () => setPage("collections"),
-            style: { fontSize: 12, color: "#666", marginBottom: 14, cursor: "pointer", fontFamily: "'DM Sans',sans-serif", letterSpacing: 0.5, transition: "all .25s ease" },
+            style: { fontSize: 12, color: "#555", marginBottom: 14, cursor: "pointer", fontFamily: "'DM Sans',sans-serif", letterSpacing: 0.5, transition: "all .25s ease" },
             onMouseEnter: (e) => e.target.style.color = "#B8922A",
-            onMouseLeave: (e) => e.target.style.color = "#666",
+            onMouseLeave: (e) => e.target.style.color = "#555",
             children: l
           },
           l
         ))
       ] }),
       /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 9, letterSpacing: 3, color: "#000", textTransform: "uppercase", marginBottom: 24, fontFamily: "'DM Sans',sans-serif", fontWeight: 600 }, children: "Company" }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: "8.5px", letterSpacing: 2.5, color: "#000", textTransform: "uppercase", marginBottom: 24, fontFamily: "'DM Sans',sans-serif", fontWeight: 700 }, children: "Company" }),
         [["Our Story", "story"], ["Contact Us", "contact"], ["Find a Store", "contact"], ["Careers", "contact"], ["Press", "contact"]].map(([l, pg]) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
           "p",
           {
             onClick: () => setPage(pg),
-            style: { fontSize: 12, color: "#666", marginBottom: 14, cursor: "pointer", fontFamily: "'DM Sans',sans-serif", letterSpacing: 0.5, transition: "all .25s ease" },
+            style: { fontSize: 12, color: "#555", marginBottom: 14, cursor: "pointer", fontFamily: "'DM Sans',sans-serif", letterSpacing: 0.5, transition: "all .25s ease" },
             onMouseEnter: (e) => e.target.style.color = "#B8922A",
-            onMouseLeave: (e) => e.target.style.color = "#666",
+            onMouseLeave: (e) => e.target.style.color = "#555",
             children: l
           },
           l
         ))
       ] }),
       /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 9, letterSpacing: 3, color: "#000", textTransform: "uppercase", marginBottom: 24, fontFamily: "'DM Sans',sans-serif", fontWeight: 600 }, children: "Support" }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: "8.5px", letterSpacing: 2.5, color: "#000", textTransform: "uppercase", marginBottom: 24, fontFamily: "'DM Sans',sans-serif", fontWeight: 700 }, children: "Support" }),
         ["Shipping & Returns", "FAQ", "Track My Order", "Fragrance Guide", "Gift Wrapping"].map((l) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
           "p",
           {
-            style: { fontSize: 12, color: "#666", marginBottom: 14, cursor: "pointer", fontFamily: "'DM Sans',sans-serif", letterSpacing: 0.5, transition: "all .25s ease" },
+            style: { fontSize: 12, color: "#555", marginBottom: 14, cursor: "pointer", fontFamily: "'DM Sans',sans-serif", letterSpacing: 0.5, transition: "all .25s ease" },
             onMouseEnter: (e) => e.target.style.color = "#B8922A",
-            onMouseLeave: (e) => e.target.style.color = "#666",
+            onMouseLeave: (e) => e.target.style.color = "#555",
             children: l
           },
           l
         )),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { marginTop: 32, paddingTop: 24, borderTop: "1px solid #E8E4DC" }, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 9, letterSpacing: 3, color: "#000", textTransform: "uppercase", marginBottom: 14, fontFamily: "'DM Sans',sans-serif", fontWeight: 600 }, children: "Ships With" }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { display: "flex", flexWrap: "wrap", gap: 6 }, children: ["DHL", "Aramex", "EMX"].map((s) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { border: "1px solid #EBEBEB", padding: "4px 12px", fontSize: 9, color: "#555", fontFamily: "'DM Sans',sans-serif", letterSpacing: 1, background: "#FCFBFA", borderRadius: 1 }, children: s }, s)) })
+        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { marginTop: 32, paddingTop: 24, borderTop: "1px solid #e5e5e5" }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: "8px", letterSpacing: 2.5, color: "#000", textTransform: "uppercase", marginBottom: 14, fontFamily: "'DM Sans',sans-serif", fontWeight: 700 }, children: "Ships With" }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { display: "flex", flexWrap: "wrap", gap: 6 }, children: ["DHL", "Aramex", "EMX"].map((s) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { border: "1px solid #e5e5e5", padding: "4px 12px", fontSize: 9, color: "#444", fontFamily: "'DM Sans',sans-serif", letterSpacing: 1, background: "#fff", borderRadius: 1 }, children: s }, s)) })
         ] })
       ] })
     ] }),
