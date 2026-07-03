@@ -22023,9 +22023,10 @@ function ProductCard({ p, onView }) {
         flexDirection: "column",
         position: "relative",
         cursor: "pointer",
-        border: hov ? "1px solid #000" : "1px solid #EBEBEB",
-        transition: "border-color .3s ease, box-shadow .3s ease",
-        boxShadow: hov ? "0 12px 40px rgba(0,0,0,.10)" : "0 2px 8px rgba(0,0,0,.04)"
+        border: "1px solid #f0f0f0",
+        transition: "all .4s cubic-bezier(0.25, 0.8, 0.25, 1)",
+        boxShadow: hov ? "0 15px 35px rgba(0,0,0,0.06)" : "none",
+        transform: hov ? "translateY(-4px)" : "translateY(0)"
       },
       children: [
         p.badge && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: {
@@ -22042,19 +22043,18 @@ function ProductCard({ p, onView }) {
           textTransform: "uppercase",
           fontFamily: "'DM Sans',sans-serif"
         }, children: p.badge }),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { position: "relative", aspectRatio: "1/1", overflow: "hidden", background: "#fff" }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { position: "relative", aspectRatio: "1/1", overflow: "hidden", background: "#fafafa", display: "flex", alignItems: "center", justifyContent: "center" }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
           "img",
           {
             src: p.img,
             alt: p.name,
             loading: "lazy",
             style: {
-              width: "100%",
-              height: "100%",
+              width: "92%",
+              height: "92%",
               objectFit: "contain",
-              padding: "20px",
-              transition: "transform .6s cubic-bezier(0.25,0.8,0.25,1)",
-              transform: hov ? "scale(1.05)" : "scale(1)"
+              transition: "transform .6s cubic-bezier(0.25, 0.8, 0.25, 1)",
+              transform: hov ? "scale(1.06)" : "scale(1)"
             }
           }
         ) }),
