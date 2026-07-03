@@ -22312,17 +22312,6 @@ function HomePage({ setPage, addToCart, setViewProduct }) {
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {}),
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { fontStyle: "normal", fontWeight: 400, color: "#C9A84C" }, children: "Arabian Fragrance" })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { width: 40, height: 1, background: "rgba(201,168,76,.45)", marginBottom: 16 } }),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "hero-subtitle", style: {
-          fontSize: "clamp(14px,1.2vw,16px)",
-          color: "rgba(255,255,255,.65)",
-          fontFamily: "'DM Sans',sans-serif",
-          fontWeight: 300,
-          lineHeight: 1.75,
-          letterSpacing: 0.3,
-          marginBottom: 28,
-          maxWidth: 440
-        }, children: "Over four decades of mastery \u2014 where the rarest oud, rose, and musk are composed into enduring luxury." }),
         /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "hero-cta-row", style: { display: "flex", gap: 12, flexWrap: "wrap", marginBottom: 32 }, children: [
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
             "button",

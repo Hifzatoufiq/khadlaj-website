@@ -594,22 +594,6 @@ function HomePage({ setPage, addToCart, setViewProduct }){
             <span style={{fontStyle:"normal",fontWeight:400,color:"#C9A84C"}}>Arabian Fragrance</span>
           </h1>
 
-          {/* Divider */}
-          <div style={{width:40,height:1,background:"rgba(201,168,76,.45)",marginBottom:16}}/>
-
-          {/* Subtitle */}
-          <p className="hero-subtitle" style={{
-            fontSize:"clamp(14px,1.2vw,16px)",
-            color:"rgba(255,255,255,.65)",
-            fontFamily:"'DM Sans',sans-serif",
-            fontWeight:300,
-            lineHeight:1.75,
-            letterSpacing:.3,
-            marginBottom:28,
-            maxWidth:440,
-          }}>
-            Over four decades of mastery — where the rarest oud, rose, and musk are composed into enduring luxury.
-          </p>
 
           {/* CTA Buttons */}
           <div className="hero-cta-row" style={{display:"flex",gap:12,flexWrap:"wrap",marginBottom:32}}>
