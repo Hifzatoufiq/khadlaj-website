@@ -50,7 +50,7 @@ const STATS = [
 
 const PRODUCTS = [
   // ── Local products (own images) ──
-  { id:13, name:"Island",               col:"Master Perfumery", price:150, size:"100ml Extrait", badge:"Best Seller", gender:"Unisex", notes:["Marine","Amber","Oud"],        img:"https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Island_2.jpg?v=1771044501" },
+  { id:13, name:"Island",               col:"Master Perfumery", price:150, size:"100ml Extrait", badge:"Best Seller", gender:"Unisex", notes:["Marine","Amber","Oud"],        img:"./assets/images/products/island_single.jpg" },
   { id:14, name:"Cream Velvet",         col:"Master Perfumery", price:130, size:"100ml Extrait",      badge:"Best Seller", gender:"Unisex", notes:["Cream","Velvet","Musk"],        img:"https://cdn.shopify.com/s/files/1/0626/6119/8023/files/CreamVelvet02.jpg?v=1736149095" },
   { id:15, name:"Cloud Candy",          col:"Atyaab",           price:325, size:"Gift Set",      badge:null,          gender:"Her",    notes:["Peach","Musk","Vanilla"],       img:"https://cdn.shopify.com/s/files/1/0626/6119/8023/files/CloudCandy1.jpg?v=1767169755",     images:["https://cdn.shopify.com/s/files/1/0626/6119/8023/files/CloudCandy1.jpg?v=1767169755","https://cdn.shopify.com/s/files/1/0626/6119/8023/files/CloudCandy1.jpg?v=1767169755","./assets/images/products/cloud-candy-open-box.png","./assets/images/products/cloud-candy-back-box.png"] },
   { id:16, name:"Strawberry Shake",     col:"Atyaab",           price:295, size:"100ml EDP",     badge:null,          gender:"Her",    notes:["Strawberry","Musk","Vanilla"],  img:"https://cdn.shopify.com/s/files/1/0626/6119/8023/files/STRAWBERRY_SHAKE-03.jpg?v=1764228432" },
