@@ -269,9 +269,10 @@ const GLOBAL_CSS = `
     .hero-img-wrap{height:320px!important;min-height:unset!important;}
     .grid-2{grid-template-columns:1fr!important;}
 
-    /* Hero adjustments */
-    .hero-section { height: 80vh !important; }
-    .hero-text-container { padding: 40px 30px !important; }
+    /* Hero adjustments — tablet */
+    .hero-section { height: 80vh !important; min-height: 520px !important; }
+    .hero-text-container { padding: 60px 40px 40px !important; max-width: 100% !important; }
+    .hero-headline { font-size: 38px !important; }
   }
   @media(max-width:600px){
     .grid-4{grid-template-columns:repeat(2,1fr)!important;}
@@ -280,23 +281,32 @@ const GLOBAL_CSS = `
     .new-scroll > div{flex:0 0 78vw!important;}
     .reel-card{flex:0 0 88vw!important;}
 
-    /* Hero adjustments for smaller screens */
-    .hero-section { height: 100dvh !important; }
-    .hero-text-container { padding: 40px 20px 30px !important; }
-    .hero-headline { font-size: 32px !important; line-height: 1.2 !important; }
-    .hero-subtitle { font-size: 13px !important; line-height: 1.6 !important; max-width: 100% !important; margin-bottom: 20px !important; }
-    .hero-stats-row { gap: 12px !important; padding-top: 12px !important; }
-    .hero-stat-item { padding-right: 12px !important; margin-right: 12px !important; }
+    /* Hero — mobile phones */
+    .hero-section {
+      height: 100svh !important;
+      min-height: -webkit-fill-available !important;
+    }
+    .hero-video { object-position: center center !important; }
+    .hero-text-container {
+      padding: 24px 20px 32px !important;
+      max-width: 100% !important;
+      justify-content: flex-end !important;
+    }
+    .hero-headline { font-size: 30px !important; line-height: 1.15 !important; margin-bottom: 10px !important; }
+    .hero-subtitle { font-size: 13px !important; line-height: 1.6 !important; max-width: 100% !important; margin-bottom: 16px !important; }
+    .hero-stats-row { gap: 10px !important; padding-top: 10px !important; flex-wrap: wrap !important; }
+    .hero-stat-item { padding-right: 10px !important; margin-right: 10px !important; }
   }
   @media(max-width:480px){
     .grid-4{grid-template-columns:repeat(2,1fr)!important;}
     .popup-in{grid-template-columns:1fr!important;}
 
-    .hero-headline { font-size: 28px !important; }
+    .hero-section { height: 100svh !important; }
+    .hero-headline { font-size: 26px !important; letter-spacing: 0 !important; }
     .hero-cta-row { flex-direction: column !important; gap: 8px !important; width: 100% !important; }
-    .hero-cta-row button { width: 100% !important; text-align: center !important; }
-    .hero-stats-row { border-top: none !important; }
-    .hero-stat-item { border-right: none !important; }
+    .hero-cta-row button { width: 100% !important; text-align: center !important; justify-content: center !important; }
+    .hero-stats-row { border-top: none !important; padding-top: 0 !important; }
+    .hero-stat-item { border-right: none !important; flex: 1 1 40% !important; margin-right: 0 !important; padding-right: 0 !important; }
   }
 `;
 
@@ -544,7 +554,7 @@ function HomePage({ setPage, addToCart, setViewProduct }){
   return (
     <>
       {/* ── HERO VIDEO ── */}
-      <section className="hero-section" style={{position:"relative",width:"100%",height:"100vh",overflow:"hidden",background:"#0a0a0a"}}>
+      <section className="hero-section" style={{position:"relative",width:"100%",height:"100svh",minHeight:"500px",overflow:"hidden",background:"#0a0a0a"}}>
         <video
           className="hero-video"
           ref={el=>{if(el){el.muted=true;el.play().catch(()=>{});}}}
