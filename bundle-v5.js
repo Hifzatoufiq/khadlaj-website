@@ -22042,7 +22042,7 @@ function ProductCard({ p, onView }) {
           textTransform: "uppercase",
           fontFamily: "'DM Sans',sans-serif"
         }, children: p.badge }),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { position: "relative", aspectRatio: "4/5", overflow: "hidden", background: "#fff" }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { position: "relative", aspectRatio: "1/1", overflow: "hidden", background: "#F5F5F5" }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
           "img",
           {
             src: p.img,
@@ -22051,8 +22051,7 @@ function ProductCard({ p, onView }) {
             style: {
               width: "100%",
               height: "100%",
-              objectFit: "contain",
-              padding: "16px",
+              objectFit: "cover",
               transition: "transform .6s cubic-bezier(0.25,0.8,0.25,1)",
               transform: hov ? "scale(1.05)" : "scale(1)"
             }

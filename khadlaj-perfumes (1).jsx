@@ -1,4 +1,4 @@
-﻿import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 
 /* ═══════════════════════════════════════════════════════════════
    DESIGN TOKENS
@@ -347,12 +347,11 @@ function ProductCard({ p, onView }){
           fontFamily:"'DM Sans',sans-serif",
         }}>{p.badge}</span>
       )}
-      <div style={{ position:"relative", aspectRatio:"4/5", overflow:"hidden", background:"#fff" }}>
+      <div style={{ position:"relative", aspectRatio:"1/1", overflow:"hidden", background:"#F5F5F5" }}>
         <img
           src={p.img} alt={p.name} loading="lazy"
           style={{
-            width:"100%", height:"100%", objectFit:"contain",
-            padding:"16px",
+            width:"100%", height:"100%", objectFit:"cover",
             transition:"transform .6s cubic-bezier(0.25,0.8,0.25,1)",
             transform: hov ? "scale(1.05)" : "scale(1)",
           }}
