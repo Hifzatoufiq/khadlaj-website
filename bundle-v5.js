@@ -22395,11 +22395,6 @@ function HomePage({ setPage, addToCart, setViewProduct }) {
       ] })
     ] }),
     /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { overflow: "hidden", background: "#FAFAFA", padding: "20px 0", borderTop: "1px solid #E8E4DC", borderBottom: "1px solid #E8E4DC" }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "ribbon-inner", children: [...SCENT_RIBBON, ...SCENT_RIBBON, ...SCENT_RIBBON].map((n, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { padding: "0 32px", fontSize: 10, letterSpacing: 4, color: i % 4 === 0 ? "#C1A46A" : "#777", textTransform: "uppercase", whiteSpace: "nowrap", fontFamily: "'DM Sans',sans-serif" }, children: n }, i)) }) }),
-    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", { style: { background: "#fff", padding: "80px 6%", borderBottom: "1px solid #E8E4DC" }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 0 }, className: "grid-4", children: STATS.map((s, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { textAlign: "center", padding: "32px 24px", borderRight: i < 3 ? "1px solid #E8E4DC" : "none" }, children: [
-      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "disp", style: { fontSize: "clamp(40px,4.5vw,64px)", fontWeight: 300, color: "#111", lineHeight: 1, marginBottom: 12 }, children: s.v }),
-      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { width: 24, height: 1, background: "#C1A46A", margin: "0 auto 16px" } }),
-      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 9, letterSpacing: 4, color: "#888", textTransform: "uppercase", fontFamily: "'DM Sans',sans-serif", fontWeight: 600 }, children: s.l })
-    ] }, s.v)) }) }),
     /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", { style: { padding: "0 5% 104px", background: "#fff" }, children: [
       /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { paddingTop: 96, marginBottom: 52, display: "flex", alignItems: "flex-end", justifyContent: "space-between", flexWrap: "wrap", gap: 16 }, children: [
         /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [

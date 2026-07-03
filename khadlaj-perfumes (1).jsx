@@ -673,18 +673,6 @@ function HomePage({ setPage, addToCart, setViewProduct }){
         </div>
       </div>
 
-      {/* ── STATS ── */}
-      <section style={{background:"#fff",padding:"80px 6%",borderBottom:"1px solid #E8E4DC"}}>
-        <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:0}} className="grid-4">
-          {STATS.map((s,i)=>(
-            <div key={s.v} style={{textAlign:"center",padding:"32px 24px",borderRight:i<3?"1px solid #E8E4DC":"none"}}>
-              <p className="disp" style={{fontSize:"clamp(40px,4.5vw,64px)",fontWeight:300,color:"#111",lineHeight:1,marginBottom:12}}>{s.v}</p>
-              <div style={{width:24,height:1,background:"#C1A46A",margin:"0 auto 16px"}}/>
-              <p style={{fontSize:9,letterSpacing:4,color:"#888",textTransform:"uppercase",fontFamily:"'DM Sans',sans-serif",fontWeight:600}}>{s.l}</p>
-            </div>
-          ))}
-        </div>
-      </section>
 
       {/* ── FEATURED PRODUCTS ── */}
       <section style={{padding:"0 5% 104px",background:"#fff"}}>
