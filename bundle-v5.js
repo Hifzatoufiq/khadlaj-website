@@ -22058,6 +22058,8 @@ function ProductCard({ p, onView }) {
               width: "95%",
               height: "95%",
               objectFit: "contain",
+              mixBlendMode: "multiply",
+              filter: "contrast(1.05) brightness(1.04)",
               transition: "transform .6s cubic-bezier(0.25, 0.8, 0.25, 1)",
               transform: hov ? "scale(1.06)" : "scale(1)"
             }
@@ -22862,7 +22864,7 @@ function ProductPage({ product, addToCart, setPage, setViewProduct }) {
       /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: product.name })
     ] }),
     /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { maxWidth: 1440, margin: "0 auto", padding: "40px 5% 120px" }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "grid", gridTemplateColumns: "1fr 1fr", gap: "clamp(40px, 8vw, 100px)", alignItems: "start" }, className: "grid-2", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { display: "flex", flexDirection: "column", gap: 16 }, children: thumbs.map((t, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { width: "100%", aspectRatio: "1/1", display: "flex", alignItems: "center", justifyContent: "center", background: "#FAFAFA" }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", { src: t, alt: `${product.name} - ${i + 1}`, style: { width: "85%", height: "85%", objectFit: "contain", mixBlendMode: "multiply", transition: "opacity .3s" } }) }, i)) }),
+      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { display: "flex", flexDirection: "column", gap: 16 }, children: thumbs.map((t, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { width: "100%", aspectRatio: "1/1", display: "flex", alignItems: "center", justifyContent: "center", background: "transparent" }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", { src: t, alt: `${product.name} - ${i + 1}`, style: { width: "85%", height: "85%", objectFit: "contain", mixBlendMode: "multiply", filter: "contrast(1.05) brightness(1.04)", transition: "opacity .3s" } }) }, i)) }),
       /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { paddingTop: 8, maxWidth: 540, position: "sticky", top: 120, alignSelf: "start" }, children: [
         /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 10, letterSpacing: 3, color: "#111", textTransform: "uppercase", fontFamily: "'Montserrat',sans-serif", marginBottom: 16 }, children: "Khadlaj Perfumes" }),
         /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", { className: "disp", style: { fontSize: "clamp(36px, 4.5vw, 52px)", fontWeight: 300, color: "#000", lineHeight: 1.05, letterSpacing: "-0.5px", textTransform: "uppercase", marginBottom: 16 }, children: product.name }),

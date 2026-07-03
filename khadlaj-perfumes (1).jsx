@@ -358,6 +358,7 @@ function ProductCard({ p, onView }){
           src={p.img} alt={p.name} loading="lazy"
           style={{
             width:"95%", height:"95%", objectFit:"contain",
+            mixBlendMode:"multiply", filter:"contrast(1.05) brightness(1.04)",
             transition:"transform .6s cubic-bezier(0.25, 0.8, 0.25, 1)",
             transform: hov ? "scale(1.06)" : "scale(1)",
           }}
@@ -1104,8 +1105,8 @@ function ProductPage({ product, addToCart, setPage, setViewProduct }){
           {/* ── Left: Image Gallery (Scrollable Stack) ── */}
           <div style={{display:"flex", flexDirection:"column", gap:16}}>
             {thumbs.map((t, i) => (
-              <div key={i} style={{width:"100%", aspectRatio:"1/1", display:"flex", alignItems:"center", justifyContent:"center", background:"#FAFAFA"}}>
-                 <img src={t} alt={`${product.name} - ${i+1}`} style={{width:"85%", height:"85%", objectFit:"contain", mixBlendMode:"multiply", transition:"opacity .3s"}}/>
+              <div key={i} style={{width:"100%", aspectRatio:"1/1", display:"flex", alignItems:"center", justifyContent:"center", background:"transparent"}}>
+                 <img src={t} alt={`${product.name} - ${i+1}`} style={{width:"85%", height:"85%", objectFit:"contain", mixBlendMode:"multiply", filter:"contrast(1.05) brightness(1.04)", transition:"opacity .3s"}}/>
               </div>
             ))}
           </div>
