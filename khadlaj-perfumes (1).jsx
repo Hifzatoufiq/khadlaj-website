@@ -1652,7 +1652,7 @@ function Navbar({ page, setPage, cartCount }){
       {/* ── Main nav ── */}
       <nav style={{position:"sticky",top:0,zIndex:100,background:"rgba(255,255,255,.96)",backdropFilter:"blur(15px)",borderBottom:"1px solid #f0f0f0"}}>
         <div style={{padding:"0 6%"}}>
-          <div style={{display:"grid",gridTemplateColumns:"1fr auto 1fr",alignItems:"center",height:"80px",gap:16}}>
+          <div style={{display:"grid",gridTemplateColumns:"1fr auto 1fr",alignItems:"center",padding:"16px 0",gap:16}}>
             {/* Left utility */}
             <div style={{display:"flex",gap:6,alignItems:"center"}}>
               <div style={{display:"flex",gap:4,alignItems:"center"}} className="hide-mob">
