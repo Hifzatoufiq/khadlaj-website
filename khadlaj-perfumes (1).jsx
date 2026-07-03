@@ -89,14 +89,14 @@ const PRODUCTS = [
 ];
 
 const GIFT_SETS = [
-  { id:5,  name:"Cloud Candy Gift Set",          price:169, pieces:3, img:"https://cdn.shopify.com/s/files/1/0626/6119/8023/files/CloudCandy1.jpg?v=1767169755",          desc:"A soft peach-pink gift set with a playful, feminine profile and premium presentation." },
+  { id:5,  name:"Cloud Candy Gift Set",          price:169, pieces:3, img:"https://cdn.shopify.com/s/files/1/0626/6119/8023/files/CloudCandy3.jpg?v=1767169755",          desc:"A soft peach-pink gift set with a playful, feminine profile and premium presentation." },
   { id:6,  name:"Strawberry Shake Gift Set",      price:295, pieces:2, img:"./assets/images/gifsets/strawberry-shake-giftset.png",                                                               desc:"A playful rose-pink set with a feminine, candy-like finish." },
   { id:7,  name:"Biscotti Date Toffee Gift Set",  price:315, pieces:2, img:"./assets/images/gifsets/biscotti-date-toffee-giftset.png",                                                           desc:"A warm gourmand set with rich coffee, date, and caramel styling." },
   { id:8,  name:"Biscotti Melon Musk Gift Set",   price:315, pieces:2, img:"./assets/images/gifsets/biscotti-melon-musk-giftset.png",                                                            desc:"A soft pastel presentation for a fresh melon and musk composition." },
   { id:9,  name:"Uno Intimo Gift Set",            price:285, pieces:2, img:"./assets/images/gifsets/uno-intimo-giftset.png",                                                                     desc:"An elegant, polished set with a refined feminine profile." },
   { id:10, name:"Bleu Glacé Gift Set",            price:275, pieces:2, img:"./assets/images/gifsets/blue-glace-giftset.png",                                                                     desc:"A crisp blue presentation with a clean, modern freshness." },
   { id:11, name:"Shahi Oud Gift Set",             price:360, pieces:2, img:"./assets/images/gifsets/shahi-oud-giftset.png",                                                                      desc:"A bold black-and-gold gift set with a rich oud signature." },
-  { id:12, name:"Island Gift Set",               price:179, pieces:3, img:"https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Island1.jpg?v=1767168752",              desc:"The signature Island scent in a luxury gift trio for him and her." },
+  { id:12, name:"Island Gift Set",               price:179, pieces:3, img:"https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Island3.jpg?v=1767168724",              desc:"The signature Island scent in a luxury gift trio for him and her." },
   { id:13, name:"Cream Velvet Gift Set",          price:160, pieces:3, img:"https://cdn.shopify.com/s/files/1/0626/6119/8023/files/CreamVelvet-3.jpg?v=1779352383",        desc:"Buttery caramel and warm vanilla in a beautifully curated gift set." },
   { id:14, name:"Nafais Sharq Gift Set",          price:150, pieces:3, img:"https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Nafais-Sharq-3.jpg?v=1779352739",      desc:"Rich florals, warm woods, and timeless Arabian allure." },
 ];
