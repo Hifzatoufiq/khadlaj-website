@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+﻿import { useState, useEffect, useRef } from "react";
 
 /* ═══════════════════════════════════════════════════════════════
    DESIGN TOKENS
@@ -177,23 +177,23 @@ const CATEGORIES = ["All","Best Sellers","New","For Him","For Her","Unisex","Aty
    GLOBAL CSS
 ═══════════════════════════════════════════════════════════════ */
 const GLOBAL_CSS = `
-  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap');
   *{box-sizing:border-box;margin:0;padding:0;}
   html{scroll-behavior:smooth;}
-  body{background:#fff;color:#000;font-family:'DM Sans',sans-serif;}
+  body{background:#fff;color:#000;font-family:'Outfit',sans-serif;}
   ::-webkit-scrollbar{width:3px;}
   ::-webkit-scrollbar-track{background:#fff;}
   ::-webkit-scrollbar-thumb{background:#000;}
   .hide-scrollbar::-webkit-scrollbar { display: none; }
   .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-  .disp{font-family:'Playfair Display',serif;}
-  .mono{font-family:'DM Sans',sans-serif;}
+  .disp{font-family:'Cormorant Garamond',serif;}
+  .mono{font-family:'Outfit',sans-serif;}
 
   /* YSL-style primary button: solid black */
   .btn-gold{
     background:#000;color:#fff;border:1px solid #000;
     padding:14px 32px;
-    font-family:'DM Sans',sans-serif;font-weight:500;font-size:11px;
+    font-family:'Outfit',sans-serif;font-weight:500;font-size:11px;
     letter-spacing:2.5px;text-transform:uppercase;cursor:pointer;
     transition:background .22s,color .22s;
   }
@@ -203,14 +203,14 @@ const GLOBAL_CSS = `
   .btn-ghost{
     background:transparent;color:#000;border:1px solid #000;
     padding:13px 28px;
-    font-family:'DM Sans',sans-serif;font-weight:400;font-size:11px;
+    font-family:'Outfit',sans-serif;font-weight:400;font-size:11px;
     letter-spacing:2.5px;text-transform:uppercase;cursor:pointer;
     transition:all .22s;
   }
   .btn-ghost:hover{background:#000;color:#fff;}
 
   .gold-line{width:40px;height:1px;background:#B8922A;margin:0 auto;}
-  .eyebrow{font-size:10px;letter-spacing:4px;color:#B8922A;text-transform:uppercase;font-family:'DM Sans',sans-serif;}
+  .eyebrow{font-size:10px;letter-spacing:4px;color:#B8922A;text-transform:uppercase;font-family:'Outfit',sans-serif;}
 
   /* Product card — YSL-style: no lift, just a clean image reveal */
   .card-lift{transition:opacity .25s;}
@@ -234,7 +234,7 @@ const GLOBAL_CSS = `
   .tiktok-card{overflow:hidden;position:relative;}
   .tiktok-card iframe{pointer-events:none;border:none;overflow:hidden;}
 
-  input,textarea{font-family:'DM Sans',sans-serif;}
+  input,textarea{font-family:'Outfit',sans-serif;}
 
   /* New arrivals horizontal scroll */
   .new-scroll::-webkit-scrollbar{height:2px;}
@@ -344,7 +344,7 @@ function ProductCard({ p, onView }){
           background: p.badge==="Limited" ? "#5C0000" : p.badge==="New" ? "#B8922A" : "#000",
           color:"#fff", fontSize:8, letterSpacing:2.5,
           padding:"4px 10px", fontWeight:700, textTransform:"uppercase",
-          fontFamily:"'DM Sans',sans-serif",
+          fontFamily:"'Outfit',sans-serif",
         }}>{p.badge}</span>
       )}
       <div style={{ position:"relative", aspectRatio:"1/1", overflow:"hidden", background:"transparent", display:"flex", alignItems:"center", justifyContent:"center" }}>
@@ -358,13 +358,13 @@ function ProductCard({ p, onView }){
         />
       </div>
       <div style={{padding:"16px 10px 18px", flex:1, display:"flex", flexDirection:"column", alignItems:"center", textAlign:"center"}}>
-        <p style={{fontSize:8, letterSpacing:3, color:"#B8922A", textTransform:"uppercase", marginBottom:6, fontFamily:"'DM Sans',sans-serif", fontWeight:600}}>{p.col}</p>
-        <h3 style={{fontSize:13, fontWeight:700, color:"#000", lineHeight:1.3, marginBottom:4, textTransform:"uppercase", letterSpacing:1, fontFamily:"'DM Sans',sans-serif"}}>{p.name}</h3>
-        <p style={{fontSize:11, color:"#999", marginBottom:10, fontFamily:"'DM Sans',sans-serif", letterSpacing:.4}}>{p.size}</p>
+        <p style={{fontSize:8, letterSpacing:3, color:"#B8922A", textTransform:"uppercase", marginBottom:6, fontFamily:"'Outfit',sans-serif", fontWeight:600}}>{p.col}</p>
+        <h3 style={{fontSize:13, fontWeight:700, color:"#000", lineHeight:1.3, marginBottom:4, textTransform:"uppercase", letterSpacing:1, fontFamily:"'Outfit',sans-serif"}}>{p.name}</h3>
+        <p style={{fontSize:11, color:"#999", marginBottom:10, fontFamily:"'Outfit',sans-serif", letterSpacing:.4}}>{p.size}</p>
         {notes.length > 0 && (
           <div style={{display:"flex", flexWrap:"wrap", gap:5, marginBottom:12, justifyContent:"center"}}>
             {notes.map((n, i) => (
-              <span key={n} style={{display:"inline-flex", alignItems:"center", gap:4, padding:"3px 8px", background:"#F5F5F5", fontSize:8, letterSpacing:1, color:"#666", textTransform:"uppercase", fontFamily:"'DM Sans',sans-serif"}}>
+              <span key={n} style={{display:"inline-flex", alignItems:"center", gap:4, padding:"3px 8px", background:"#F5F5F5", fontSize:8, letterSpacing:1, color:"#666", textTransform:"uppercase", fontFamily:"'Outfit',sans-serif"}}>
                 <span style={{width:5, height:5, borderRadius:"50%", background: noteColors[i % noteColors.length], flexShrink:0, display:"inline-block"}}/>
                 {n}
               </span>
@@ -374,9 +374,9 @@ function ProductCard({ p, onView }){
         <div style={{marginTop:"auto", width:"100%", display:"flex", flexDirection:"column", alignItems:"center", gap:6, paddingTop:12, borderTop:"1px solid #F0F0F0"}}>
           <div style={{display:"flex", alignItems:"center", gap:4, justifyContent:"center"}}>
             <span style={{color:"#C8A96E", fontSize:11, letterSpacing:1}}>{"★".repeat(5)}</span>
-            <span style={{fontSize:9, color:"#aaa", fontFamily:"'DM Sans',sans-serif"}}>(905)</span>
+            <span style={{fontSize:9, color:"#aaa", fontFamily:"'Outfit',sans-serif"}}>(905)</span>
           </div>
-          <p style={{fontSize:15, fontWeight:700, color:"#000", fontFamily:"'DM Sans',sans-serif"}}>AED {p.price}</p>
+          <p style={{fontSize:15, fontWeight:700, color:"#000", fontFamily:"'Outfit',sans-serif"}}>AED {p.price}</p>
         </div>
       </div>
     </div>
@@ -387,7 +387,7 @@ function SectionHeader({ eyebrow, title, sub, light=false }){
     <div style={{textAlign:"center",marginBottom:52}}>
       <p className="eyebrow" style={{marginBottom:14,color:"#B8922A"}}>{eyebrow}</p>
       <h2 className="disp" style={{fontSize:"clamp(28px,3.8vw,52px)",fontWeight:300,color: light ? "#fff" : "#000",lineHeight:1.15,letterSpacing:"-0.5px",marginBottom:sub?14:0}}>{title}</h2>
-      {sub && <p style={{color: light ? "rgba(255,255,255,0.7)" : "#777",fontSize:14,maxWidth:500,margin:"0 auto",lineHeight:1.8,fontFamily:"'DM Sans',sans-serif"}}>{sub}</p>}
+      {sub && <p style={{color: light ? "rgba(255,255,255,0.7)" : "#777",fontSize:14,maxWidth:500,margin:"0 auto",lineHeight:1.8,fontFamily:"'Outfit',sans-serif"}}>{sub}</p>}
       <div className="gold-line" style={{marginTop:22}}/>
     </div>
   );
@@ -444,14 +444,14 @@ function TikTokCard({ t }) {
             <img src={t.img} alt="" style={{width:"100%", height:"100%", objectFit:"contain", mixBlendMode:"multiply"}}/>
           </div>
           <div>
-            <p style={{fontSize:9, letterSpacing:2.5, textTransform:"uppercase", color:"#C1A46A", fontFamily:"'DM Sans',sans-serif", marginBottom:4}}>{t.tag || "Trending"}</p>
-            <p style={{fontSize:18, fontWeight:500, fontFamily:"'DM Sans',sans-serif", lineHeight:1, color:"#fff"}}>{t.title}</p>
+            <p style={{fontSize:9, letterSpacing:2.5, textTransform:"uppercase", color:"#C1A46A", fontFamily:"'Outfit',sans-serif", marginBottom:4}}>{t.tag || "Trending"}</p>
+            <p style={{fontSize:18, fontWeight:500, fontFamily:"'Outfit',sans-serif", lineHeight:1, color:"#fff"}}>{t.title}</p>
           </div>
         </div>
         
         <div style={{display:"flex", alignItems:"center", justifyContent:"space-between", borderTop:"1px solid rgba(255,255,255,0.15)", paddingTop:16}}>
-          <p style={{fontSize:16, fontWeight:700, fontFamily:"'DM Sans',sans-serif", color:"#fff"}}>AED {t.price?.toFixed(2)}</p>
-          <span style={{fontSize:11, letterSpacing:2, textTransform:"uppercase", fontWeight:700, fontFamily:"'DM Sans',sans-serif", display:"flex", alignItems:"center", gap:6, color:"#fff"}}>
+          <p style={{fontSize:16, fontWeight:700, fontFamily:"'Outfit',sans-serif", color:"#fff"}}>AED {t.price?.toFixed(2)}</p>
+          <span style={{fontSize:11, letterSpacing:2, textTransform:"uppercase", fontWeight:700, fontFamily:"'Outfit',sans-serif", display:"flex", alignItems:"center", gap:6, color:"#fff"}}>
             Shop Now <span>&rarr;</span>
           </span>
         </div>
@@ -503,7 +503,7 @@ function HomePage({ setPage, addToCart, setViewProduct }){
       <div style={{overflow:"hidden",background:"#FAFAFA",padding:"20px 0", borderTop:"1px solid #E8E4DC", borderBottom:"1px solid #E8E4DC"}}>
         <div className="ribbon-inner">
           {[...SCENT_RIBBON,...SCENT_RIBBON,...SCENT_RIBBON].map((n,i)=>(
-            <span key={i} style={{padding:"0 32px",fontSize:10,letterSpacing:4,color:i%4===0?"#C1A46A":"#777",textTransform:"uppercase",whiteSpace:"nowrap",fontFamily:"'DM Sans',sans-serif"}}>{n}</span>
+            <span key={i} style={{padding:"0 32px",fontSize:10,letterSpacing:4,color:i%4===0?"#C1A46A":"#777",textTransform:"uppercase",whiteSpace:"nowrap",fontFamily:"'Outfit',sans-serif"}}>{n}</span>
           ))}
         </div>
       </div>
@@ -513,7 +513,7 @@ function HomePage({ setPage, addToCart, setViewProduct }){
       <section style={{padding:"0 5% 104px",background:"#fff"}}>
         <div style={{paddingTop:96,marginBottom:52,display:"flex",alignItems:"flex-end",justifyContent:"space-between",flexWrap:"wrap",gap:16}}>
           <div>
-            <p style={{fontSize:9,letterSpacing:5,color:"#B8922A",textTransform:"uppercase",fontFamily:"'DM Sans',sans-serif",marginBottom:14}}>Featured Fragrances</p>
+            <p style={{fontSize:9,letterSpacing:5,color:"#B8922A",textTransform:"uppercase",fontFamily:"'Outfit',sans-serif",marginBottom:14}}>Featured Fragrances</p>
             <h2 className="disp" style={{fontSize:"clamp(32px,4vw,54px)",fontWeight:300,color:"#000",lineHeight:1.05,letterSpacing:-1}}>Discover Your<br/><em style={{fontStyle:"italic",color:"#B8922A"}}>Signature Scent</em></h2>
           </div>
           <button className="btn-ghost" style={{flexShrink:0}} onClick={()=>setPage("collections")}>View All</button>
@@ -529,7 +529,7 @@ function HomePage({ setPage, addToCart, setViewProduct }){
                 borderBottom: activeCat===c ? "1px solid #000" : "1px solid transparent",
                 padding:"10px 18px 12px",fontSize:10,letterSpacing:2,cursor:"pointer",whiteSpace:"nowrap",
                 fontWeight:activeCat===c?600:400,transition:"all .2s",textTransform:"uppercase",
-                fontFamily:"'DM Sans',sans-serif",
+                fontFamily:"'Outfit',sans-serif",
               }}>
               {c}
             </button>
@@ -547,11 +547,11 @@ function HomePage({ setPage, addToCart, setViewProduct }){
       <section style={{padding:"80px 5%",background:"#000"}}>
         <div style={{marginBottom:48,textAlign:"center"}}>
           <div style={{width:40,height:1,background:"#B8922A",margin:"0 auto 16px"}}/>
-          <p style={{fontSize:8,letterSpacing:3,color:"#B8922A",textTransform:"uppercase",fontFamily:"'DM Sans',sans-serif",marginBottom:12}}>@KhadlajPerfumes</p>
+          <p style={{fontSize:8,letterSpacing:3,color:"#B8922A",textTransform:"uppercase",fontFamily:"'Outfit',sans-serif",marginBottom:12}}>@KhadlajPerfumes</p>
           <h2 className="disp" style={{fontSize:"clamp(24px,3vw,42px)",fontWeight:300,color:"#fff",letterSpacing:-0.5,marginBottom:10,lineHeight:1.2}}>
             Watch Us on TikTok
           </h2>
-          <p style={{color:"rgba(255,255,255,.5)",fontSize:12,fontFamily:"'DM Sans',sans-serif",letterSpacing:0.3}}>
+          <p style={{color:"rgba(255,255,255,.5)",fontSize:12,fontFamily:"'Outfit',sans-serif",letterSpacing:0.3}}>
             Real fragrances. Real stories. Follow us for the latest drops.
           </p>
         </div>
@@ -579,7 +579,7 @@ function HomePage({ setPage, addToCart, setViewProduct }){
               border:"1px solid rgba(255,255,255,.25)",
               color:"#fff",padding:"13px 32px",
               fontSize:10,letterSpacing:3,textTransform:"uppercase",
-              textDecoration:"none",fontFamily:"'DM Sans',sans-serif",
+              textDecoration:"none",fontFamily:"'Outfit',sans-serif",
               transition:"all .2s",
             }}
             onMouseEnter={e=>{e.currentTarget.style.background="#B8922A";e.currentTarget.style.borderColor="#B8922A";}}
@@ -598,7 +598,7 @@ function HomePage({ setPage, addToCart, setViewProduct }){
             <h2 className="disp" style={{fontSize:"clamp(32px,4.5vw,54px)",fontWeight:300,lineHeight:1.1,marginBottom:20,color:"#fff",letterSpacing:-1.5}}>
               The Art of Arabic &amp;<br/><em style={{color:"#B8922A",fontStyle:"italic"}}>French Perfumery</em>
             </h2>
-            <p style={{color:"rgba(255,255,255,.6)",lineHeight:1.85,fontSize:14,marginBottom:36,maxWidth:440,fontFamily:"'DM Sans',sans-serif"}}>
+            <p style={{color:"rgba(255,255,255,.6)",lineHeight:1.85,fontSize:14,marginBottom:36,maxWidth:440,fontFamily:"'Outfit',sans-serif"}}>
               Founded by Mohamed Iqbal Abdul Sattar — each creation blends the ancient soul of Arabian oud with the precision of French fragrance tradition.
             </p>
             <div>
@@ -669,8 +669,8 @@ function HomePage({ setPage, addToCart, setViewProduct }){
             }}
             >
               <div style={{marginBottom:22,display:"flex",justifyContent:"center"}}>{item.icon}</div>
-              <p style={{fontSize:11,fontWeight:700,color:"#111",letterSpacing:2,fontFamily:"'DM Sans',sans-serif",marginBottom:12,textTransform:"uppercase"}}>{item.title}</p>
-              <p style={{fontSize:12,color:"#777",lineHeight:1.7,fontFamily:"'DM Sans',sans-serif",maxWidth:220,margin:"0 auto"}}>{item.desc}</p>
+              <p style={{fontSize:11,fontWeight:700,color:"#111",letterSpacing:2,fontFamily:"'Outfit',sans-serif",marginBottom:12,textTransform:"uppercase"}}>{item.title}</p>
+              <p style={{fontSize:12,color:"#777",lineHeight:1.7,fontFamily:"'Outfit',sans-serif",maxWidth:220,margin:"0 auto"}}>{item.desc}</p>
             </div>
           ))}
         </div>
@@ -681,7 +681,7 @@ function HomePage({ setPage, addToCart, setViewProduct }){
         <div style={{display:"flex",alignItems:"flex-end",justifyContent:"space-between",marginBottom:40}}>
           <div>
             <div style={{width:32,height:1,background:"#B8922A",marginBottom:16}}/>
-            <p style={{fontSize:9,letterSpacing:5,color:"#B8922A",textTransform:"uppercase",fontFamily:"'DM Sans',sans-serif",marginBottom:10}}>Just Dropped</p>
+            <p style={{fontSize:9,letterSpacing:5,color:"#B8922A",textTransform:"uppercase",fontFamily:"'Outfit',sans-serif",marginBottom:10}}>Just Dropped</p>
             <h2 className="disp" style={{fontSize:"clamp(28px,3.5vw,50px)",fontWeight:300,color:"#000",letterSpacing:-1,lineHeight:1.05}}>
               New <em style={{fontStyle:"italic",color:"#B8922A"}}>Arrivals</em>
             </h2>
@@ -700,7 +700,7 @@ function HomePage({ setPage, addToCart, setViewProduct }){
         <div style={{display:"flex",alignItems:"flex-end",justifyContent:"space-between",flexWrap:"wrap",gap:16,marginBottom:60}}>
           <div>
             <div style={{width:32,height:1,background:"#B8922A",marginBottom:18}}/>
-            <p style={{fontSize:9,letterSpacing:5,color:"#B8922A",textTransform:"uppercase",fontFamily:"'DM Sans',sans-serif",marginBottom:12}}>Gifting</p>
+            <p style={{fontSize:9,letterSpacing:5,color:"#B8922A",textTransform:"uppercase",fontFamily:"'Outfit',sans-serif",marginBottom:12}}>Gifting</p>
             <h2 className="disp" style={{fontSize:"clamp(30px,3.8vw,52px)",fontWeight:300,color:"#000",lineHeight:1,letterSpacing:-1}}>
               Curated<br/><em style={{fontStyle:"italic",color:"#B8922A"}}>Gift Collections</em>
             </h2>
@@ -727,8 +727,8 @@ function HomePage({ setPage, addToCart, setViewProduct }){
               <StarRating n={r.stars} color="#B8922A"/>
               <p className="disp" style={{fontSize:14,color:"rgba(255,255,255,0.85)",lineHeight:1.8,margin:"24px 0",fontStyle:"italic",fontWeight:300}}>"{r.text}"</p>
               <div style={{marginTop:"auto"}}>
-                <p style={{fontSize:9,fontWeight:600,color:"#fff",letterSpacing:2,fontFamily:"'DM Sans',sans-serif",textTransform:"uppercase"}}>{r.name}</p>
-                <p style={{fontSize:8,letterSpacing:4,color:"#B8922A",marginTop:6,textTransform:"uppercase",fontFamily:"'DM Sans',sans-serif"}}>{r.country}</p>
+                <p style={{fontSize:9,fontWeight:600,color:"#fff",letterSpacing:2,fontFamily:"'Outfit',sans-serif",textTransform:"uppercase"}}>{r.name}</p>
+                <p style={{fontSize:8,letterSpacing:4,color:"#B8922A",marginTop:6,textTransform:"uppercase",fontFamily:"'Outfit',sans-serif"}}>{r.country}</p>
               </div>
             </div>
           ))}
@@ -740,11 +740,11 @@ function HomePage({ setPage, addToCart, setViewProduct }){
       <section style={{padding:"0 5% 96px",background:"#fff"}}>
         <div style={{textAlign:"center",paddingTop:96,marginBottom:52}}>
           <div style={{width:40,height:1,background:"#B8922A",margin:"0 auto 20px"}}/>
-          <p style={{fontSize:9,letterSpacing:5,color:"#B8922A",textTransform:"uppercase",fontFamily:"'DM Sans',sans-serif",marginBottom:16}}>@KhadlajPerfumes</p>
+          <p style={{fontSize:9,letterSpacing:5,color:"#B8922A",textTransform:"uppercase",fontFamily:"'Outfit',sans-serif",marginBottom:16}}>@KhadlajPerfumes</p>
           <h2 className="disp" style={{fontSize:"clamp(28px,3.5vw,50px)",fontWeight:300,color:"#000",letterSpacing:-0.5,lineHeight:1.1,marginBottom:20}}>
             Feel the World of <em style={{fontStyle:"italic",color:"#B8922A"}}>Khadlaj</em>
           </h2>
-          <p style={{fontSize:13,color:"#888",fontFamily:"'DM Sans',sans-serif",letterSpacing:.3,marginBottom:28,maxWidth:420,margin:"0 auto 28px"}}>
+          <p style={{fontSize:13,color:"#888",fontFamily:"'Outfit',sans-serif",letterSpacing:.3,marginBottom:28,maxWidth:420,margin:"0 auto 28px"}}>
             Real moments. Real fragrance. Follow us for the latest drops and stories.
           </p>
           <a
@@ -755,7 +755,7 @@ function HomePage({ setPage, addToCart, setViewProduct }){
               border:"1px solid #000",color:"#000",background:"transparent",
               padding:"11px 28px",fontSize:9,letterSpacing:2.5,
               textTransform:"uppercase",textDecoration:"none",
-              fontFamily:"'DM Sans',sans-serif",transition:"all .22s",
+              fontFamily:"'Outfit',sans-serif",transition:"all .22s",
             }}
             onMouseEnter={e=>{e.currentTarget.style.background="#000";e.currentTarget.style.color="#fff";}}
             onMouseLeave={e=>{e.currentTarget.style.background="transparent";e.currentTarget.style.color="#000";}}
@@ -774,7 +774,7 @@ function HomePage({ setPage, addToCart, setViewProduct }){
               onMouseLeave={e=>e.currentTarget.style.transform="scale(1)"}
             />
             <div style={{position:"absolute",bottom:0,left:0,right:0,padding:"20px",background:"linear-gradient(to top,rgba(0,0,0,.7),transparent)"}}>
-              <p style={{color:"#B8922A",fontSize:8,letterSpacing:2.5,textTransform:"uppercase",fontFamily:"'DM Sans',sans-serif",marginBottom:3}}>Master Perfumery</p>
+              <p style={{color:"#B8922A",fontSize:8,letterSpacing:2.5,textTransform:"uppercase",fontFamily:"'Outfit',sans-serif",marginBottom:3}}>Master Perfumery</p>
               <p className="disp" style={{color:"#fff",fontSize:18,fontWeight:300}}>Ihthiraam</p>
             </div>
           </div>
@@ -801,7 +801,7 @@ function HomePage({ setPage, addToCart, setViewProduct }){
               onMouseLeave={e=>e.currentTarget.style.transform="scale(1)"}
             />
             <div style={{position:"absolute",bottom:0,left:0,right:0,padding:"20px",background:"linear-gradient(to top,rgba(0,0,0,.7),transparent)"}}>
-              <p style={{color:"#B8922A",fontSize:8,letterSpacing:2.5,textTransform:"uppercase",fontFamily:"'DM Sans',sans-serif",marginBottom:3}}>Master Perfumery</p>
+              <p style={{color:"#B8922A",fontSize:8,letterSpacing:2.5,textTransform:"uppercase",fontFamily:"'Outfit',sans-serif",marginBottom:3}}>Master Perfumery</p>
               <p className="disp" style={{color:"#fff",fontSize:18,fontWeight:300}}>Angel Dust</p>
             </div>
           </div>
@@ -915,7 +915,7 @@ function CollectionsPage({ addToCart, setViewProduct, setPage }){
           padding:"0 5%",textAlign:"center",
         }}>
           <div style={{width:40,height:1,background:"#B8922A",marginBottom:24}}/>
-          <p style={{fontSize:9,letterSpacing:6,color:"#B8922A",textTransform:"uppercase",fontFamily:"'DM Sans',sans-serif",marginBottom:16}}>
+          <p style={{fontSize:9,letterSpacing:6,color:"#B8922A",textTransform:"uppercase",fontFamily:"'Outfit',sans-serif",marginBottom:16}}>
             Khadlaj · Est. 1997
           </p>
           <h1 className="disp" style={{
@@ -926,7 +926,7 @@ function CollectionsPage({ addToCart, setViewProduct, setPage }){
           </h1>
           <p style={{
             color:"rgba(255,255,255,.6)",fontSize:14,
-            fontFamily:"'DM Sans',sans-serif",letterSpacing:.5,
+            fontFamily:"'Outfit',sans-serif",letterSpacing:.5,
             marginBottom:32,
           }}>
             {PRODUCTS.length} unique creations — from everyday luxury to rare extrait
@@ -942,7 +942,7 @@ function CollectionsPage({ addToCart, setViewProduct, setPage }){
                   border:"1px solid rgba(255,255,255,.3)",
                   padding:"7px 18px",fontSize:9,letterSpacing:2,
                   textTransform:"uppercase",cursor:"pointer",
-                  fontFamily:"'DM Sans',sans-serif",
+                  fontFamily:"'Outfit',sans-serif",
                   transition:"all .2s",
                 }}
                 onMouseEnter={e=>{e.currentTarget.style.background="#B8922A";e.currentTarget.style.borderColor="#B8922A";e.currentTarget.style.color="#fff";}}
@@ -974,14 +974,14 @@ function CollectionsPage({ addToCart, setViewProduct, setPage }){
                 cursor:"pointer",whiteSpace:"nowrap",
                 fontWeight: activeCat===c ? 700 : 400,
                 transition:"all .18s",textTransform:"uppercase",
-                fontFamily:"'DM Sans',sans-serif",
+                fontFamily:"'Outfit',sans-serif",
               }}>{c}</button>
           ))}
         </div>
         {/* Sort + Price */}
         <div style={{display:"flex",gap:12,alignItems:"center",flexShrink:0}}>
           <div style={{display:"flex",alignItems:"center",gap:8}}>
-            <span style={{fontSize:10,color:"#888",letterSpacing:1,fontFamily:"'DM Sans',sans-serif",whiteSpace:"nowrap"}}>Max AED {priceMax}</span>
+            <span style={{fontSize:10,color:"#888",letterSpacing:1,fontFamily:"'Outfit',sans-serif",whiteSpace:"nowrap"}}>Max AED {priceMax}</span>
             <input type="range" min={50} max={800} value={priceMax} onChange={e=>setPriceMax(+e.target.value)}
               style={{width:90,accentColor:"#000"}}/>
           </div>
@@ -990,7 +990,7 @@ function CollectionsPage({ addToCart, setViewProduct, setPage }){
               background:"#fff",color:"#000",
               border:"1px solid #E0E0E0",
               padding:"8px 14px",fontSize:10,cursor:"pointer",
-              letterSpacing:1,fontFamily:"'DM Sans',sans-serif",
+              letterSpacing:1,fontFamily:"'Outfit',sans-serif",
               outline:"none",
             }}>
             <option value="default">Featured</option>
@@ -1004,7 +1004,7 @@ function CollectionsPage({ addToCart, setViewProduct, setPage }){
       <div style={{padding:"20px 5% 80px"}}>
         <p style={{
           fontSize:10,color:"#999",marginBottom:32,
-          letterSpacing:2,fontFamily:"'DM Sans',sans-serif",
+          letterSpacing:2,fontFamily:"'Outfit',sans-serif",
           textTransform:"uppercase",
         }}>{filtered.length} fragrances found</p>
 
@@ -1017,7 +1017,7 @@ function CollectionsPage({ addToCart, setViewProduct, setPage }){
         {filtered.length===0 && (
           <div style={{textAlign:"center",padding:"96px 0"}}>
             <p className="disp" style={{fontSize:36,fontWeight:300,color:"#000",marginBottom:12}}>No fragrances found</p>
-            <p style={{fontSize:13,color:"#888",fontFamily:"'DM Sans',sans-serif"}}>Try adjusting the filters above.</p>
+            <p style={{fontSize:13,color:"#888",fontFamily:"'Outfit',sans-serif"}}>Try adjusting the filters above.</p>
           </div>
         )}
       </div>
@@ -1037,7 +1037,7 @@ function Accordion({ title, children, defaultOpen=false }) {
         style={{
           width:"100%", display:"flex", justifyContent:"space-between", alignItems:"center",
           padding:"20px 0", background:"transparent", border:"none", cursor:"pointer",
-          fontSize:12, letterSpacing:2, textTransform:"uppercase", fontFamily:"'DM Sans',sans-serif",
+          fontSize:12, letterSpacing:2, textTransform:"uppercase", fontFamily:"'Outfit',sans-serif",
           fontWeight:600, color:"#111"
         }}
       >
@@ -1045,7 +1045,7 @@ function Accordion({ title, children, defaultOpen=false }) {
         <span style={{fontSize:18, fontWeight:300}}>{open ? "−" : "+"}</span>
       </button>
       {open && (
-        <div style={{paddingBottom:24, fontSize:14, color:"#555", lineHeight:1.8, fontFamily:"'DM Sans',sans-serif"}}>
+        <div style={{paddingBottom:24, fontSize:14, color:"#555", lineHeight:1.8, fontFamily:"'Outfit',sans-serif"}}>
           {children}
         </div>
       )}
@@ -1083,7 +1083,7 @@ function ProductPage({ product, addToCart, setPage, setViewProduct }){
     <div style={{background:"#fff", minHeight:"100vh"}}>
       
       {/* ── Breadcrumbs ── */}
-      <div style={{padding:"32px 5% 0", maxWidth:1440, margin:"0 auto", fontSize:10, letterSpacing:1.5, textTransform:"uppercase", color:"#888", fontFamily:"'DM Sans',sans-serif"}}>
+      <div style={{padding:"32px 5% 0", maxWidth:1440, margin:"0 auto", fontSize:10, letterSpacing:1.5, textTransform:"uppercase", color:"#888", fontFamily:"'Outfit',sans-serif"}}>
         <span style={{cursor:"pointer", color:"#111"}} onClick={()=>setPage("home")}>Home</span>
         <span style={{margin:"0 12px"}}>|</span>
         <span style={{cursor:"pointer", color:"#111"}} onClick={()=>setPage("collections")}>Collections</span>
@@ -1107,7 +1107,7 @@ function ProductPage({ product, addToCart, setPage, setViewProduct }){
           {/* ── Right: Product Details (Sticky) ── */}
           <div style={{paddingTop:8, maxWidth:540, position:"sticky", top:120, alignSelf:"start"}}>
              {/* EYEBROW */}
-             <p style={{fontSize:10, letterSpacing:3, color:"#111", textTransform:"uppercase", fontFamily:"'DM Sans',sans-serif", marginBottom:16}}>Khadlaj Perfumes</p>
+             <p style={{fontSize:10, letterSpacing:3, color:"#111", textTransform:"uppercase", fontFamily:"'Outfit',sans-serif", marginBottom:16}}>Khadlaj Perfumes</p>
              
              {/* TITLE */}
              <h1 className="disp" style={{fontSize:"clamp(36px, 4.5vw, 52px)", fontWeight:300, color:"#000", lineHeight:1.05, letterSpacing:"-0.5px", textTransform:"uppercase", marginBottom:16}}>
@@ -1117,17 +1117,17 @@ function ProductPage({ product, addToCart, setPage, setViewProduct }){
              {/* REVIEWS */}
              <div style={{display:"flex", alignItems:"center", gap:8, marginBottom:24}}>
                <StarRating n={5} color="#111" />
-               <span style={{fontSize:13, color:"#555", fontFamily:"'DM Sans',sans-serif", borderBottom:"1px solid #ccc", cursor:"pointer", paddingBottom:2}}>4.9 rating (55 reviews)</span>
+               <span style={{fontSize:13, color:"#555", fontFamily:"'Outfit',sans-serif", borderBottom:"1px solid #ccc", cursor:"pointer", paddingBottom:2}}>4.9 rating (55 reviews)</span>
              </div>
 
              {/* PRICE */}
-             <p style={{fontSize:24, fontWeight:400, color:"#111", fontFamily:"'DM Sans',sans-serif", marginBottom:8}}>AED {product.price.toFixed(2)}</p>
-             <p style={{fontSize:12, color:"#777", fontFamily:"'DM Sans',sans-serif", marginBottom:40}}>Tax included. Shipping calculated at checkout.</p>
+             <p style={{fontSize:24, fontWeight:400, color:"#111", fontFamily:"'Outfit',sans-serif", marginBottom:8}}>AED {product.price.toFixed(2)}</p>
+             <p style={{fontSize:12, color:"#777", fontFamily:"'Outfit',sans-serif", marginBottom:40}}>Tax included. Shipping calculated at checkout.</p>
 
              {/* VARIANT / SIZE */}
              <div style={{marginBottom:40}}>
-               <p style={{fontSize:11, letterSpacing:1.5, textTransform:"uppercase", color:"#111", fontFamily:"'DM Sans',sans-serif", marginBottom:12, fontWeight:600}}>Size</p>
-               <button style={{border:"1px solid #111", background:"#fff", color:"#111", padding:"12px 28px", fontSize:12, letterSpacing:1.5, fontFamily:"'DM Sans',sans-serif", cursor:"default"}}>
+               <p style={{fontSize:11, letterSpacing:1.5, textTransform:"uppercase", color:"#111", fontFamily:"'Outfit',sans-serif", marginBottom:12, fontWeight:600}}>Size</p>
+               <button style={{border:"1px solid #111", background:"#fff", color:"#111", padding:"12px 28px", fontSize:12, letterSpacing:1.5, fontFamily:"'Outfit',sans-serif", cursor:"default"}}>
                  {product.size}
                </button>
              </div>
@@ -1137,7 +1137,7 @@ function ProductPage({ product, addToCart, setPage, setViewProduct }){
                {/* Quantity */}
                <div style={{display:"flex", alignItems:"center", border:"1px solid #E8E4DC", width:130, height:56}}>
                   <button onClick={()=>setQty(q=>Math.max(1,q-1))} style={{flex:1, height:"100%", border:"none", background:"transparent", fontSize:20, cursor:"pointer", color:"#555"}}>−</button>
-                  <span style={{flex:1, textAlign:"center", fontSize:15, fontFamily:"'DM Sans',sans-serif"}}>{qty}</span>
+                  <span style={{flex:1, textAlign:"center", fontSize:15, fontFamily:"'Outfit',sans-serif"}}>{qty}</span>
                   <button onClick={()=>setQty(q=>q+1)} style={{flex:1, height:"100%", border:"none", background:"transparent", fontSize:20, cursor:"pointer", color:"#555"}}>+</button>
                </div>
                
@@ -1147,7 +1147,7 @@ function ProductPage({ product, addToCart, setPage, setViewProduct }){
                  style={{
                    flex:1, minWidth:200, height:56, background:"#111", color:"#fff", border:"none", 
                    fontSize:12, fontWeight:700, letterSpacing:2, textTransform:"uppercase", 
-                   fontFamily:"'DM Sans',sans-serif", cursor:"pointer", transition:"background .2s"
+                   fontFamily:"'Outfit',sans-serif", cursor:"pointer", transition:"background .2s"
                  }} 
                  onMouseEnter={e=>e.currentTarget.style.background="#333"} 
                  onMouseLeave={e=>e.currentTarget.style.background="#111"}
@@ -1158,13 +1158,13 @@ function ProductPage({ product, addToCart, setPage, setViewProduct }){
 
              {/* TRUST BADGES */}
              <div style={{display:"flex", gap:24, marginBottom:48, paddingTop:24, borderTop:"1px solid #E8E4DC"}}>
-               <div style={{display:"flex", alignItems:"center", gap:8, fontSize:10, color:"#555", fontFamily:"'DM Sans',sans-serif", textTransform:"uppercase", letterSpacing:1.5}}>
+               <div style={{display:"flex", alignItems:"center", gap:8, fontSize:10, color:"#555", fontFamily:"'Outfit',sans-serif", textTransform:"uppercase", letterSpacing:1.5}}>
                  <span style={{fontSize:14}}>✓</span> Authentic
                </div>
-               <div style={{display:"flex", alignItems:"center", gap:8, fontSize:10, color:"#555", fontFamily:"'DM Sans',sans-serif", textTransform:"uppercase", letterSpacing:1.5}}>
+               <div style={{display:"flex", alignItems:"center", gap:8, fontSize:10, color:"#555", fontFamily:"'Outfit',sans-serif", textTransform:"uppercase", letterSpacing:1.5}}>
                  <span style={{fontSize:14}}>✓</span> Secure Check
                </div>
-               <div style={{display:"flex", alignItems:"center", gap:8, fontSize:10, color:"#555", fontFamily:"'DM Sans',sans-serif", textTransform:"uppercase", letterSpacing:1.5}}>
+               <div style={{display:"flex", alignItems:"center", gap:8, fontSize:10, color:"#555", fontFamily:"'Outfit',sans-serif", textTransform:"uppercase", letterSpacing:1.5}}>
                  <span style={{fontSize:14}}>✓</span> Fast Ship
                </div>
              </div>
@@ -1232,11 +1232,11 @@ function GiftsPage({ addToCart, setViewProduct, setPage }){
           padding:"0 5%",textAlign:"center",
         }}>
           <div style={{width:40,height:1,background:"#B8922A",marginBottom:24}}/>
-          <p style={{fontSize:9,letterSpacing:6,color:"#B8922A",textTransform:"uppercase",fontFamily:"'DM Sans',sans-serif",marginBottom:16}}>Khadlaj Gifting</p>
+          <p style={{fontSize:9,letterSpacing:6,color:"#B8922A",textTransform:"uppercase",fontFamily:"'Outfit',sans-serif",marginBottom:16}}>Khadlaj Gifting</p>
           <h1 className="disp" style={{fontSize:"clamp(38px,6vw,80px)",fontWeight:300,color:"#fff",lineHeight:1,letterSpacing:-2,marginBottom:16}}>
             The Gift of<br/><em style={{fontStyle:"italic",color:"#B8922A"}}>Authentic Fragrance</em>
           </h1>
-          <p style={{color:"rgba(255,255,255,.65)",maxWidth:480,lineHeight:1.8,fontSize:14,fontFamily:"'DM Sans',sans-serif"}}>
+          <p style={{color:"rgba(255,255,255,.65)",maxWidth:480,lineHeight:1.8,fontSize:14,fontFamily:"'Outfit',sans-serif"}}>
             Every Khadlaj gift set arrives in premium packaging — a luxury experience from first glance.
           </p>
         </div>
@@ -1246,12 +1246,12 @@ function GiftsPage({ addToCart, setViewProduct, setPage }){
       <section style={{padding:"80px 5%",background:"#fff"}}>
         <div style={{display:"flex",alignItems:"flex-end",justifyContent:"space-between",flexWrap:"wrap",gap:16,marginBottom:52}}>
           <div>
-            <p style={{fontSize:9,letterSpacing:5,color:"#B8922A",textTransform:"uppercase",fontFamily:"'DM Sans',sans-serif",marginBottom:12}}>Curated Collections</p>
+            <p style={{fontSize:9,letterSpacing:5,color:"#B8922A",textTransform:"uppercase",fontFamily:"'Outfit',sans-serif",marginBottom:12}}>Curated Collections</p>
             <h2 className="disp" style={{fontSize:"clamp(28px,3.5vw,50px)",fontWeight:300,color:"#000",letterSpacing:-1,lineHeight:1.05}}>
               Gift Sets &amp; <em style={{fontStyle:"italic",color:"#B8922A"}}>Bundles</em>
             </h2>
           </div>
-          <p style={{fontSize:12,color:"#888",fontFamily:"'DM Sans',sans-serif"}}>{giftProducts.length} gift sets available</p>
+          <p style={{fontSize:12,color:"#888",fontFamily:"'Outfit',sans-serif"}}>{giftProducts.length} gift sets available</p>
         </div>
 
         <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:24,alignItems:"start"}} className="grid-4">
@@ -1265,9 +1265,9 @@ function GiftsPage({ addToCart, setViewProduct, setPage }){
       <section style={{background:"#000",padding:"80px 5%",textAlign:"center"}}>
         <div style={{maxWidth:580,margin:"0 auto"}}>
           <div style={{width:40,height:1,background:"#B8922A",margin:"0 auto 32px"}}/>
-          <p style={{fontSize:9,letterSpacing:5,color:"#B8922A",textTransform:"uppercase",fontFamily:"'DM Sans',sans-serif",marginBottom:16}}>Custom Orders</p>
+          <p style={{fontSize:9,letterSpacing:5,color:"#B8922A",textTransform:"uppercase",fontFamily:"'Outfit',sans-serif",marginBottom:16}}>Custom Orders</p>
           <h2 className="disp" style={{fontSize:"clamp(30px,4vw,56px)",fontWeight:300,color:"#fff",marginBottom:16,letterSpacing:-1}}>Build Your Own Gift Box</h2>
-          <p style={{color:"rgba(255,255,255,.55)",fontSize:14,maxWidth:460,margin:"0 auto 40px",lineHeight:1.85,fontFamily:"'DM Sans',sans-serif"}}>
+          <p style={{color:"rgba(255,255,255,.55)",fontSize:14,maxWidth:460,margin:"0 auto 40px",lineHeight:1.85,fontFamily:"'Outfit',sans-serif"}}>
             Choose any 2–6 fragrances and we'll present them in our signature gift packaging. Perfect for corporate gifting or weddings.
           </p>
           <button className="btn-gold" style={{fontSize:10,padding:"15px 44px",letterSpacing:3}}>Start Building</button>
@@ -1308,7 +1308,7 @@ function StoryPage(){
           padding:"0 6% 56px",
         }}>
           <div style={{width:40,height:1,background:"#B8922A",marginBottom:20}}/>
-          <p style={{fontSize:9,letterSpacing:6,color:"#B8922A",textTransform:"uppercase",fontFamily:"'DM Sans',sans-serif",marginBottom:14}}>
+          <p style={{fontSize:9,letterSpacing:6,color:"#B8922A",textTransform:"uppercase",fontFamily:"'Outfit',sans-serif",marginBottom:14}}>
             Family-Owned · UAE · Est. 1997
           </p>
           <h1 className="disp" style={{
@@ -1317,7 +1317,7 @@ function StoryPage(){
           }}>
             Our Story
           </h1>
-          <p style={{color:"rgba(255,255,255,.6)",fontSize:14,maxWidth:480,lineHeight:1.8,fontFamily:"'DM Sans',sans-serif"}}>
+          <p style={{color:"rgba(255,255,255,.6)",fontSize:14,maxWidth:480,lineHeight:1.8,fontFamily:"'Outfit',sans-serif"}}>
             45 years of mastery. One family. 400+ fragrances that define Arabian perfumery.
           </p>
         </div>
@@ -1436,14 +1436,14 @@ function ContactPage(){
           padding:"0 6% 52px",
         }}>
           <div style={{width:40,height:1,background:"#B8922A",marginBottom:20}}/>
-          <p style={{fontSize:9,letterSpacing:6,color:"#B8922A",textTransform:"uppercase",fontFamily:"'DM Sans',sans-serif",marginBottom:14}}>
+          <p style={{fontSize:9,letterSpacing:6,color:"#B8922A",textTransform:"uppercase",fontFamily:"'Outfit',sans-serif",marginBottom:14}}>
             Get in Touch
           </p>
           <h1 className="disp" style={{
             fontSize:"clamp(44px,6vw,84px)",fontWeight:300,
             color:"#fff",lineHeight:.92,letterSpacing:-2,marginBottom:16,
           }}>Contact Us</h1>
-          <p style={{color:"rgba(255,255,255,.55)",fontSize:13,maxWidth:420,lineHeight:1.8,fontFamily:"'DM Sans',sans-serif"}}>
+          <p style={{color:"rgba(255,255,255,.55)",fontSize:13,maxWidth:420,lineHeight:1.8,fontFamily:"'Outfit',sans-serif"}}>
             Our team is ready to assist — whether you're a customer, retailer, or gifting partner.
           </p>
         </div>
@@ -1453,9 +1453,9 @@ function ContactPage(){
         {/* Info */}
         <div>
           <div style={{width:32,height:1,background:"#B8922A",marginBottom:20}}/>
-          <p style={{fontSize:9,letterSpacing:5,color:"#B8922A",textTransform:"uppercase",fontFamily:"'DM Sans',sans-serif",marginBottom:14}}>Reach Us</p>
+          <p style={{fontSize:9,letterSpacing:5,color:"#B8922A",textTransform:"uppercase",fontFamily:"'Outfit',sans-serif",marginBottom:14}}>Reach Us</p>
           <h2 className="disp" style={{fontSize:"clamp(28px,3vw,44px)",fontWeight:300,marginBottom:24,lineHeight:1.1,color:"#000",letterSpacing:-1}}>We'd Love to Hear From You</h2>
-          <p style={{color:"#777",lineHeight:1.85,fontSize:14,marginBottom:36,fontFamily:"'DM Sans',sans-serif"}}>
+          <p style={{color:"#777",lineHeight:1.85,fontSize:14,marginBottom:36,fontFamily:"'Outfit',sans-serif"}}>
             Whether you're a fragrance enthusiast, a retail partner, or a gifting client — our team is here to help.
           </p>
           {[
@@ -1467,13 +1467,13 @@ function ContactPage(){
             <div key={label} style={{display:"flex",gap:18,marginBottom:22,paddingBottom:22,borderBottom:"1px solid #F0EBE3"}}>
               <span style={{fontSize:20,flexShrink:0,marginTop:2}}>{icon}</span>
               <div>
-                <p style={{fontSize:9,letterSpacing:3,color:"#B8922A",textTransform:"uppercase",fontFamily:"'DM Sans',sans-serif",marginBottom:4}}>{label}</p>
-                <p style={{fontSize:14,color:"#333",fontFamily:"'DM Sans',sans-serif"}}>{val}</p>
+                <p style={{fontSize:9,letterSpacing:3,color:"#B8922A",textTransform:"uppercase",fontFamily:"'Outfit',sans-serif",marginBottom:4}}>{label}</p>
+                <p style={{fontSize:14,color:"#333",fontFamily:"'Outfit',sans-serif"}}>{val}</p>
               </div>
             </div>
           ))}
           <div style={{marginTop:32}}>
-            <p style={{fontSize:9,letterSpacing:3,color:"#B8922A",textTransform:"uppercase",fontFamily:"'DM Sans',sans-serif",marginBottom:16}}>Follow Us</p>
+            <p style={{fontSize:9,letterSpacing:3,color:"#B8922A",textTransform:"uppercase",fontFamily:"'Outfit',sans-serif",marginBottom:16}}>Follow Us</p>
             <div style={{display:"flex",gap:10,flexWrap:"wrap"}}>
               {[
                 ["Instagram","https://www.instagram.com/khadlajperfumes"],
@@ -1486,7 +1486,7 @@ function ContactPage(){
                     border:"1px solid #000",color:"#000",
                     padding:"9px 16px",fontSize:9,letterSpacing:2,
                     cursor:"pointer",textDecoration:"none",
-                    fontFamily:"'DM Sans',sans-serif",textTransform:"uppercase",
+                    fontFamily:"'Outfit',sans-serif",textTransform:"uppercase",
                     transition:"all .2s",
                   }}
                   onMouseEnter={e=>{e.currentTarget.style.background="#000";e.currentTarget.style.color="#fff";}}
@@ -1503,7 +1503,7 @@ function ContactPage(){
             <div style={{textAlign:"center",padding:"60px 0"}}>
               <div style={{width:48,height:48,borderRadius:"50%",background:"#B8922A",display:"flex",alignItems:"center",justifyContent:"center",margin:"0 auto 24px",fontSize:22,color:"#fff"}}>✓</div>
               <h3 className="disp" style={{fontSize:32,color:"#fff",margin:"0 0 12px",fontWeight:300}}>Message Sent</h3>
-              <p style={{color:"rgba(255,255,255,.5)",fontSize:13,fontFamily:"'DM Sans',sans-serif"}}>We'll get back to you within 24 hours.</p>
+              <p style={{color:"rgba(255,255,255,.5)",fontSize:13,fontFamily:"'Outfit',sans-serif"}}>We'll get back to you within 24 hours.</p>
               <button className="btn-ghost" onClick={()=>setSent(false)} style={{marginTop:32,color:"#fff",borderColor:"rgba(255,255,255,.3)"}}>Send Another</button>
             </div>
           ) : (
@@ -1512,26 +1512,26 @@ function ContactPage(){
               <h3 className="disp" style={{fontSize:28,fontWeight:300,color:"#fff",marginBottom:32,letterSpacing:-0.5}}>Send a Message</h3>
               {[["Name","name","text"],["Email","email","email"],["Subject","subject","text"]].map(([label,key,type])=>(
                 <div key={key} style={{marginBottom:18}}>
-                  <label style={{fontSize:9,letterSpacing:2.5,color:"rgba(255,255,255,.4)",display:"block",marginBottom:8,textTransform:"uppercase",fontFamily:"'DM Sans',sans-serif"}}>{label}</label>
+                  <label style={{fontSize:9,letterSpacing:2.5,color:"rgba(255,255,255,.4)",display:"block",marginBottom:8,textTransform:"uppercase",fontFamily:"'Outfit',sans-serif"}}>{label}</label>
                   <input type={type} value={form[key]} onChange={e=>setForm({...form,[key]:e.target.value})}
                     style={{
                       width:"100%",background:"rgba(255,255,255,.05)",
                       border:"1px solid rgba(255,255,255,.12)",
                       borderBottom:"1px solid rgba(255,255,255,.3)",
                       color:"#fff",padding:"12px 0",fontSize:14,outline:"none",
-                      fontFamily:"'DM Sans',sans-serif",
+                      fontFamily:"'Outfit',sans-serif",
                     }}/>
                 </div>
               ))}
               <div style={{marginBottom:28}}>
-                <label style={{fontSize:9,letterSpacing:2.5,color:"rgba(255,255,255,.4)",display:"block",marginBottom:8,textTransform:"uppercase",fontFamily:"'DM Sans',sans-serif"}}>Message</label>
+                <label style={{fontSize:9,letterSpacing:2.5,color:"rgba(255,255,255,.4)",display:"block",marginBottom:8,textTransform:"uppercase",fontFamily:"'Outfit',sans-serif"}}>Message</label>
                 <textarea value={form.message} onChange={e=>setForm({...form,message:e.target.value})} rows={5}
                   style={{
                     width:"100%",background:"rgba(255,255,255,.05)",
                     border:"1px solid rgba(255,255,255,.12)",
                     borderBottom:"1px solid rgba(255,255,255,.3)",
                     color:"#fff",padding:"12px 0",fontSize:14,outline:"none",
-                    resize:"vertical",fontFamily:"'DM Sans',sans-serif",
+                    resize:"vertical",fontFamily:"'Outfit',sans-serif",
                   }}/>
               </div>
               <button
@@ -1540,7 +1540,7 @@ function ContactPage(){
                   width:"100%",background:"#B8922A",color:"#fff",
                   border:"none",padding:"16px",fontSize:10,
                   letterSpacing:3,textTransform:"uppercase",cursor:"pointer",
-                  fontFamily:"'DM Sans',sans-serif",fontWeight:600,
+                  fontFamily:"'Outfit',sans-serif",fontWeight:600,
                   transition:"opacity .2s",
                 }}
                 onMouseEnter={e=>e.currentTarget.style.opacity=".85"}
@@ -1594,24 +1594,24 @@ function Navbar({ page, setPage, cartCount }){
             {searchQuery && searchResults.length===0 && (
               <div style={{textAlign:"center",paddingTop:64}}>
                 <p className="disp" style={{fontSize:28,fontWeight:300,color:"#000",marginBottom:8}}>No results for "{searchQuery}"</p>
-                <p style={{fontSize:13,color:"#888",fontFamily:"'DM Sans',sans-serif"}}>Try "oud", "musk", "gift"...</p>
+                <p style={{fontSize:13,color:"#888",fontFamily:"'Outfit',sans-serif"}}>Try "oud", "musk", "gift"...</p>
               </div>
             )}
             {searchResults.length>0 && (
               <>
-                <p style={{fontSize:9,letterSpacing:4,color:"#B8922A",textTransform:"uppercase",fontFamily:"'DM Sans',sans-serif",marginBottom:20}}>{searchResults.length} results for "{searchQuery}"</p>
+                <p style={{fontSize:9,letterSpacing:4,color:"#B8922A",textTransform:"uppercase",fontFamily:"'Outfit',sans-serif",marginBottom:20}}>{searchResults.length} results for "{searchQuery}"</p>
                 <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:48}} className="grid-3">
                   {searchResults.map(p=>(
                     <div key={p.id} onClick={()=>{setSearchOpen(false);setSearchQuery("");setSearchResults([]);setPage("product");}} style={{cursor:"pointer"}}>
                       <div style={{position:"relative",aspectRatio:"3/4",overflow:"hidden",background:"#F7F5F2"}}>
                         <img src={p.img} alt={p.name} loading="lazy" style={{width:"100%",height:"100%",objectFit:"contain",padding:"16px"}}/>
                         <div style={{height:2,position:"absolute",bottom:0,left:0,right:0,background:"linear-gradient(90deg,#B8922A,#D4AF5A,#B8922A)"}}/>
-                        {p.badge&&<span style={{position:"absolute",top:10,left:10,background:p.badge==="New"?"#B8922A":p.badge==="Limited"?"#5C0000":"#000",color:"#fff",fontSize:8,letterSpacing:2,padding:"3px 8px",fontFamily:"'DM Sans',sans-serif",textTransform:"uppercase"}}>{p.badge}</span>}
+                        {p.badge&&<span style={{position:"absolute",top:10,left:10,background:p.badge==="New"?"#B8922A":p.badge==="Limited"?"#5C0000":"#000",color:"#fff",fontSize:8,letterSpacing:2,padding:"3px 8px",fontFamily:"'Outfit',sans-serif",textTransform:"uppercase"}}>{p.badge}</span>}
                       </div>
                       <div style={{padding:"10px 6px 14px"}}>
-                        <p style={{fontSize:9,color:"#B8922A",letterSpacing:3,textTransform:"uppercase",fontFamily:"'DM Sans',sans-serif",marginBottom:3}}>{p.col}</p>
-                        <p style={{fontSize:12,fontWeight:700,color:"#000",textTransform:"uppercase",fontFamily:"'DM Sans',sans-serif",marginBottom:4,lineHeight:1.2}}>{p.name}</p>
-                        <p style={{fontSize:13,fontWeight:700,color:"#000",fontFamily:"'DM Sans',sans-serif"}}>AED {p.price}</p>
+                        <p style={{fontSize:9,color:"#B8922A",letterSpacing:3,textTransform:"uppercase",fontFamily:"'Outfit',sans-serif",marginBottom:3}}>{p.col}</p>
+                        <p style={{fontSize:12,fontWeight:700,color:"#000",textTransform:"uppercase",fontFamily:"'Outfit',sans-serif",marginBottom:4,lineHeight:1.2}}>{p.name}</p>
+                        <p style={{fontSize:13,fontWeight:700,color:"#000",fontFamily:"'Outfit',sans-serif"}}>AED {p.price}</p>
                       </div>
                     </div>
                   ))}
@@ -1620,11 +1620,11 @@ function Navbar({ page, setPage, cartCount }){
             )}
             {!searchQuery && (
               <div>
-                <p style={{fontSize:9,letterSpacing:4,color:"#B8922A",textTransform:"uppercase",fontFamily:"'DM Sans',sans-serif",marginBottom:16}}>Popular Searches</p>
+                <p style={{fontSize:9,letterSpacing:4,color:"#B8922A",textTransform:"uppercase",fontFamily:"'Outfit',sans-serif",marginBottom:16}}>Popular Searches</p>
                 <div style={{display:"flex",flexWrap:"wrap",gap:8,marginBottom:32}}>
                   {["Oud","Musk","Gift Set","New Arrivals","For Her","For Him","Amber","Island"].map(s=>(
                     <button key={s} onClick={()=>handleSearch(s)}
-                      style={{background:"#F7F5F2",border:"1px solid #E8E4DC",padding:"8px 16px",fontSize:12,color:"#333",cursor:"pointer",fontFamily:"'DM Sans',sans-serif",transition:"all .2s"}}
+                      style={{background:"#F7F5F2",border:"1px solid #E8E4DC",padding:"8px 16px",fontSize:12,color:"#333",cursor:"pointer",fontFamily:"'Outfit',sans-serif",transition:"all .2s"}}
                       onMouseEnter={e=>{e.currentTarget.style.background="#000";e.currentTarget.style.color="#fff";}}
                       onMouseLeave={e=>{e.currentTarget.style.background="#F7F5F2";e.currentTarget.style.color="#333";}}
                     >{s}</button>
@@ -1637,7 +1637,7 @@ function Navbar({ page, setPage, cartCount }){
       )}
 
       {/* ── Announcement bar ── */}
-      <div style={{background:"#0a0a0a",color:"#fff",textAlign:"center",padding:"8px 16px",fontSize:"8.5px",letterSpacing:"4px",fontFamily:"'DM Sans',sans-serif",textTransform:"uppercase",borderBottom:"1px solid rgba(184,146,42,0.15)"}}>
+      <div style={{background:"#0a0a0a",color:"#fff",textAlign:"center",padding:"8px 16px",fontSize:"8.5px",letterSpacing:"4px",fontFamily:"'Outfit',sans-serif",textTransform:"uppercase",borderBottom:"1px solid rgba(184,146,42,0.15)"}}>
         <span style={{color:"#B8922A",marginRight:8,fontWeight:600}}>✦</span>
         REGISTER NOW & RECEIVE 10% OFF — CODE: <span style={{color:"#B8922A",fontWeight:700}}>10OFF</span>
         <span style={{color:"#B8922A",marginLeft:8,fontWeight:600}}>✦</span>
@@ -1656,7 +1656,7 @@ function Navbar({ page, setPage, cartCount }){
                     onMouseLeave={e=>{e.currentTarget.style.opacity="0.75";e.currentTarget.style.transform="scale(1)";}}
                   >
                     <span style={{fontSize:12}}>{c.flag}</span>
-                    <span style={{fontSize:"8px",color:"#111",fontFamily:"'DM Sans',sans-serif",fontWeight:600,letterSpacing:"1px",textTransform:"uppercase"}}>{c.name}</span>
+                    <span style={{fontSize:"8px",color:"#111",fontFamily:"'Outfit',sans-serif",fontWeight:600,letterSpacing:"1px",textTransform:"uppercase"}}>{c.name}</span>
                   </div>
                 ))}
               </div>
@@ -1676,14 +1676,14 @@ function Navbar({ page, setPage, cartCount }){
             </div>
             {/* Right icons */}
             <div style={{display:"flex",alignItems:"center",justifyContent:"flex-end",gap:24}}>
-              <span className="hide-mob" style={{fontSize:"8.5px",letterSpacing:"2.5px",color:"#111",textTransform:"uppercase",cursor:"pointer",fontFamily:"'DM Sans',sans-serif",fontWeight:600,transition:"color .2s"}} onMouseEnter={e=>e.target.style.color="#B8922A"} onMouseLeave={e=>e.target.style.color="#111"} onClick={()=>setPage("contact")}>Sign Up</span>
+              <span className="hide-mob" style={{fontSize:"8.5px",letterSpacing:"2.5px",color:"#111",textTransform:"uppercase",cursor:"pointer",fontFamily:"'Outfit',sans-serif",fontWeight:600,transition:"color .2s"}} onMouseEnter={e=>e.target.style.color="#B8922A"} onMouseLeave={e=>e.target.style.color="#111"} onClick={()=>setPage("contact")}>Sign Up</span>
               <span className="hide-mob" style={{cursor:"pointer",display:"flex",alignItems:"center",transition:"transform .2s"}} onMouseEnter={e=>e.currentTarget.style.transform="scale(1.1)"} onMouseLeave={e=>e.currentTarget.style.transform="scale(1)"} onClick={()=>setSearchOpen(true)}>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#111" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
               </span>
               <div onClick={()=>setPage("collections")} style={{position:"relative",cursor:"pointer",transition:"transform .2s ease"}} onMouseEnter={e=>e.currentTarget.style.transform="scale(1.1)"} onMouseLeave={e=>e.currentTarget.style.transform="scale(1)"}>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#111" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
                 {cartCount>0 && (
-                  <span style={{position:"absolute",top:-5,right:-7,background:"#B8922A",color:"#fff",borderRadius:"50%",width:14,height:14,fontSize:8,display:"flex",alignItems:"center",justifyContent:"center",fontWeight:700,fontFamily:"'DM Sans',sans-serif"}}>{cartCount}</span>
+                  <span style={{position:"absolute",top:-5,right:-7,background:"#B8922A",color:"#fff",borderRadius:"50%",width:14,height:14,fontSize:8,display:"flex",alignItems:"center",justifyContent:"center",fontWeight:700,fontFamily:"'Outfit',sans-serif"}}>{cartCount}</span>
                 )}
               </div>
               {/* Hamburger — mobile only */}
@@ -1699,7 +1699,7 @@ function Navbar({ page, setPage, cartCount }){
               </button>
             </div>
           </div>
-          <div className="hide-mob" style={{display:"flex",justifyContent:"center",gap:40,paddingBottom:16,fontSize:"8.5px",letterSpacing:"3px",textTransform:"uppercase",color:"#111",fontFamily:"'DM Sans',sans-serif",fontWeight:600}}>
+          <div className="hide-mob" style={{display:"flex",justifyContent:"center",gap:40,paddingBottom:16,fontSize:"8.5px",letterSpacing:"3px",textTransform:"uppercase",color:"#111",fontFamily:"'Outfit',sans-serif",fontWeight:600}}>
             {[["Offers","collections"],["Bestsellers","collections"],["New In","collections"],["Gifts","gifts"],["Perfume","collections"],["Our Story","story"],["Contact","contact"]].map(([label,pg])=>(
               <span key={label} onClick={()=>setPage(pg)} style={{cursor:"pointer",paddingBottom:4,borderBottom:page===pg?"1px solid #B8922A":"1px solid transparent",color:page===pg?"#B8922A":"#111",transition:"all .25s ease"}}
                 onMouseEnter={e=>{e.currentTarget.style.color="#B8922A";e.currentTarget.style.borderBottomColor="#B8922A";}}
@@ -1728,7 +1728,7 @@ function Navbar({ page, setPage, cartCount }){
                   fontSize:11,letterSpacing:2.5,
                   textTransform:"uppercase",
                   color:"#000",cursor:"pointer",
-                  fontFamily:"'DM Sans',sans-serif",
+                  fontFamily:"'Outfit',sans-serif",
                   borderBottom:"1px solid #F0EBE3",
                   display:"flex",alignItems:"center",justifyContent:"space-between",
                 }}
@@ -1740,7 +1740,7 @@ function Navbar({ page, setPage, cartCount }){
             <div style={{padding:"14px 6% 0",display:"flex",gap:12,flexWrap:"wrap"}}>
               {[["Instagram","https://www.instagram.com/khadlajperfumes"],["TikTok",SOCIAL_LINKS.tiktok]].map(([s,href])=>(
                 <a key={s} href={href} target="_blank" rel="noreferrer"
-                  style={{fontSize:9,letterSpacing:2,color:"#888",border:"1px solid #E0E0E0",padding:"7px 14px",textDecoration:"none",fontFamily:"'DM Sans',sans-serif",textTransform:"uppercase"}}>
+                  style={{fontSize:9,letterSpacing:2,color:"#888",border:"1px solid #E0E0E0",padding:"7px 14px",textDecoration:"none",fontFamily:"'Outfit',sans-serif",textTransform:"uppercase"}}>
                   {s}
                 </a>
               ))}
@@ -1763,16 +1763,16 @@ function Footer({ setPage }){
       {/* Newsletter */}
       <div style={{background:"#0a0a0a",padding:"80px 5%",textAlign:"center",borderBottom:"1px solid rgba(184,146,42,0.2)"}}>
         <div style={{width:32,height:1,background:"#B8922A",margin:"0 auto 20px"}}/>
-        <p style={{fontSize:9,letterSpacing:5,color:"#B8922A",textTransform:"uppercase",fontFamily:"'DM Sans',sans-serif",marginBottom:16,fontWeight:600}}>Stay Inspired</p>
+        <p style={{fontSize:9,letterSpacing:5,color:"#B8922A",textTransform:"uppercase",fontFamily:"'Outfit',sans-serif",marginBottom:16,fontWeight:600}}>Stay Inspired</p>
         <h2 className="disp" style={{fontSize:"clamp(28px,3.5vw,46px)",fontWeight:300,marginBottom:14,color:"#fff",letterSpacing:"-0.5px"}}>Join the Khadlaj Circle</h2>
-        <p style={{color:"rgba(255,255,255,.5)",fontSize:13,marginBottom:36,fontFamily:"'DM Sans',sans-serif",maxWidth:400,margin:"0 auto 36px",lineHeight:1.7}}>New launches, exclusive offers, and fragrance stories — direct to your inbox.</p>
+        <p style={{color:"rgba(255,255,255,.5)",fontSize:13,marginBottom:36,fontFamily:"'Outfit',sans-serif",maxWidth:400,margin:"0 auto 36px",lineHeight:1.7}}>New launches, exclusive offers, and fragrance stories — direct to your inbox.</p>
         <div style={{display:"flex",gap:0,maxWidth:420,margin:"0 auto",justifyContent:"center"}}>
           <input type="email" placeholder="Your email address"
-            style={{flex:1,background:"transparent",border:"1px solid rgba(255,255,255,.20)",borderRight:"none",color:"#fff",padding:"14px 20px",fontSize:12,outline:"none",fontFamily:"'DM Sans',sans-serif",letterSpacing:.5,transition:"border-color .3s"}}
+            style={{flex:1,background:"transparent",border:"1px solid rgba(255,255,255,.20)",borderRight:"none",color:"#fff",padding:"14px 20px",fontSize:12,outline:"none",fontFamily:"'Outfit',sans-serif",letterSpacing:.5,transition:"border-color .3s"}}
             onFocus={e=>e.currentTarget.style.borderColor="rgba(255,255,255,.4)"}
             onBlur={e=>e.currentTarget.style.borderColor="rgba(255,255,255,.2)"}
           />
-          <button style={{background:"#B8922A",border:"none",color:"#fff",padding:"14px 32px",fontSize:9,letterSpacing:3,textTransform:"uppercase",cursor:"pointer",fontFamily:"'DM Sans',sans-serif",fontWeight:600,whiteSpace:"nowrap",transition:"background .3s"}}
+          <button style={{background:"#B8922A",border:"none",color:"#fff",padding:"14px 32px",fontSize:9,letterSpacing:3,textTransform:"uppercase",cursor:"pointer",fontFamily:"'Outfit',sans-serif",fontWeight:600,whiteSpace:"nowrap",transition:"background .3s"}}
             onMouseEnter={e=>e.currentTarget.style.background="#C9A84C"}
             onMouseLeave={e=>e.currentTarget.style.background="#B8922A"}
           >Subscribe</button>
@@ -1787,8 +1787,8 @@ function Footer({ setPage }){
             alt="Khadlaj Perfumes"
             style={{height:52,width:"auto",objectFit:"contain",display:"block",marginBottom:24}}
           />
-          <p style={{fontSize:"8px",letterSpacing:3.5,color:"#B8922A",fontFamily:"'DM Sans',sans-serif",marginBottom:16,textTransform:"uppercase",fontWeight:700}}>Perfumes · UAE · Est. 1997</p>
-          <p style={{fontSize:13,color:"#555",lineHeight:1.85,maxWidth:260,marginBottom:32,fontFamily:"'DM Sans',sans-serif"}}>Family-owned UAE perfume house. Authentic Arabian &amp; French fragrance artistry since 1997.</p>
+          <p style={{fontSize:"8px",letterSpacing:3.5,color:"#B8922A",fontFamily:"'Outfit',sans-serif",marginBottom:16,textTransform:"uppercase",fontWeight:700}}>Perfumes · UAE · Est. 1997</p>
+          <p style={{fontSize:13,color:"#555",lineHeight:1.85,maxWidth:260,marginBottom:32,fontFamily:"'Outfit',sans-serif"}}>Family-owned UAE perfume house. Authentic Arabian &amp; French fragrance artistry since 1997.</p>
           
           <div style={{display:"flex",gap:8,flexWrap:"wrap"}}>
             {COUNTRIES.map(c=>(
@@ -1797,42 +1797,42 @@ function Footer({ setPage }){
                 onMouseLeave={e=>{e.currentTarget.style.borderColor="#e5e5e5";}}
               >
                 <span style={{fontSize:12}}>{c.flag}</span>
-                <span style={{fontSize:9,color:"#222",fontFamily:"'DM Sans',sans-serif",fontWeight:600}}>{c.name}</span>
+                <span style={{fontSize:9,color:"#222",fontFamily:"'Outfit',sans-serif",fontWeight:600}}>{c.name}</span>
               </div>
             ))}
           </div>
         </div>
         <div>
-          <p style={{fontSize:"8.5px",letterSpacing:2.5,color:"#000",textTransform:"uppercase",marginBottom:24,fontFamily:"'DM Sans',sans-serif",fontWeight:700}}>Collections</p>
+          <p style={{fontSize:"8.5px",letterSpacing:2.5,color:"#000",textTransform:"uppercase",marginBottom:24,fontFamily:"'Outfit',sans-serif",fontWeight:700}}>Collections</p>
           {["Atyaab","Lafede","Master Perfumery","Gift Sets","New Arrivals","Best Sellers"].map(l=>(
-            <p key={l} onClick={()=>setPage("collections")} style={{fontSize:12,color:"#555",marginBottom:14,cursor:"pointer",fontFamily:"'DM Sans',sans-serif",letterSpacing:.5,transition:"all .25s ease"}}
+            <p key={l} onClick={()=>setPage("collections")} style={{fontSize:12,color:"#555",marginBottom:14,cursor:"pointer",fontFamily:"'Outfit',sans-serif",letterSpacing:.5,transition:"all .25s ease"}}
               onMouseEnter={e=>e.target.style.color="#B8922A"} onMouseLeave={e=>e.target.style.color="#555"}>{l}</p>
           ))}
         </div>
         <div>
-          <p style={{fontSize:"8.5px",letterSpacing:2.5,color:"#000",textTransform:"uppercase",marginBottom:24,fontFamily:"'DM Sans',sans-serif",fontWeight:700}}>Company</p>
+          <p style={{fontSize:"8.5px",letterSpacing:2.5,color:"#000",textTransform:"uppercase",marginBottom:24,fontFamily:"'Outfit',sans-serif",fontWeight:700}}>Company</p>
           {[["Our Story","story"],["Contact Us","contact"],["Find a Store","contact"],["Careers","contact"],["Press","contact"]].map(([l,pg])=>(
-            <p key={l} onClick={()=>setPage(pg)} style={{fontSize:12,color:"#555",marginBottom:14,cursor:"pointer",fontFamily:"'DM Sans',sans-serif",letterSpacing:.5,transition:"all .25s ease"}}
+            <p key={l} onClick={()=>setPage(pg)} style={{fontSize:12,color:"#555",marginBottom:14,cursor:"pointer",fontFamily:"'Outfit',sans-serif",letterSpacing:.5,transition:"all .25s ease"}}
               onMouseEnter={e=>e.target.style.color="#B8922A"} onMouseLeave={e=>e.target.style.color="#555"}>{l}</p>
           ))}
         </div>
         <div>
-          <p style={{fontSize:"8.5px",letterSpacing:2.5,color:"#000",textTransform:"uppercase",marginBottom:24,fontFamily:"'DM Sans',sans-serif",fontWeight:700}}>Support</p>
+          <p style={{fontSize:"8.5px",letterSpacing:2.5,color:"#000",textTransform:"uppercase",marginBottom:24,fontFamily:"'Outfit',sans-serif",fontWeight:700}}>Support</p>
           {["Shipping & Returns","FAQ","Track My Order","Fragrance Guide","Gift Wrapping"].map(l=>(
-            <p key={l} style={{fontSize:12,color:"#555",marginBottom:14,cursor:"pointer",fontFamily:"'DM Sans',sans-serif",letterSpacing:.5,transition:"all .25s ease"}}
+            <p key={l} style={{fontSize:12,color:"#555",marginBottom:14,cursor:"pointer",fontFamily:"'Outfit',sans-serif",letterSpacing:.5,transition:"all .25s ease"}}
               onMouseEnter={e=>e.target.style.color="#B8922A"} onMouseLeave={e=>e.target.style.color="#555"}>{l}</p>
           ))}
           <div style={{marginTop:32,paddingTop:24,borderTop:"1px solid #e5e5e5"}}>
-            <p style={{fontSize:"8px",letterSpacing:2.5,color:"#000",textTransform:"uppercase",marginBottom:14,fontFamily:"'DM Sans',sans-serif",fontWeight:700}}>Ships With</p>
+            <p style={{fontSize:"8px",letterSpacing:2.5,color:"#000",textTransform:"uppercase",marginBottom:14,fontFamily:"'Outfit',sans-serif",fontWeight:700}}>Ships With</p>
             <div style={{display:"flex",flexWrap:"wrap",gap:6}}>
               {["DHL","Aramex","EMX"].map(s=>(
-                <span key={s} style={{border:"1px solid #e5e5e5",padding:"4px 12px",fontSize:9,color:"#444",fontFamily:"'DM Sans',sans-serif",letterSpacing:1,background:"#fff",borderRadius:1}}>{s}</span>
+                <span key={s} style={{border:"1px solid #e5e5e5",padding:"4px 12px",fontSize:9,color:"#444",fontFamily:"'Outfit',sans-serif",letterSpacing:1,background:"#fff",borderRadius:1}}>{s}</span>
               ))}
             </div>
           </div>
         </div>
       </div>
-      <div style={{background:"#fff",borderTop:"1px solid #E8E4DC",padding:"20px 5%",display:"flex",justifyContent:"space-between",flexWrap:"wrap",gap:12,fontSize:9,color:"#888",letterSpacing:1.5,fontFamily:"'DM Sans',sans-serif",textTransform:"uppercase"}}>
+      <div style={{background:"#fff",borderTop:"1px solid #E8E4DC",padding:"20px 5%",display:"flex",justifyContent:"space-between",flexWrap:"wrap",gap:12,fontSize:9,color:"#888",letterSpacing:1.5,fontFamily:"'Outfit',sans-serif",textTransform:"uppercase"}}>
         <p>© 2025 Khadlaj Perfumes LLC. All rights reserved. UAE.</p>
         <div style={{display:"flex",gap:24}}>
           {["Privacy Policy","Terms of Use","Cookie Settings"].map(l=>(
@@ -1876,7 +1876,7 @@ export default function App(){
   };
 
   return (
-    <div style={{fontFamily:"'DM Sans',sans-serif",background:"#fff",color:"#000",minHeight:"100vh",overflowX:"hidden"}}>
+    <div style={{fontFamily:"'Outfit',sans-serif",background:"#fff",color:"#000",minHeight:"100vh",overflowX:"hidden"}}>
       <style>{GLOBAL_CSS}</style>
       <Navbar page={page} setPage={setPage} cartCount={cartCount}/>
       <main>{renderPage()}</main>
@@ -1928,18 +1928,18 @@ export default function App(){
             {/* Right form */}
             <div style={{padding:"40px 28px",display:"flex",flexDirection:"column",justifyContent:"center"}}>
               <div style={{width:28,height:1,background:"#B8922A",marginBottom:16}}/>
-              <p style={{fontSize:9,letterSpacing:4,color:"#B8922A",textTransform:"uppercase",fontFamily:"'DM Sans',sans-serif",marginBottom:12}}>Welcome</p>
+              <p style={{fontSize:9,letterSpacing:4,color:"#B8922A",textTransform:"uppercase",fontFamily:"'Outfit',sans-serif",marginBottom:12}}>Welcome</p>
               <h3 className="disp" style={{fontSize:24,fontWeight:300,color:"#000",marginBottom:10,lineHeight:1.15,letterSpacing:-.5}}>Join the Khadlaj Circle</h3>
-              <p style={{fontSize:12,color:"#888",lineHeight:1.7,fontFamily:"'DM Sans',sans-serif",marginBottom:24}}>Subscribe &amp; get <strong style={{color:"#000"}}>10% off</strong> your first order plus early access to new launches.</p>
+              <p style={{fontSize:12,color:"#888",lineHeight:1.7,fontFamily:"'Outfit',sans-serif",marginBottom:24}}>Subscribe &amp; get <strong style={{color:"#000"}}>10% off</strong> your first order plus early access to new launches.</p>
               <input type="email" placeholder="Your email address" value={popupEmail} onChange={e=>setPopupEmail(e.target.value)}
-                style={{width:"100%",border:"none",borderBottom:"1px solid #000",padding:"10px 0",fontSize:13,outline:"none",fontFamily:"'DM Sans',sans-serif",marginBottom:16,background:"transparent"}}/>
+                style={{width:"100%",border:"none",borderBottom:"1px solid #000",padding:"10px 0",fontSize:13,outline:"none",fontFamily:"'Outfit',sans-serif",marginBottom:16,background:"transparent"}}/>
               <button
                 onClick={()=>{setPopupDone(true);setShowPopup(false);}}
-                style={{width:"100%",background:"#000",color:"#fff",border:"none",padding:"14px",fontSize:10,letterSpacing:3,textTransform:"uppercase",cursor:"pointer",fontFamily:"'DM Sans',sans-serif",fontWeight:600,transition:"background .2s"}}
+                style={{width:"100%",background:"#000",color:"#fff",border:"none",padding:"14px",fontSize:10,letterSpacing:3,textTransform:"uppercase",cursor:"pointer",fontFamily:"'Outfit',sans-serif",fontWeight:600,transition:"background .2s"}}
                 onMouseEnter={e=>e.currentTarget.style.background="#B8922A"}
                 onMouseLeave={e=>e.currentTarget.style.background="#000"}
               >Claim 10% Off</button>
-              <p onClick={()=>setShowPopup(false)} style={{fontSize:11,color:"#bbb",textAlign:"center",marginTop:12,cursor:"pointer",fontFamily:"'DM Sans',sans-serif",textDecoration:"underline"}}>No thanks</p>
+              <p onClick={()=>setShowPopup(false)} style={{fontSize:11,color:"#bbb",textAlign:"center",marginTop:12,cursor:"pointer",fontFamily:"'Outfit',sans-serif",textDecoration:"underline"}}>No thanks</p>
             </div>
           </div>
         </div>
