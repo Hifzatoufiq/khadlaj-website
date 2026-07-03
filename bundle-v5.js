@@ -22299,10 +22299,6 @@ function HomePage({ setPage, addToCart, setViewProduct }) {
         zIndex: 3,
         maxWidth: 660
       }, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", alignItems: "center", gap: 12, marginBottom: 14 }, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { display: "inline-block", width: 32, height: 1, background: "#C9A84C", flexShrink: 0 } }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { fontSize: 9, letterSpacing: 5, color: "#C9A84C", textTransform: "uppercase", fontFamily: "'DM Sans',sans-serif", fontWeight: 500 }, children: "Khadlaj Perfumes \xB7 Since 1997" })
-        ] }),
         /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", { className: "disp hero-headline", style: {
           fontSize: "clamp(34px,4.5vw,72px)",
           fontWeight: 400,

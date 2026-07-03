@@ -579,11 +579,6 @@ function HomePage({ setPage, addToCart, setViewProduct }){
           zIndex:3,
           maxWidth:660,
         }}>
-          {/* Brand label */}
-          <div style={{display:"flex",alignItems:"center",gap:12,marginBottom:14}}>
-            <span style={{display:"inline-block",width:32,height:1,background:"#C9A84C",flexShrink:0}}/>
-            <span style={{fontSize:9,letterSpacing:5,color:"#C9A84C",textTransform:"uppercase",fontFamily:"'DM Sans',sans-serif",fontWeight:500}}>Khadlaj Perfumes · Since 1997</span>
-          </div>
 
           {/* Headline */}
           <h1 className="disp hero-headline" style={{
