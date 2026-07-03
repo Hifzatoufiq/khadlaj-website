@@ -763,15 +763,38 @@ function HomePage({ setPage, addToCart, setViewProduct }){
       </section>
 
       {/* ── MASTER PERFUMERY EDITORIAL ── */}
-      <section style={{position:"relative",overflow:"hidden",zIndex:0,background:"#000",padding:"96px 5%"}}>
-        <div style={{maxWidth:560}}>
-          <h2 className="disp" style={{fontSize:"clamp(32px,5vw,64px)",fontWeight:300,lineHeight:1.05,marginBottom:20,color:"#fff",letterSpacing:-1.5}}>
-            The Art of Arabic &amp;<br/><em style={{color:"#B8922A",fontStyle:"italic"}}>French Perfumery</em>
-          </h2>
-          <p style={{color:"rgba(255,255,255,.6)",lineHeight:1.85,fontSize:14,marginBottom:32,maxWidth:440,fontFamily:"'DM Sans',sans-serif"}}>
-            Founded by Mohamed Iqbal Abdul Sattar — each creation blends the ancient soul of Arabian oud with the precision of French fragrance tradition.
-          </p>
-          <button className="btn-gold" onClick={()=>setPage("story")}>Meet the Perfumers</button>
+      <section style={{position:"relative",overflow:"hidden",zIndex:0,background:"#000",padding:"0"}}>
+        <div style={{display:"grid",gridTemplateColumns:"repeat(2,1fr)",minHeight:"550px"}} className="hero-split">
+          {/* Left Text Column */}
+          <div style={{padding:"80px 8% 80px 8%",display:"flex",flexDirection:"column",justifyContent:"center"}}>
+            <h2 className="disp" style={{fontSize:"clamp(32px,4.5vw,54px)",fontWeight:300,lineHeight:1.1,marginBottom:20,color:"#fff",letterSpacing:-1.5}}>
+              The Art of Arabic &amp;<br/><em style={{color:"#B8922A",fontStyle:"italic"}}>French Perfumery</em>
+            </h2>
+            <p style={{color:"rgba(255,255,255,.6)",lineHeight:1.85,fontSize:14,marginBottom:36,maxWidth:440,fontFamily:"'DM Sans',sans-serif"}}>
+              Founded by Mohamed Iqbal Abdul Sattar — each creation blends the ancient soul of Arabian oud with the precision of French fragrance tradition.
+            </p>
+            <div>
+              <button className="btn-gold" style={{borderColor:"#fff",background:"#fff",color:"#000"}} onClick={()=>setPage("story")}>Meet the Perfumers</button>
+            </div>
+          </div>
+          {/* Right Image Column */}
+          <div style={{position:"relative",overflow:"hidden",minHeight:"350px"}}>
+            <img 
+              src="https://cdn.shopify.com/s/files/1/0626/6119/8023/files/Ihthiraam-1.jpg?v=1775635386" 
+              alt="Khadlaj Master Perfumery"
+              style={{
+                width:"100%",
+                height:"100%",
+                objectFit:"cover",
+                position:"absolute",
+                top:0,
+                left:0,
+                transition:"transform 0.8s ease"
+              }}
+              onMouseEnter={e=>e.currentTarget.style.transform="scale(1.05)"}
+              onMouseLeave={e=>e.currentTarget.style.transform="scale(1)"}
+            />
+          </div>
         </div>
       </section>
 
