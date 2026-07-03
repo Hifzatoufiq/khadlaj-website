@@ -689,7 +689,7 @@ function HomePage({ setPage, addToCart, setViewProduct }){
           ))}
         </div>
 
-        <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:32,alignItems:"start"}} className="grid-4">
+        <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:32,alignItems:"start"}} className="grid-3">
           {filtered.map(p=>(
             <ProductCard key={p.id} p={p} onView={(prod)=>{setViewProduct(prod);setPage("product");}} onCart={addToCart}/>
           ))}
@@ -744,15 +744,15 @@ function HomePage({ setPage, addToCart, setViewProduct }){
       </section>
 
       {/* ── MASTER PERFUMERY EDITORIAL ── */}
-      <section style={{position:"relative",overflow:"hidden",zIndex:0}}>
-            <h2 className="disp" style={{fontSize:"clamp(32px,5vw,64px)",fontWeight:300,lineHeight:1.05,marginBottom:20,color:"#fff",letterSpacing:-1.5}}>
-              The Art of Arabic &amp;<br/><em style={{color:"#B8922A",fontStyle:"italic"}}>French Perfumery</em>
-            </h2>
-            <p style={{color:"rgba(255,255,255,.6)",lineHeight:1.85,fontSize:14,marginBottom:32,maxWidth:440,fontFamily:"'DM Sans',sans-serif"}}>
-              Founded by Mohamed Iqbal Abdul Sattar — each creation blends the ancient soul of Arabian oud with the precision of French fragrance tradition.
-            </p>
-            <button className="btn-gold" onClick={()=>setPage("story")}>Meet the Perfumers</button>
-          </div>
+      <section style={{position:"relative",overflow:"hidden",zIndex:0,background:"#000",padding:"96px 5%"}}>
+        <div style={{maxWidth:560}}>
+          <h2 className="disp" style={{fontSize:"clamp(32px,5vw,64px)",fontWeight:300,lineHeight:1.05,marginBottom:20,color:"#fff",letterSpacing:-1.5}}>
+            The Art of Arabic &amp;<br/><em style={{color:"#B8922A",fontStyle:"italic"}}>French Perfumery</em>
+          </h2>
+          <p style={{color:"rgba(255,255,255,.6)",lineHeight:1.85,fontSize:14,marginBottom:32,maxWidth:440,fontFamily:"'DM Sans',sans-serif"}}>
+            Founded by Mohamed Iqbal Abdul Sattar — each creation blends the ancient soul of Arabian oud with the precision of French fragrance tradition.
+          </p>
+          <button className="btn-gold" onClick={()=>setPage("story")}>Meet the Perfumers</button>
         </div>
       </section>
 
@@ -1328,7 +1328,7 @@ function ProductPage({ product, addToCart, setPage, setViewProduct }){
       {related.length>0 && (
         <div style={{padding:"0 5% 104px"}}>
           <SectionHeader eyebrow="◈ · Handpicked For You" title="You May Also Like" light/>
-          <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:32,alignItems:"start"}} className="grid-4">
+          <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:32,alignItems:"start"}} className="grid-3">
             {related.map(p=>(
               <ProductCard key={p.id} p={p} onView={(prod)=>{if(setViewProduct){setViewProduct(prod);setPage("product");}}} onCart={addToCart}/>
             ))}
