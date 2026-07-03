@@ -268,6 +268,10 @@ const GLOBAL_CSS = `
     .hero-split{grid-template-columns:1fr!important;}
     .hero-img-wrap{height:320px!important;min-height:unset!important;}
     .grid-2{grid-template-columns:1fr!important;}
+
+    /* Hero adjustments */
+    .hero-section { height: 80vh !important; }
+    .hero-text-container { padding: 40px 30px !important; }
   }
   @media(max-width:600px){
     .grid-4{grid-template-columns:repeat(2,1fr)!important;}
@@ -275,10 +279,24 @@ const GLOBAL_CSS = `
     .grid-2{grid-template-columns:1fr!important;}
     .new-scroll > div{flex:0 0 78vw!important;}
     .reel-card{flex:0 0 88vw!important;}
+
+    /* Hero adjustments for smaller screens */
+    .hero-section { height: 100dvh !important; }
+    .hero-text-container { padding: 40px 20px 30px !important; }
+    .hero-headline { font-size: 32px !important; line-height: 1.2 !important; }
+    .hero-subtitle { font-size: 13px !important; line-height: 1.6 !important; max-width: 100% !important; margin-bottom: 20px !important; }
+    .hero-stats-row { gap: 12px !important; padding-top: 12px !important; }
+    .hero-stat-item { padding-right: 12px !important; margin-right: 12px !important; }
   }
   @media(max-width:480px){
     .grid-4{grid-template-columns:repeat(2,1fr)!important;}
     .popup-in{grid-template-columns:1fr!important;}
+
+    .hero-headline { font-size: 28px !important; }
+    .hero-cta-row { flex-direction: column !important; gap: 8px !important; width: 100% !important; }
+    .hero-cta-row button { width: 100% !important; text-align: center !important; }
+    .hero-stats-row { border-top: none !important; }
+    .hero-stat-item { border-right: none !important; }
   }
 `;
 
@@ -526,8 +544,9 @@ function HomePage({ setPage, addToCart, setViewProduct }){
   return (
     <>
       {/* ── HERO VIDEO ── */}
-      <section style={{position:"relative",width:"100%",height:"100vh",overflow:"hidden",background:"#0a0a0a"}}>
+      <section className="hero-section" style={{position:"relative",width:"100%",height:"100vh",overflow:"hidden",background:"#0a0a0a"}}>
         <video
+          className="hero-video"
           ref={el=>{if(el){el.muted=true;el.play().catch(()=>{});}}}
           autoPlay muted loop playsInline preload="auto"
           style={{position:"absolute",top:0,left:0,width:"100%",height:"100%",objectFit:"cover",display:"block",opacity:.8}}
@@ -541,7 +560,7 @@ function HomePage({ setPage, addToCart, setViewProduct }){
         <div style={{position:"absolute",inset:0,background:"linear-gradient(to right,rgba(0,0,0,.4) 0%,transparent 55%)",pointerEvents:"none"}}/>
 
         {/* ── Main Content: full inset flex, content sits at bottom ── */}
-        <div style={{
+        <div className="hero-text-container" style={{
           position:"absolute",inset:0,
           display:"flex",
           flexDirection:"column",
@@ -557,7 +576,7 @@ function HomePage({ setPage, addToCart, setViewProduct }){
           </div>
 
           {/* Headline */}
-          <h1 className="disp" style={{
+          <h1 className="disp hero-headline" style={{
             fontSize:"clamp(34px,4.5vw,72px)",
             fontWeight:400,
             fontStyle:"italic",
@@ -574,7 +593,7 @@ function HomePage({ setPage, addToCart, setViewProduct }){
           <div style={{width:40,height:1,background:"rgba(201,168,76,.45)",marginBottom:16}}/>
 
           {/* Subtitle */}
-          <p style={{
+          <p className="hero-subtitle" style={{
             fontSize:"clamp(14px,1.2vw,16px)",
             color:"rgba(255,255,255,.65)",
             fontFamily:"'DM Sans',sans-serif",
@@ -588,7 +607,7 @@ function HomePage({ setPage, addToCart, setViewProduct }){
           </p>
 
           {/* CTA Buttons */}
-          <div style={{display:"flex",gap:12,flexWrap:"wrap",marginBottom:32}}>
+          <div className="hero-cta-row" style={{display:"flex",gap:12,flexWrap:"wrap",marginBottom:32}}>
             <button
               onClick={()=>setPage("collections")}
               style={{
@@ -615,14 +634,14 @@ function HomePage({ setPage, addToCart, setViewProduct }){
           </div>
 
           {/* Stats bar */}
-          <div style={{display:"flex",gap:0,borderTop:"1px solid rgba(255,255,255,.1)",paddingTop:18,flexWrap:"wrap",rowGap:8}}>
+          <div className="hero-stats-row" style={{display:"flex",gap:0,borderTop:"1px solid rgba(255,255,255,.1)",paddingTop:18,flexWrap:"wrap",rowGap:8}}>
             {[
               {v:"1997",l:"Est."},
               {v:"400+",l:"Fragrances"},
               {v:"30+",l:"Countries"},
               {v:"4.8★",l:"Rating"},
             ].map((s,i)=>(
-              <div key={s.l} style={{
+              <div key={s.l} className="hero-stat-item" style={{
                 paddingRight:22,marginRight:22,
                 borderRight: i<3 ? "1px solid rgba(255,255,255,.1)" : "none",
               }}>

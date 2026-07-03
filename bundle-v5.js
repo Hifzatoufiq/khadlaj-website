@@ -21960,6 +21960,10 @@ var GLOBAL_CSS = `
     .hero-split{grid-template-columns:1fr!important;}
     .hero-img-wrap{height:320px!important;min-height:unset!important;}
     .grid-2{grid-template-columns:1fr!important;}
+
+    /* Hero adjustments */
+    .hero-section { height: 80vh !important; }
+    .hero-text-container { padding: 40px 30px !important; }
   }
   @media(max-width:600px){
     .grid-4{grid-template-columns:repeat(2,1fr)!important;}
@@ -21967,10 +21971,24 @@ var GLOBAL_CSS = `
     .grid-2{grid-template-columns:1fr!important;}
     .new-scroll > div{flex:0 0 78vw!important;}
     .reel-card{flex:0 0 88vw!important;}
+
+    /* Hero adjustments for smaller screens */
+    .hero-section { height: 100dvh !important; }
+    .hero-text-container { padding: 40px 20px 30px !important; }
+    .hero-headline { font-size: 32px !important; line-height: 1.2 !important; }
+    .hero-subtitle { font-size: 13px !important; line-height: 1.6 !important; max-width: 100% !important; margin-bottom: 20px !important; }
+    .hero-stats-row { gap: 12px !important; padding-top: 12px !important; }
+    .hero-stat-item { padding-right: 12px !important; margin-right: 12px !important; }
   }
   @media(max-width:480px){
     .grid-4{grid-template-columns:repeat(2,1fr)!important;}
     .popup-in{grid-template-columns:1fr!important;}
+
+    .hero-headline { font-size: 28px !important; }
+    .hero-cta-row { flex-direction: column !important; gap: 8px !important; width: 100% !important; }
+    .hero-cta-row button { width: 100% !important; text-align: center !important; }
+    .hero-stats-row { border-top: none !important; }
+    .hero-stat-item { border-right: none !important; }
   }
 `;
 function StarRating({ n = 5, color = C.brass }) {
@@ -22238,10 +22256,11 @@ function HomePage({ setPage, addToCart, setViewProduct }) {
     return p.col === activeCat;
   }).slice(0, 8);
   return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", { style: { position: "relative", width: "100%", height: "100vh", overflow: "hidden", background: "#0a0a0a" }, children: [
+    /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", { className: "hero-section", style: { position: "relative", width: "100%", height: "100vh", overflow: "hidden", background: "#0a0a0a" }, children: [
       /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
         "video",
         {
+          className: "hero-video",
           ref: (el) => {
             if (el) {
               el.muted = true;
@@ -22260,7 +22279,7 @@ function HomePage({ setPage, addToCart, setViewProduct }) {
       ),
       /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { position: "absolute", inset: 0, background: "linear-gradient(to bottom,rgba(0,0,0,.1) 0%,rgba(0,0,0,.0) 30%,rgba(0,0,0,.6) 70%,rgba(0,0,0,.92) 100%)", pointerEvents: "none" } }),
       /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { position: "absolute", inset: 0, background: "linear-gradient(to right,rgba(0,0,0,.4) 0%,transparent 55%)", pointerEvents: "none" } }),
-      /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: {
+      /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "hero-text-container", style: {
         position: "absolute",
         inset: 0,
         display: "flex",
@@ -22274,7 +22293,7 @@ function HomePage({ setPage, addToCart, setViewProduct }) {
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { display: "inline-block", width: 32, height: 1, background: "#C9A84C", flexShrink: 0 } }),
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { fontSize: 9, letterSpacing: 5, color: "#C9A84C", textTransform: "uppercase", fontFamily: "'DM Sans',sans-serif", fontWeight: 500 }, children: "Khadlaj Perfumes \xB7 Since 1997" })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", { className: "disp", style: {
+        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", { className: "disp hero-headline", style: {
           fontSize: "clamp(34px,4.5vw,72px)",
           fontWeight: 400,
           fontStyle: "italic",
@@ -22288,7 +22307,7 @@ function HomePage({ setPage, addToCart, setViewProduct }) {
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { fontStyle: "normal", fontWeight: 400, color: "#C9A84C" }, children: "Arabian Fragrance" })
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { width: 40, height: 1, background: "rgba(201,168,76,.45)", marginBottom: 16 } }),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: {
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "hero-subtitle", style: {
           fontSize: "clamp(14px,1.2vw,16px)",
           color: "rgba(255,255,255,.65)",
           fontFamily: "'DM Sans',sans-serif",
@@ -22298,7 +22317,7 @@ function HomePage({ setPage, addToCart, setViewProduct }) {
           marginBottom: 28,
           maxWidth: 440
         }, children: "Over four decades of mastery \u2014 where the rarest oud, rose, and musk are composed into enduring luxury." }),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", gap: 12, flexWrap: "wrap", marginBottom: 32 }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "hero-cta-row", style: { display: "flex", gap: 12, flexWrap: "wrap", marginBottom: 32 }, children: [
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
             "button",
             {
@@ -22350,12 +22369,12 @@ function HomePage({ setPage, addToCart, setViewProduct }) {
             }
           )
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { display: "flex", gap: 0, borderTop: "1px solid rgba(255,255,255,.1)", paddingTop: 18, flexWrap: "wrap", rowGap: 8 }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "hero-stats-row", style: { display: "flex", gap: 0, borderTop: "1px solid rgba(255,255,255,.1)", paddingTop: 18, flexWrap: "wrap", rowGap: 8 }, children: [
           { v: "1997", l: "Est." },
           { v: "400+", l: "Fragrances" },
           { v: "30+", l: "Countries" },
           { v: "4.8\u2605", l: "Rating" }
-        ].map((s, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: {
+        ].map((s, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "hero-stat-item", style: {
           paddingRight: 22,
           marginRight: 22,
           borderRight: i < 3 ? "1px solid rgba(255,255,255,.1)" : "none"
